@@ -14,7 +14,7 @@ import java.io.Serializable;
 @Table(name="dashboard_role")
 @Data
 public class Role  implements Serializable {
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 4L;
 
     @JsonProperty("id")
     @Id
