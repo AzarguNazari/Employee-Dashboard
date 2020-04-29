@@ -2,7 +2,6 @@ package com.example.dashboard.employeedashboard.service;
 
 import com.example.dashboard.employeedashboard.model.Employee;
 import com.example.dashboard.employeedashboard.repository.EmployeeRepository;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
@@ -45,4 +44,11 @@ public class EmployeeService {
     public void deleteEmployeeById(Integer id){
         employeeRepository.deleteById(id);
     }
+
+    public void updateEmployee(Integer employeeId, Employee employee) {
+        employee.setId(employeeId);
+        employeeRepository.deleteById(employeeId);
+        employeeRepository.save(employee);
+    }
+
 }

@@ -4,7 +4,6 @@ package com.example.dashboard.employeedashboard.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
-import org.springframework.hateoas.EntityModel;
 import org.springframework.validation.annotation.Validated;
 
 import javax.persistence.*;
@@ -16,7 +15,7 @@ import javax.persistence.*;
 @Entity
 @Data
 @Table(name = "dashboard_employee")
-public class Employee extends EntityModel {
+public class Employee{
 
     @JsonProperty
     @Id

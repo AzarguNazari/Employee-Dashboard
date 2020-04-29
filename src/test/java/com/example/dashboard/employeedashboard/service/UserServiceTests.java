@@ -29,7 +29,7 @@ public class UserServiceTests {
         employeeService.addAllEmployees(employees);
         Assert.assertEquals(Long.valueOf(4), employeeService.totalEmployees());
 
-        Assert.assertEquals("username1", employeeService.getEmpoyeeByUsername("username1").getUsername());
+        Assert.assertEquals("username1", employeeService.getEmpoyeeByUsername("username1").get().getUsername());
 
         employeeService.deleteEmployeeById(1);
 
