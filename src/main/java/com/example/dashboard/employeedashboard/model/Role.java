@@ -7,24 +7,21 @@ import lombok.Data;
 import org.springframework.validation.annotation.Validated;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Validated
 @Entity
 @Table(name="dashboard_role")
 @Data
-public class Role  implements Serializable {
-    private static final long serialVersionUID = 4L;
-
-    @JsonProperty("id")
+public class Role{
+    @JsonProperty
     @Id
     @GeneratedValue
     @JsonIgnore
-    private Integer id = null;
+    private Integer id;
 
-    @JsonProperty("name")
-    @Column(name="name")
-    private String name = null;
+    @JsonProperty
+    @Column
+    private String name;
 
     public Role(){}
     public Role(String roleName){this.name = roleName;}

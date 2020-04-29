@@ -6,15 +6,12 @@ import lombok.Data;
 import org.springframework.validation.annotation.Validated;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Validated
 @Entity
 @Table(name="dashboard_task")
 @Data
-public class Task implements Serializable{
-
-    private static final long serialVersionUID = 3L;
+public class Task{
 
     @JsonProperty
     @Id

@@ -3,12 +3,11 @@ package com.example.dashboard.employeedashboard.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Builder;
 import lombok.Data;
+import org.springframework.hateoas.EntityModel;
 import org.springframework.validation.annotation.Validated;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 /**
  * User
@@ -16,16 +15,14 @@ import java.io.Serializable;
 @Validated
 @Entity
 @Data
-@Table(name = "dashboard_user")
-public class Employee implements Serializable {
+@Table(name = "dashboard_employee")
+public class Employee extends EntityModel {
 
-    private static final long serialVersionUID = 1L;
-
-    @JsonProperty("id")
+    @JsonProperty
     @Id
     @GeneratedValue
     @JsonIgnore
-    private Integer id = null;
+    private Integer id;
 
     @JsonProperty
     @Column
@@ -35,7 +32,7 @@ public class Employee implements Serializable {
     @Column
     private String lastName;
 
-    @JsonProperty(value = "user_name")
+    @JsonProperty
     @Column
     private String username;
 
