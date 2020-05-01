@@ -54,4 +54,46 @@ public class HomeController {
         return "redirect:index";
     }
 
+    @GetMapping("notfound")
+    public String notFound(Model model){
+        return "error";
+    }
+
+    @GetMapping("announcements")
+    public String announcement(Model model){
+        return "announcement";
+    }
+
+    @GetMapping("attendance")
+    public String attendance(Model model){
+        return "attendance";
+    }
+
+    @GetMapping("chat")
+    public String chat(Model model){
+        return "chat";
+    }
+
+    @GetMapping("tasks")
+    public String tasks(Model model){
+        return "tasks";
+    }
+
+    @GetMapping("profile")
+    public String profile(Model model){
+        return "profile";
+    }
+
+    @GetMapping("setting")
+    public String setting(Model model){
+        return "setting";
+    }
+
+    @GetMapping("activities")
+    public String activities(Model model){
+        return "activities";
+    }
+
+
+
 }
