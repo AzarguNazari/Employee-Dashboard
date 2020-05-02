@@ -1,41 +1,33 @@
 package com.example.dashboard.employeedashboard.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Data;
+import lombok.*;
 import org.springframework.validation.annotation.Validated;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Validated
 @Entity
-@Table(name="dashboard_task")
+@Table(name="task")
 @Data
+@NoArgsConstructor
+@RequiredArgsConstructor
 public class Task{
 
-    @JsonProperty
     @Id
     @GeneratedValue
-    @JsonIgnore
     private Integer id;
 
-    @JsonProperty
-    @Column(name="name")
-    private String name;
+    @Column @NonNull
+    private String taskname;
 
-    @JsonProperty
-    @Column
+    @Column @NonNull
     private String description;
 
-    @JsonProperty
-    @Column
+    @Column @NonNull @Enumerated(EnumType.STRING)
     private Priority priority;
 
-    public Task(){}
-    public Task(String name, String description, Priority priority){
-        this.name = name;
-        this.description = description;
-        this.priority = priority;
-    }
+    @ManyToMany(mappedBy = "tasks")
+    private Set<Employee> assignedTo;
 }
 

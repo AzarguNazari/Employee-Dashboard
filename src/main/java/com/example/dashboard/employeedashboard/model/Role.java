@@ -1,29 +1,28 @@
 package com.example.dashboard.employeedashboard.model;
 
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Data;
+import lombok.*;
+import lombok.experimental.FieldDefaults;
 import org.springframework.validation.annotation.Validated;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Validated
 @Entity
-@Table(name="dashboard_role")
+@Table(name="role")
 @Data
+@FieldDefaults(level = AccessLevel.PRIVATE)
+@NoArgsConstructor
 public class Role{
-    @JsonProperty
+
     @Id
-    @GeneratedValue
-    @JsonIgnore
-    private Integer id;
+    Integer id;
 
-    @JsonProperty
     @Column
-    private String name;
+    String name;
 
-    public Role(){}
-    public Role(String roleName){this.name = roleName;}
+    @OneToMany(mappedBy = "role", cascade = {CascadeType.ALL})
+    List<Employee> employees;
 }
 

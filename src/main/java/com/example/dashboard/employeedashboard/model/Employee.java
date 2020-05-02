@@ -1,60 +1,54 @@
 package com.example.dashboard.employeedashboard.model;
 
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AccessLevel;
 import lombok.Data;
-import org.springframework.validation.annotation.Validated;
+import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
+import java.util.Set;
 
-/**
- * User
- */
-@Validated
+@FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
 @Data
-@Table(name = "dashboard_employee")
+@Table(name = "employee")
 public class Employee{
 
-    @JsonProperty
-    @Id
-    @GeneratedValue
-    @JsonIgnore
-    private Integer id;
+    @Id @GeneratedValue Integer id;
 
-    @JsonProperty
-    @Column
-    private String firstName;
+    @Column String firstname;
 
-    @JsonProperty
-    @Column
-    private String lastName;
+    @Column String lastname;
 
-    @JsonProperty
-    @Column
-    private String username;
+    @Column String username;
 
-    @JsonIgnore
-    @Column
-    private String password;
+    @Column String password;
 
-    @JsonProperty
-    @Column
-    private Integer salary;
+    @Column Integer salary;
 
-    @JsonProperty
-    @Column
-    private String position;
+    @Enumerated(EnumType.STRING)
+    @Column Title title;
+
+    @ManyToMany
+    @JoinTable(
+            name = "task_assign",
+            joinColumns = @JoinColumn(name = "employee_id"),
+            inverseJoinColumns = @JoinColumn(name = "task_id")
+    )
+    Set<Task> tasks;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "role_id")
+    Role role;
 
     public Employee(){}
 
-    public Employee(String username, String firstName, String lastname, String password, Integer salary, String position){
+    public Employee(String username, String firstName, String lastname, String password, Integer salary, Title title){
         this.username = username;
-        this.firstName = firstName;
-        this.lastName = lastname;
+        this.firstname = firstName;
+        this.lastname = lastname;
         this.password = password;
         this.salary = salary;
-        this.position = position;
+        this.title = title;
     }
 }
