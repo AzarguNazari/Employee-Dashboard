@@ -12,88 +12,87 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Log4j2
 @Controller
-@RequestMapping("/")
+@RequestMapping
 public class HomeController {
 
-    // ------------------------------ MAIN PAGE
+    @GetMapping
+    public String defaultHome(Model model){
+        return "redirect:/dashboard/index";
+    }
 
-    @GetMapping("index")
+    //              MAIN PAGE
+    @GetMapping(value = {"/dashboard/index", "/dashboard"})
     public String home(Model model){
         return "index";
     }
 
-    // -------------------------- LOG IN
-
-    @GetMapping("login")
+    //              LOG IN
+    @GetMapping("/dashboard/login")
     public String login(Model model){
-        model.addAttribute("userdto", new LoginUserDto());
+        model.addAttribute("loginUserDto", new LoginUserDto());
         return "login";
     }
 
-    @PostMapping("login")
+    @PostMapping(value = "/dashboard/login")
     public String login(@ModelAttribute LoginUserDto loginUserDto, Model model) {
-
         System.out.println(loginUserDto.getUsername() + " " + loginUserDto.getPassword() + " is received");
 //        message = this.messageRepository.save(message);
-        return "redirect:index";
+        return "redirect:/dashboard/index";
     }
 
     // -------------------------- REGISTER ----------------------------
 
-    @GetMapping("register")
+    @GetMapping("/dashboard/register")
     public String register(Model model){
         model.addAttribute("userdto", new UserDto());
         return "register";
     }
 
-    @PostMapping("register")
+    @PostMapping("/dashboard/register")
     public String register(@ModelAttribute UserDto userDto, Model model) {
 
         System.out.println(userDto.getUsername() + " " + userDto.getPassword1() + " is received");
 //        message = this.messageRepository.save(message);
-        return "redirect:index";
+        return "redirect:/dashboard/index";
     }
 
-    @GetMapping("notfound")
+    @GetMapping("/dashboard/notfound")
     public String notFound(Model model){
         return "error";
     }
 
-    @GetMapping("announcements")
+    @GetMapping("/dashboard/announcements")
     public String announcement(Model model){
         return "announcement";
     }
 
-    @GetMapping("attendance")
+    @GetMapping("/dashboard/attendance")
     public String attendance(Model model){
         return "attendance";
     }
 
-    @GetMapping("chat")
+    @GetMapping("/dashboard/chat")
     public String chat(Model model){
         return "chat";
     }
 
-    @GetMapping("tasks")
+    @GetMapping("/dashboard/tasks")
     public String tasks(Model model){
         return "tasks";
     }
 
-    @GetMapping("profile")
+    @GetMapping("/dashboard/profile")
     public String profile(Model model){
         return "profile";
     }
 
-    @GetMapping("setting")
+    @GetMapping("/dashboard/setting")
     public String setting(Model model){
         return "setting";
     }
 
-    @GetMapping("activities")
+    @GetMapping("/dashboard/activities")
     public String activities(Model model){
         return "activities";
     }
-
-
-
 }

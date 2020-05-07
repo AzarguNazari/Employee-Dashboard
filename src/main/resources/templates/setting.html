@@ -3,294 +3,296 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
 
-  <title>Profile</title>
-  <th:block th:include="fragments/head :: head"></th:block>
+    <title>Profile</title>
+    <th:block th:include="fragments/head :: head"></th:block>
 
 </head>
 
 <body id="page-top">
 
-  <!-- Page Wrapper -->
-  <div id="wrapper">
+<!-- Page Wrapper -->
+<div id="wrapper">
 
     <!-- Sidebar -->
     <th:block th:replace="fragments/sideBarMenu :: sidemenu"></th:block>
     <!-- End of Sidebar -->
 
     <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
+    <div class="d-flex flex-column" id="content-wrapper">
 
-      <!-- Main Content -->
-      <div id="content">
+        <!-- Main Content -->
+        <div id="content">
 
-        <!-- Topbar -->
-        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+            <!-- Topbar -->
+            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-          <!-- Sidebar Toggle (Topbar) -->
-          <button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop">
-            <i class="fa fa-bars"></i>
-          </button>
+                <!-- Sidebar Toggle (Topbar) -->
+                <button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop">
+                    <i class="fa fa-bars"></i>
+                </button>
 
-          <th:block th:replace="fragments/topBar :: topBarSearch"></th:block>
-
-
-          <!-- Topbar Navbar -->
-          <ul class="navbar-nav ml-auto">
-
-            <li th:replace="fragments/topBar :: navXS"></li>
-
-            <!-- Nav Item - Alerts -->
-            <li class="nav-item dropdown no-arrow mx-1">
-              <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown"
-                 href="#"
-                 id="alertsDropdown" role="button">
-                <i class="fas fa-bell fa-fw"></i>
-                <!-- Counter - Alerts -->
-                <span class="badge badge-danger badge-counter">3+</span>
-              </a>
-              <!-- Dropdown - Alerts -->
-              <div aria-labelledby="alertsDropdown"
-                   class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in">
-                <h6 class="dropdown-header">
-                  Alerts Center
-                </h6>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="mr-3">
-                    <div class="icon-circle bg-primary">
-                      <i class="fas fa-file-alt text-white"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="small text-gray-500">December 12, 2019</div>
-                    <span class="font-weight-bold">A new monthly report is ready to download!</span>
-                  </div>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="mr-3">
-                    <div class="icon-circle bg-success">
-                      <i class="fas fa-donate text-white"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="small text-gray-500">December 7, 2019</div>
-                    $290.29 has been deposited into your account!
-                  </div>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="mr-3">
-                    <div class="icon-circle bg-warning">
-                      <i class="fas fa-exclamation-triangle text-white"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="small text-gray-500">December 2, 2019</div>
-                    Spending Alert: We've noticed unusually high spending for your account.
-                  </div>
-                </a>
-                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
-              </div>
-            </li>
-
-            <!-- Nav Item - Messages -->
-            <li class="nav-item dropdown no-arrow mx-1">
-              <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown"
-                 href="#"
-                 id="messagesDropdown" role="button">
-                <i class="fas fa-envelope fa-fw"></i>
-                <!-- Counter - Messages -->
-                <span class="badge badge-danger badge-counter">7</span>
-              </a>
-              <!-- Dropdown - Messages -->
-              <div aria-labelledby="messagesDropdown"
-                   class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in">
-                <h6 class="dropdown-header">
-                  Message Center
-                </h6>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="dropdown-list-image mr-3">
-                    <img alt="" class="rounded-circle"
-                         src="https://source.unsplash.com/fn_BT9fwg_E/60x60">
-                    <div class="status-indicator bg-success"></div>
-                  </div>
-                  <div class="font-weight-bold">
-                    <div class="text-truncate">Hi there! I am wondering if you can help me with a
-                      problem I've been
-                      having.
-                    </div>
-                    <div class="small text-gray-500">Emily Fowler · 58m</div>
-                  </div>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="dropdown-list-image mr-3">
-                    <img alt="" class="rounded-circle"
-                         src="https://source.unsplash.com/AU4VPcFN4LE/60x60">
-                    <div class="status-indicator"></div>
-                  </div>
-                  <div>
-                    <div class="text-truncate">I have the photos that you ordered last month, how would
-                      you like them
-                      sent to you?
-                    </div>
-                    <div class="small text-gray-500">Jae Chun · 1d</div>
-                  </div>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="dropdown-list-image mr-3">
-                    <img alt="" class="rounded-circle"
-                         src="https://source.unsplash.com/CS2uCrpNzJY/60x60">
-                    <div class="status-indicator bg-warning"></div>
-                  </div>
-                  <div>
-                    <div class="text-truncate">Last month's report looks great, I am very happy with the
-                      progress so
-                      far, keep up the good work!
-                    </div>
-                    <div class="small text-gray-500">Morgan Alvarez · 2d</div>
-                  </div>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="dropdown-list-image mr-3">
-                    <img alt="" class="rounded-circle"
-                         src="https://source.unsplash.com/Mv9hjnEUHR4/60x60">
-                    <div class="status-indicator bg-success"></div>
-                  </div>
-                  <div>
-                    <div class="text-truncate">Am I a good boy? The reason I ask is because someone told
-                      me that people
-                      say this to all dogs, even if they aren't good...
-                    </div>
-                    <div class="small text-gray-500">Chicken the Dog · 2w</div>
-                  </div>
-                </a>
-                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
-              </div>
-            </li>
-
-            <div class="topbar-divider d-none d-sm-block"></div>
-
-            <li th:replace="fragments/topBar :: userInfo"></li>
-
-          </ul>
-
-        </nav>
-        <!-- End of Topbar -->
+                <th:block th:replace="fragments/topBar :: topBarSearch"></th:block>
 
 
-          <th:block th:replace="fragments/setting :: settingBox"></th:block>
+                <!-- Topbar Navbar -->
+                <ul class="navbar-nav ml-auto">
 
-        <!-- /.container-fluid -->
+                    <li th:replace="fragments/topBar :: navXS"></li>
 
-      </div>
-      <!-- End of Main Content -->
+                    <!-- Nav Item - Alerts -->
+                    <li class="nav-item dropdown no-arrow mx-1">
+                        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                           data-toggle="dropdown"
+                           href="#"
+                           id="alertsDropdown" role="button">
+                            <i class="fas fa-bell fa-fw"></i>
+                            <!-- Counter - Alerts -->
+                            <span class="badge badge-danger badge-counter">3+</span>
+                        </a>
+                        <!-- Dropdown - Alerts -->
+                        <div aria-labelledby="alertsDropdown"
+                             class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in">
+                            <h6 class="dropdown-header">
+                                Alerts Center
+                            </h6>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="mr-3">
+                                    <div class="icon-circle bg-primary">
+                                        <i class="fas fa-file-alt text-white"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="small text-gray-500">December 12, 2019</div>
+                                    <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="mr-3">
+                                    <div class="icon-circle bg-success">
+                                        <i class="fas fa-donate text-white"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="small text-gray-500">December 7, 2019</div>
+                                    $290.29 has been deposited into your account!
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="mr-3">
+                                    <div class="icon-circle bg-warning">
+                                        <i class="fas fa-exclamation-triangle text-white"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="small text-gray-500">December 2, 2019</div>
+                                    Spending Alert: We've noticed unusually high spending for your account.
+                                </div>
+                            </a>
+                            <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                        </div>
+                    </li>
 
-      <th:block th:include="fragments/footer :: footer"></th:block>
+                    <!-- Nav Item - Messages -->
+                    <li class="nav-item dropdown no-arrow mx-1">
+                        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                           data-toggle="dropdown"
+                           href="#"
+                           id="messagesDropdown" role="button">
+                            <i class="fas fa-envelope fa-fw"></i>
+                            <!-- Counter - Messages -->
+                            <span class="badge badge-danger badge-counter">7</span>
+                        </a>
+                        <!-- Dropdown - Messages -->
+                        <div aria-labelledby="messagesDropdown"
+                             class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in">
+                            <h6 class="dropdown-header">
+                                Message Center
+                            </h6>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="dropdown-list-image mr-3">
+                                    <img alt="" class="rounded-circle"
+                                         src="https://source.unsplash.com/fn_BT9fwg_E/60x60">
+                                    <div class="status-indicator bg-success"></div>
+                                </div>
+                                <div class="font-weight-bold">
+                                    <div class="text-truncate">Hi there! I am wondering if you can help me with a
+                                        problem I've been
+                                        having.
+                                    </div>
+                                    <div class="small text-gray-500">Emily Fowler · 58m</div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="dropdown-list-image mr-3">
+                                    <img alt="" class="rounded-circle"
+                                         src="https://source.unsplash.com/AU4VPcFN4LE/60x60">
+                                    <div class="status-indicator"></div>
+                                </div>
+                                <div>
+                                    <div class="text-truncate">I have the photos that you ordered last month, how would
+                                        you like them
+                                        sent to you?
+                                    </div>
+                                    <div class="small text-gray-500">Jae Chun · 1d</div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="dropdown-list-image mr-3">
+                                    <img alt="" class="rounded-circle"
+                                         src="https://source.unsplash.com/CS2uCrpNzJY/60x60">
+                                    <div class="status-indicator bg-warning"></div>
+                                </div>
+                                <div>
+                                    <div class="text-truncate">Last month's report looks great, I am very happy with the
+                                        progress so
+                                        far, keep up the good work!
+                                    </div>
+                                    <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="dropdown-list-image mr-3">
+                                    <img alt="" class="rounded-circle"
+                                         src="https://source.unsplash.com/Mv9hjnEUHR4/60x60">
+                                    <div class="status-indicator bg-success"></div>
+                                </div>
+                                <div>
+                                    <div class="text-truncate">Am I a good boy? The reason I ask is because someone told
+                                        me that people
+                                        say this to all dogs, even if they aren't good...
+                                    </div>
+                                    <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+                        </div>
+                    </li>
+
+                    <div class="topbar-divider d-none d-sm-block"></div>
+
+                    <li th:replace="fragments/topBar :: userInfo"></li>
+
+                </ul>
+
+            </nav>
+            <!-- End of Topbar -->
+
+
+            <th:block th:replace="fragments/setting :: settingBox"></th:block>
+
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- End of Main Content -->
+
+        <th:block th:include="fragments/footer :: footer"></th:block>
 
 
     </div>
     <!-- End of Content Wrapper -->
 
-  </div>
-  <!-- End of Page Wrapper -->
+</div>
+<!-- End of Page Wrapper -->
 
-  <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
-  </a>
+</a>
 
 <!-- Create New Task Modal-->
-<div class="modal fade" id="taskUpdate" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-aria-hidden="true">
-<div class="modal-dialog" role="document">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title text-center">Update Task</h5>
-      <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">×</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <form>
-        <textarea class="form-control">Task description</textarea>
-        <hr>
-        <label>Progress Percentage</label>
-        <input type="number" class="form-control" id="progressPercentage">
-      </form>
-    </div>
-    <div class="modal-footer">
-      <button class="btn btn-success" type="button">Update Task</button>
-      <button class="btn btn-danger" type="button" data-dismiss="modal">Cancel</button>
-    </div>
-  </div>
-</div>
-</div>
-
-  <!-- Create New Task Modal-->
-  <div class="modal fade" id="taskModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
+<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="taskUpdate" role="dialog"
+     tabindex="-1">
     <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title text-center">Create New Task</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-center">Update Task</h5>
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <textarea class="form-control">Task description</textarea>
+                    <hr>
+                    <label>Progress Percentage</label>
+                    <input class="form-control" id="progressPercentage" type="number">
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" type="button">Update Task</button>
+                <button class="btn btn-danger" data-dismiss="modal" type="button">Cancel</button>
+            </div>
         </div>
-        <div class="modal-body">
-          <form>
-            <textarea class="form-control">Task description</textarea>
-            <hr>
-            <input class="form-control" type="date" id="deadline" required />
-            <hr>
-            <label>Assign To</label>
-            <select id="assignee" class="form-control">
-              <option value="ahmad">Ahmad</option>
-            </select>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-success" type="button">Add Task</button>
-          <button class="btn btn-danger" type="button" data-dismiss="modal">Cancel</button>
-        </div>
-      </div>
     </div>
-  </div>
+</div>
 
-  <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
+<!-- Create New Task Modal-->
+<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="taskModel" role="dialog"
+     tabindex="-1">
     <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-center">Create New Task</h5>
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <textarea class="form-control">Task description</textarea>
+                    <hr>
+                    <input class="form-control" id="deadline" required type="date"/>
+                    <hr>
+                    <label>Assign To</label>
+                    <select class="form-control" id="assignee">
+                        <option value="ahmad">Ahmad</option>
+                    </select>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" type="button">Add Task</button>
+                <button class="btn btn-danger" data-dismiss="modal" type="button">Cancel</button>
+            </div>
         </div>
-        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
-        </div>
-      </div>
     </div>
-  </div>
+</div>
 
-  <!-- Bootstrap core JavaScript-->
-  <script th:src="@{vendor/jquery/jquery.min.js}"></script>
-  <script th:src="@{vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+<!-- Logout Modal-->
+<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="logoutModal" role="dialog"
+     tabindex="-1">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-dismiss="modal" type="button">Cancel</button>
+                <a class="btn btn-primary" href="login.html">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
 
-  <!-- Core plugin JavaScript-->
-  <script th:src="@{vendor/jquery-easing/jquery.easing.min.js}"></script>
+<!-- Bootstrap core JavaScript-->
+<script th:src="@{../static/dashboard/vendor/jquery/jquery.min.js}"></script>
+<script th:src="@{../static/dashboard/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
 
-  <!-- Custom scripts for all pages-->
-  <script th:src="@{dist/js/sb-admin-2.min.js}"></script>
+<!-- Core plugin JavaScript-->
+<script th:src="@{../static/dashboard/vendor/jquery-easing/jquery.easing.min.js}"></script>
 
-  <!-- Page level plugins -->
-  <script th:src="@{vendor/chart.js/Chart.min.js}"></script>
+<!-- Custom scripts for all pages-->
+<script th:src="@{../static/dashboard/dist/js/sb-admin-2.min.js}"></script>
 
-  <!-- Page level custom scripts -->
-  <script th:src="@{dist/js/demo/chart-area-demo.js}"></script>
-  <script th:src="@{dist/js/demo/chart-pie-demo.js}"></script>
+<!-- Page level plugins -->
+<script th:src="@{../static/dashboard/vendor/chart.js/Chart.min.js}"></script>
+
+<!-- Page level custom scripts -->
+<script th:src="@{../static/dashboard/dist/js/demo/chart-area-demo.js}"></script>
+<script th:src="@{../static/dashboard/dist/js/demo/chart-pie-demo.js}"></script>
 
 </body>
 

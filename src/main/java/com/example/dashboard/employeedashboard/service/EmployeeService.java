@@ -37,8 +37,8 @@ public class EmployeeService {
         return employeeRepository.count();
     }
 
-    public Optional<Employee> getEmpoyeeByUsername(String username){
-        return employeeRepository.findUserByUsername(username);
+    public Optional<Employee> getByUsername(String username){
+        return employeeRepository.findByUsername(username);
     }
 
     public void deleteEmployeeById(Integer id){

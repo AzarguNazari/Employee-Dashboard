@@ -2,88 +2,94 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-  <title>Register Page</title>
-  <th:block th:include="fragments/head :: head"></th:block>
+    <title>Register Page</title>
+    <th:block th:include="fragments/head :: head"></th:block>
 
 </head>
 
 <body class="bg-gradient-primary">
 
-  <div class="container">
+<div class="container">
 
     <!-- Outer Row -->
     <div class="row justify-content-center">
 
-      <div class="col-xl-6 col-lg-12 col-md-9">
+        <div class="col-xl-6 col-lg-12 col-md-9">
 
-        <div class="card o-hidden border-0 shadow-lg my-5">
-          <div class="card-body p-0">
-            <!-- Nested Row within Card Body -->
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="p-5">
-                  <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4">Register Employee</h1>
-                  </div>
-                  <form class="user">
-                    <div class="form-group row">
-                      <div class="col-sm-6 mb-3 mb-sm-0">
-                        <input type="text" class="form-control form-control-user" id="firstname" placeholder="First Name">
-                      </div>
-                      <div class="col-sm-6">
-                        <input type="text" class="form-control form-control-user" id="lastname" placeholder="Last Name">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <input type="text" class="form-control form-control-user" id="username" aria-describedby="emailHelp" placeholder="Username" required>
-                    </div>
-                    <div class="form-group">
-                      <input type="email" class="form-control form-control-user" id="email" aria-describedby="emailHelp" placeholder="Email" required>
-                    </div>
-                    <div class="form-group">
-                      <input type="password" class="form-control form-control-user" id="password" placeholder="Password" required>
-                    </div>
-                    <div class="form-group row">
-                      <div class="col-sm-6 mb-3 mb-sm-0">
-                        <input type="number" class="form-control form-control-user" id="salary" placeholder="Salary" required>
-                      </div>
-                      <div class="col-sm-6">
-                        <select class="form-control" id="position">
-                           <option value="dev">Developer</option>
-                           <option value="manager">Manager</option>
-                           <option value="hr">HR</option>
-                        </select>
-                      </div>
-                    </div>
-                    <input type="submit" value="Register" class="btn btn-primary btn-user btn-block">
+            <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="card-body p-0">
+                    <!-- Nested Row within Card Body -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <h1 class="h4 text-gray-900 mb-4">Register Employee</h1>
+                                </div>
+                                <form class="user">
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <input class="form-control form-control-user" id="firstname" placeholder="First Name"
+                                                   type="text">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input class="form-control form-control-user" id="lastname" placeholder="Last Name"
+                                                   type="text">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input aria-describedby="emailHelp" class="form-control form-control-user" id="username"
+                                               placeholder="Username" required type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <input aria-describedby="emailHelp" class="form-control form-control-user" id="email"
+                                               placeholder="Email" required type="email">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control form-control-user" id="password" placeholder="Password"
+                                               required type="password">
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <input class="form-control form-control-user" id="salary" placeholder="Salary"
+                                                   required type="number">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <select class="form-control" id="position">
+                                                <option value="dev">Developer</option>
+                                                <option value="manager">Manager</option>
+                                                <option value="hr">HR</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <input class="btn btn-primary btn-user btn-block" type="submit" value="Register">
 
-                  </form>
-                  <hr>
-                    <div class="text-center">
-                      <a class="small" th:href="@{/login}">Login to Account</a>
+                                </form>
+                                <hr>
+                                <div class="text-center">
+                                    <a class="small" th:href="@{/login}">Login to Account</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </div>
 
-      </div>
+        </div>
 
     </div>
 
-  </div>
+</div>
 
 
-  <!-- Bootstrap core JavaScript-->
-  <script th:src="@{vendor/jquery/jquery.min.js}"></script>
-  <script th:src="@{vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+<!-- Bootstrap core JavaScript-->
+<script th:src="@{../static/dashboard/vendor/jquery/jquery.min.js}"></script>
+<script th:src="@{../static/dashboard/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
 
-  <!-- Core plugin JavaScript-->
-  <script th:src="@{vendor/jquery-easing/jquery.easing.min.js}"></script>
+<!-- Core plugin JavaScript-->
+<script th:src="@{../static/dashboard/vendor/jquery-easing/jquery.easing.min.js}"></script>
 
-  <!-- Custom scripts for all pages-->
-  <script th:src="@{dist/js/sb-admin-2.min.js}"></script>
+<!-- Custom scripts for all pages-->
+<script th:src="@{../static/dashboard/dist/js/sb-admin-2.min.js}"></script>
 
 </body>
 

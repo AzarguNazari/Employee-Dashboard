@@ -3,10 +3,8 @@ package com.example.dashboard.employeedashboard;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+@SpringBootApplication(/*exclude = { SecurityAutoConfiguration.class, ManagementWebSecurityAutoConfiguration.class}*/)
 public class EmployeeDashboardApplication{
-
-
 
     public static void main(String[] args) {
         SpringApplication.run(EmployeeDashboardApplication.class, args);
