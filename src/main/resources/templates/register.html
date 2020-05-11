@@ -25,36 +25,61 @@
                                 <div class="text-center">
                                     <h1 class="h4 text-gray-900 mb-4">Register Employee</h1>
                                 </div>
-                                <form class="user">
-                                    <div class="form-group row">
+                                <form action="#" class="user" th:action="@{/dashboard/register}" method="POST" th:object="${userdto}">                                    <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input class="form-control form-control-user" id="firstname" placeholder="First Name"
-                                                   type="text">
+                                            <input class="form-control form-control-user"
+                                                   id="firstname"
+                                                   placeholder="First Name"
+                                                   type="text"
+                                                   th:field="*{firstName}"
+                                            >
                                         </div>
                                         <div class="col-sm-6">
-                                            <input class="form-control form-control-user" id="lastname" placeholder="Last Name"
-                                                   type="text">
+                                            <input class="form-control form-control-user"
+                                                   id="lastname"
+                                                   placeholder="Last Name"
+                                                   type="text"
+                                                   th:field="*{lastName}"
+                                            >
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <input aria-describedby="emailHelp" class="form-control form-control-user" id="username"
-                                               placeholder="Username" required type="text">
+                                        <input aria-describedby="emailHelp"
+                                               class="form-control form-control-user"
+                                               id="username"
+                                               placeholder="Username"
+                                               required type="text"
+                                               th:field="*{username}"
+                                        >
                                     </div>
                                     <div class="form-group">
-                                        <input aria-describedby="emailHelp" class="form-control form-control-user" id="email"
-                                               placeholder="Email" required type="email">
+                                        <input aria-describedby="emailHelp"
+                                               class="form-control form-control-user"
+                                               id="email"
+                                               placeholder="Email"
+                                               required type="email"
+                                               th:field="*{email}"
+                                        >
                                     </div>
                                     <div class="form-group">
-                                        <input class="form-control form-control-user" id="password" placeholder="Password"
-                                               required type="password">
+                                        <input class="form-control form-control-user"
+                                               id="password"
+                                               placeholder="Password"
+                                               required type="password"
+                                               th:field="*{password1}"
+                                        >
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input class="form-control form-control-user" id="salary" placeholder="Salary"
-                                                   required type="number">
+                                            <input class="form-control form-control-user"
+                                                   id="salary"
+                                                   placeholder="Salary"
+                                                   required type="number"
+                                                   th:field="*{salary}"
+                                            >
                                         </div>
                                         <div class="col-sm-6">
-                                            <select class="form-control" id="position">
+                                            <select class="form-control" id="position" th:field="*{position}">
                                                 <option value="dev">Developer</option>
                                                 <option value="manager">Manager</option>
                                                 <option value="hr">HR</option>
@@ -81,15 +106,7 @@
 </div>
 
 
-<!-- Bootstrap core JavaScript-->
-<script th:src="@{../static/dashboard/vendor/jquery/jquery.min.js}"></script>
-<script th:src="@{../static/dashboard/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
-
-<!-- Core plugin JavaScript-->
-<script th:src="@{../static/dashboard/vendor/jquery-easing/jquery.easing.min.js}"></script>
-
-<!-- Custom scripts for all pages-->
-<script th:src="@{../static/dashboard/dist/js/sb-admin-2.min.js}"></script>
+<th:block th:include="fragments/scripts :: scripts"></th:block>
 
 </body>
 

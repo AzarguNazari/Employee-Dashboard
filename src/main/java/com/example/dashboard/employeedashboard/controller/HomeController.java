@@ -33,7 +33,7 @@ public class HomeController {
         return "login";
     }
 
-    @PostMapping(value = "/dashboard/login")
+    @PostMapping("/dashboard/login")
     public String login(@ModelAttribute LoginUserDto loginUserDto, Model model) {
         System.out.println(loginUserDto.getUsername() + " " + loginUserDto.getPassword() + " is received");
 //        message = this.messageRepository.save(message);
@@ -51,7 +51,7 @@ public class HomeController {
     @PostMapping("/dashboard/register")
     public String register(@ModelAttribute UserDto userDto, Model model) {
 
-        System.out.println(userDto.getUsername() + " " + userDto.getPassword1() + " is received");
+        System.err.println(userDto.getEmail() + " " + userDto.getPassword1() + " " + userDto.getFirstName() + " " + userDto.getLastName() + "  " + userDto.getSalary() + "  " + userDto.getPosition());
 //        message = this.messageRepository.save(message);
         return "redirect:/dashboard/index";
     }
