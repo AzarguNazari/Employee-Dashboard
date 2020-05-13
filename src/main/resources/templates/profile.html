@@ -1,15 +1,11 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
-
     <title>Profile</title>
     <th:block th:include="fragments/head :: head"></th:block>
-
 </head>
 
 <body id="page-top">
-
 <!-- Page Wrapper -->
 <div id="wrapper">
 
@@ -17,13 +13,10 @@
     <th:block th:replace="fragments/sideBarMenu :: sidemenu"></th:block>
     <!-- End of Sidebar -->
 
-    <!-- Content Wrapper -->
     <div class="d-flex flex-column" id="content-wrapper">
 
-        <!-- Main Content -->
         <div id="content">
 
-            <!-- Topbar -->
             <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
                 <!-- Sidebar Toggle (Topbar) -->
@@ -31,13 +24,9 @@
                     <i class="fa fa-bars"></i>
                 </button>
 
-                <th:block th:replace="fragments/topBar :: topBarSearch"></th:block>
-
 
                 <!-- Topbar Navbar -->
                 <ul class="navbar-nav ml-auto">
-
-                    <li th:replace="fragments/topBar :: navXS"></li>
 
                     <!-- Nav Item - Alerts -->
                     <li class="nav-item dropdown no-arrow mx-1">
@@ -72,7 +61,9 @@
 
                     <!-- Nav Item - Messages -->
                     <li class="nav-item dropdown no-arrow mx-1">
-                        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                        <a aria-expanded="false"
+                           aria-haspopup="true"
+                           class="nav-link dropdown-toggle"
                            data-toggle="dropdown"
                            href="#"
                            id="messagesDropdown" role="button">
@@ -113,103 +104,109 @@
             </nav>
             <!-- End of Topbar -->
 
-            <th:block th:replace="fragments/profile :: profileBox"></th:block>
 
+            <!-- Profile -->
+            <div class="row justify-content-center" th:fragment="profileBox">
+                <div class="col-xl-8 col-lg-12 col-md-9">
+                    <div class="card o-hidden border-0 shadow-lg my-5">
+                        <div class="card-body p-0">
+                            <div class="row" th:if="${message != null}">
+                                <div class="col-lg-12" th:if="${message == 'success'}">
+                                    <div class="card bg-gradient-success">
+                                        <div class="text-center text-white">
+                                            <p>Successfully updated</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12" th:if="${message == 'danger'}">
+                                    <div class="card bg-gradient-warning">
+                                        <div class="text-center text-white">
+                                            <p>Sorry couldn't update</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Nested Row within Card Body -->
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="p-5">
+                                        <div class="text-center">
+                                            <h1 class="h4 text-gray-900 mb-4">Profile</h1>
+                                        </div>
+                                        <form class="user" action="#" th:action="@{/dashboard/profile}" method="post" th:object="${userdto}">
+                                            <div class="form-group row">
+                                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                                    <input class="form-control form-control-user"
+                                                           id="firstname"
+                                                           type="text"
+                                                           th:field="*{firstName}"
+                                                    >
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <input class="form-control form-control-user"
+                                                           id="lastname"
+                                                           type="text"
+                                                           th:field="*{lastName}"
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <input aria-describedby="emailHelp"
+                                                       class="form-control form-control-user"
+                                                       id="username"
+                                                       type="text"
+                                                       th:field="*{username}"
+                                                >
+                                            </div>
+                                            <div class="form-group">
+                                                <input aria-describedby="emailHelp"
+                                                       class="form-control form-control-user"
+                                                       id="email"
+                                                       type="email"
+                                                       th:field="*{email}"
+                                                >
+                                            </div>
+                                            <div class="form-group">
+                                                <input class="form-control form-control-user"
+                                                       id="password"
+                                                       type="password"
+                                                       th:field="*{password1}"
+                                                >
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                                    <input class="form-control form-control-user"
+                                                           id="salary"
+                                                           type="text"
+                                                           th:field="*{salary}"
+                                                    >
+                                                </div>
+                                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                                    <input class="form-control form-control-user"
+                                                           id="position"
+                                                           th:field="*{position}"
+                                                           type="text">
+                                                </div>
+                                            </div>
+                                            <input class="btn btn-outline-success btn-user btn-block" type="submit" value="Edit">
 
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- End of Main Content -->
 
         <th:block th:include="fragments/footer :: footer"></th:block>
-
-
     </div>
-    <!-- End of Content Wrapper -->
-
 </div>
-<!-- End of Page Wrapper -->
 
-<!-- Scroll to Top Button-->
 <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
 </a>
-
-<!-- Create New Task Modal-->
-<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="taskUpdate" role="dialog"
-     tabindex="-1">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-center">Update Task</h5>
-                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <textarea class="form-control">Task description</textarea>
-                    <hr>
-                    <label>Progress Percentage</label>
-                    <input class="form-control" id="progressPercentage" type="number">
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-success" type="button">Update Task</button>
-                <button class="btn btn-danger" data-dismiss="modal" type="button">Cancel</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Create New Task Modal-->
-<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="taskModel" role="dialog"
-     tabindex="-1">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-center">Create New Task</h5>
-                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <textarea class="form-control">Task description</textarea>
-                    <hr>
-                    <input class="form-control" id="deadline" required type="date"/>
-                    <hr>
-                    <label>Assign To</label>
-                    <select class="form-control" id="assignee">
-                        <option value="ahmad">Ahmad</option>
-                    </select>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-success" type="button">Add Task</button>
-                <button class="btn btn-danger" data-dismiss="modal" type="button">Cancel</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Logout Modal-->
-<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="logoutModal" role="dialog"
-     tabindex="-1">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" data-dismiss="modal" type="button">Cancel</button>
-                <a class="btn btn-primary" href="login.html">Logout</a>
-            </div>
-        </div>
-    </div>
-</div>
 
 <th:block th:include="fragments/scripts :: scripts"></th:block>
 

@@ -83,6 +83,16 @@ public class HomeController {
 
     @GetMapping("/dashboard/profile")
     public String profile(Model model){
+        model.addAttribute("userdto", new UserDto());
+//        model.addAttribute("message", "danger");
+        return "profile";
+    }
+
+    @PostMapping("/dashboard/profile")
+    public String profile(@ModelAttribute UserDto userDto, Model model){
+        if(!userDto.getFirstName().trim().equals("")){
+            model.addAttribute("message", "success");
+        }
         return "profile";
     }
 
