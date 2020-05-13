@@ -1,8 +1,17 @@
 package com.example.dashboard.employeedashboard.controller;
 
+import com.example.dashboard.employeedashboard.model.Task;
 import com.example.dashboard.employeedashboard.model.dto.LoginUserDto;
 import com.example.dashboard.employeedashboard.model.dto.UserDto;
+import com.example.dashboard.employeedashboard.service.TaskService;
 import lombok.extern.log4j.Log4j2;
+import org.hibernate.criterion.Order;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +23,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping
 public class HomeController {
+
+    @Autowired
+    private TaskService taskService;
 
     @GetMapping
     public String defaultHome(Model model){
@@ -78,6 +90,9 @@ public class HomeController {
 
     @GetMapping("/dashboard/tasks")
     public String tasks(Model model){
+        Pageable pageable = PageRequest.of(0, 5, Sort.unsorted());
+        Page<Task> tasks = taskService.getAllTasks(pageable);
+        model.addAttribute("tasks", tasks);
         return "tasks";
     }
 

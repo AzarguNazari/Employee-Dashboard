@@ -17,14 +17,14 @@ WHERE NOT EXISTS (SELECT * from EMPLOYEE where id = 3);
 
 
 /*----------------------- TASKS INSERT ---------------------------*/
-INSERT INTO TASK(id, taskname, description, priority)
-SELECT 1, 'Finish Project of Web Design', 'This project is an important port', 'HIGH'
+INSERT INTO TASK(id, taskname, description, priority, percentage)
+SELECT 1, 'Finish Project of Web Design', 'This project is an important port', 'HIGH', 20
 WHERE NOT EXISTS (SELECT * from TASK where id = 1);
 
-INSERT INTO TASK(id, taskname, description, priority)
-SELECT 2, 'Shipment task', 'The shipment process should be finished', 'NORMAL'
+INSERT INTO TASK(id, taskname, description, priority, percentage)
+SELECT 2, 'Shipment task', 'The shipment process should be finished', 'NORMAL', 30
 WHERE NOT EXISTS (SELECT * from TASK where id = 2);
 
-INSERT INTO TASK(id, taskname, description, priority)
-SELECT 3, 'New Development Phase', 'Creating new develpoment phase is important', 'LOW'
+INSERT INTO TASK(id, taskname, description, priority, percentage)
+SELECT 3, 'New Development Phase', 'Creating new develpoment phase is important', 'LOW', 90
 WHERE NOT EXISTS (SELECT * from TASK where id = 3);

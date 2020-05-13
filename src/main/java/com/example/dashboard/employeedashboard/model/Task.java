@@ -27,6 +27,9 @@ public class Task{
     @Column @NonNull @Enumerated(EnumType.STRING)
     private Priority priority;
 
+    @Column
+    private int percentage;
+
     @ManyToMany(mappedBy = "tasks")
     private Set<Employee> assignedTo;
 }
