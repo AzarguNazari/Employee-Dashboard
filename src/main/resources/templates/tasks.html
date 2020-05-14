@@ -138,7 +138,7 @@
                 <div class="row">
 
                     <!-- Task -->
-                    <div class="col-xl-4 col-lg-5" data-th-each="task: ${tasks}">
+                    <div class="col-xl-4 col-lg-5 taskCard" data-th-each="task: ${tasks}">
                         <div class="card shadow mb-4">
                             <!-- Card Header - Dropdown -->
                             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -160,26 +160,26 @@
                                 </div>
                                 <hr>
                                 <div class="row">
-                                    <div th:attr="data-task-id=${task.getId()}">
-                                        <button class="btn btn-danger btn-icon-split btn-sm removeTask">
-                                            <span class="icon text-white-50">
-                                              <i class="fas fa-trash"></i>
-                                            </span>
-                                            <span class="text">Remove</span>
-                                        </button>
-                                        <button class="btn btn-success btn-icon-split btn-sm doneTask">
-                                            <span class="icon text-white-50">
-                                              <i class="fas fa-trash"></i>
-                                            </span>
-                                            <span class="text">Done</span>
-                                        </button>
-                                        <button class="btn btn-secondary btn-icon-split btn-sm updateTask" data-target="#taskUpdate" data-toggle="modal">
-                                            <span class="icon text-white-50">
-                                              <i class="fas fa-trash"></i>
-                                            </span>
-                                            <span class="text">Update</span>
-                                        </button>
-                                    </div>
+                                        <div th:attr="data-task-id=${task.getId()}">
+                                            <button class="btn btn-danger btn-icon-split btn-sm removeTask">
+                                                <span class="icon text-white-50">
+                                                  <i class="fas fa-trash"></i>
+                                                </span>
+                                                <span class="text">Remove</span>
+                                            </button>
+                                            <button class="btn btn-success btn-icon-split btn-sm doneTask">
+                                                <span class="icon text-white-50">
+                                                  <i class="fas fa-trash"></i>
+                                                </span>
+                                                <span class="text">Done</span>
+                                            </button>
+                                            <button class="btn btn-secondary btn-icon-split btn-sm updateTask" data-target="#taskUpdate" data-toggle="modal">
+                                                <span class="icon text-white-50">
+                                                  <i class="fas fa-trash"></i>
+                                                </span>
+                                                <span class="text">Update</span>
+                                            </button>
+                                        </div>
                                 </div>
                             </div>
                         </div>
@@ -286,6 +286,24 @@
 </div>
 
 <th:block th:include="fragments/scripts :: scripts"></th:block>
+
+<script>
+    $(document).ready(function(){
+
+
+
+        $(".removeTask").click(function(){
+            var $this = $(this).parentsUntil(".taskCard").slideUp(500);
+            $.ajax({
+                type : "DELETE",
+                contentType : "application/json",
+                url : "/tasks/" + + $(this).parent("div").data("task-id"),
+                dataType : 'json'
+            });
+        })
+
+    });
+</script>
 
 </body>
 
