@@ -31,8 +31,17 @@
                     <i class="fa fa-bars"></i>
                 </button>
 
+                <!-- Topbar Search -->
+                <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" action="#" th:action="@{/tasks/create}" th:object="${task}" method="post">
+                    <button class="btn btn-success btn-sm" type="button" data-target="#newTask" data-toggle="modal" >
+                        Create New Task <i class="fas fa-plus fa-sm"></i>
+                    </button>
+                </form>
+
                 <!-- Topbar Navbar -->
                 <ul class="navbar-nav ml-auto">
+
+                    <li th:replace="fragments/topBar :: navXS"></li>
 
                     <!-- Nav Item - Alerts -->
                     <li class="nav-item dropdown no-arrow mx-1">
@@ -235,7 +244,7 @@
 </div>
 
 <!-- Create New Task Modal-->
-<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="taskModel" role="dialog"
+<div aria-hidden="true" aria-labelledby="createNewTask" class="modal fade" id="newTask" role="dialog"
      tabindex="-1">
     <div class="modal-dialog" role="document">
         <div class="modal-content">

@@ -28,6 +28,13 @@
                     <i class="fa fa-bars"></i>
                 </button>
 
+                <!-- Topbar Search -->
+                <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" action="#" th:action="@{/tasks/create}" th:object="${task}" method="post">
+                    <button class="btn btn-success btn-sm" type="button" data-target="#newAnnouncement" data-toggle="modal" >
+                        Post New Announce <i class="fas fa-plus fa-sm"></i>
+                    </button>
+                </form>
+
                 <!-- Topbar Navbar -->
                 <ul class="navbar-nav ml-auto">
 
@@ -161,6 +168,33 @@
 <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
 </a>
+
+<!-- Create New Task Modal-->
+<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="newAnnouncement" role="dialog"
+     tabindex="-1">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-center">Update Task</h5>
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <textarea class="form-control">Task description</textarea>
+                    <hr>
+                    <label>Progress Percentage</label>
+                    <input class="form-control" id="progressPercentage" type="number">
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" type="button">Update Task</button>
+                <button class="btn btn-danger" data-dismiss="modal" type="button">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Logout Modal-->
 <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="logoutModal" role="dialog"

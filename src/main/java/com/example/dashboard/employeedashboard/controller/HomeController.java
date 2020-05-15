@@ -120,4 +120,12 @@ public class HomeController {
     public String activities(Model model){
         return "activities";
     }
+
+    @PostMapping("/tasks/create")
+    public String createTask(@ModelAttribute UserDto userDto, Model model){
+        if(!userDto.getFirstName().trim().equals("")){
+            model.addAttribute("message", "success");
+        }
+        return "profile";
+    }
 }
