@@ -15,6 +15,10 @@ public class EmployeeService {
     @Autowired
     private EmployeeRepository employeeRepository;
 
+    public void deleteAllEmployees(){
+        employeeRepository.deleteAll();
+    }
+
     public void addAllEmployees(List<Employee> users){
         employeeRepository.saveAll(users);
     }
