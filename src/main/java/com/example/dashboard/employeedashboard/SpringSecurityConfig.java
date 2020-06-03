@@ -25,15 +25,15 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private AuthenticationSuccessorHandlerImpl successHandler;
 
-    @Override
-    protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication()
-                .withUser("user1").password(encoder().encode("user1Pass")).roles("USER")
-                .and()
-                .withUser("user2").password(encoder().encode("user2Pass")).roles("USER")
-                .and()
-                .withUser("admin").password(encoder().encode("adminPass")).roles("ADMIN");
-    }
+//    @Override
+//    protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
+//        auth.inMemoryAuthentication()
+//                .withUser("user1").password(encoder().encode("pass1")).roles("USER")
+//                .and()
+//                .withUser("user2").password(encoder().encode("pass1")).roles("USER")
+//                .and()
+//                .withUser("admin").password(encoder().encode("admin")).roles("ADMIN");
+//    }
 
     @Override
     public void configure(WebSecurity web) throws Exception {
@@ -42,12 +42,13 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(final HttpSecurity http) throws Exception {
-        http.headers().frameOptions().disable();
+        http.csrf().disable();
+        http.headers().frameOptions().disable(); // for h2-console frame
         http.authorizeRequests()
-            .antMatchers("/", "/dashboard/login", "/h2-console/**", "/dashboard/dist/**", "/dashboard/vendor/**")
+            .antMatchers("/", "/h2-console/**", "/dashboard/dist/**", "/dashboard/vendor/**")
             .permitAll()
-            .anyRequest()
-            .authenticated()
+            .anyRequest().authenticated()
+//            .hasAnyRole("ADMIN", "USER")
             .and()
             .formLogin()
             .loginPage("/dashboard/login")
@@ -55,21 +56,18 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
             .successHandler(successHandler)
             .and()
             .logout()
-            .permitAll()
-            .and()
-            .csrf()
-            .disable();
+            .permitAll();
     }
 
-    @Bean
-    @Override
-    public UserDetailsService userDetailsService(){
-        UserDetails user = User.withDefaultPasswordEncoder()
-                                .username("user")
-                                .password("password")
-                                .roles("USER").build();
-        return new InMemoryUserDetailsManager(user);
-    }
+//    @Bean
+//    @Override
+//    public UserDetailsService userDetailsService(){
+//        UserDetails user = User.withDefaultPasswordEncoder()
+//                                .username("user")
+//                                .password("password")
+//                                .roles("USER").build();
+//        return new InMemoryUserDetailsManager(user);
+//    }
 
     @Bean
     public PasswordEncoder encoder() {
