@@ -10,7 +10,7 @@ This application has both UI and RestAPI interaction.
 
 ## Commands
 To run the application by maven:
-```mvn spring-boot:run```
+```mvn spring-boot:run``` <br>
 To build docker image use the below command: 
 ```mvn spring-boot:build-image```
 
