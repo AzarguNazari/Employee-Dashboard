@@ -20,25 +20,24 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 @RequestMapping("/api/v1/employees")
 @RestController
-public class EmployeeController{
+public class EmployeeController implements EmployeeControllerInterface {
 
     @Autowired
     private EmployeeService employeeService;
 
-    @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
-    public void createEmployee(@RequestBody Employee employee){
+    @Override
+    public void createEmployee(Employee employee) {
         employeeService.addNewEmployee(employee);
     }
 
-    @GetMapping
+    @Override
     public List<EntityModel<Employee>> getAllEmployees(Pageable pageable) {
         return employeeService.getAllEmployees(pageable).stream().map(employee -> getEmployeeById(employee.getId())).collect(Collectors.toList());
     }
 
 
-    @GetMapping("/{id}")
-    public EntityModel<Employee> getEmployeeById(@PathVariable Integer id) {
+    @Override
+    public EntityModel<Employee> getEmployeeById(Integer id) {
         Optional<Employee> employee = employeeService.getEmployeeById(id);
 
         if (!employee.isPresent())
@@ -53,18 +52,17 @@ public class EmployeeController{
         return entityModel;
     }
 
-    @DeleteMapping("/{id}")
-    public void deleteEmployeeById(@PathVariable Integer id) {
+    @Override
+    public void deleteEmployeeById(Integer id) {
         employeeService.deleteEmployeeById(id);
     }
 
-    @PutMapping("/{id}")
-    public void updateEmployee(@PathVariable Integer employeeId, @RequestBody Employee employee) {
+    @Override
+    public void updateEmployee(Integer employeeId, Employee employee) {
         Optional<Employee> foundEmployee = employeeService.getEmployeeById(employeeId);
-        if(foundEmployee.isPresent()){
+        if (foundEmployee.isPresent()) {
             employeeService.updateEmployee(employeeId, employee);
-        }
-        else{
+        } else {
             throw new EmployeeNotFound(employeeId);
         }
     }

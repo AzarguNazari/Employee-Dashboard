@@ -2,10 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce1a758f-3128-4ac3-8ec5-458509502ce3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/dashboard/employeedashboard/EmployeeProfileTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hateoas/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hateoas/src/main/java/com/jl/crm/web/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hateoas/src/main/java/com/jl/crm/web/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hateoas/src/main/java/com/jl/crm/web/UserControllerAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hateoas/src/main/java/com/jl/crm/web/UserProfilePhotoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hateoas/src/test/java/web/UserControllerTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hateoas/src/test/java/web/UserProfilePhotoControllerTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hateoas/src/test/resources/spring-dog-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hateoas/todo.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oauth/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oauth/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oauth/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oauth/src/main/java/com/jl/crm/web/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oauth/src/main/java/com/jl/crm/web/CurrentUserSessionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oauth/src/main/java/com/jl/crm/web/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oauth/src/main/java/com/jl/crm/web/UserControllerAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oauth/src/main/java/com/jl/crm/web/UserProfilePhotoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oauth/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oauth/src/main/resources/keystore.p12" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oauth/src/test/java/com/jl/crm/web/OAuthSecuredUserControllerTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oauth/src/test/java/com/jl/crm/web/SecurityRequestPostProcessors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oauth/todo.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/advice/EmployeeControllerAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service/exceptions/EmployeeNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/responses/user-controller-add-customer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/spring-dog-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/restAPI/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/restAPI/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/restAPI/controller/EmployeeControllerInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/restAPI/controller/EmployeeControllerInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/dashboard/employeedashboard/service/UserServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/dashboard/employeedashboard/service/EmployeeControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,9 +59,17 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/test" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Application" type="Application" factoryName="Application">
@@ -56,7 +91,43 @@
       <option name="presentableId" value="Default" />
       <updated>1594059345362</updated>
     </task>
+    <task id="LOCAL-00001" summary="made the application on launcher">
+      <created>1594060485284</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1594060485284</updated>
+    </task>
+    <task id="LOCAL-00002" summary="tried to add testing for rest endponits">
+      <created>1594060495570</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1594060495570</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add mongo on docker-compose">
+      <created>1594060506374</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1594060506374</updated>
+    </task>
+    <task id="LOCAL-00004" summary="remove idea launcher from gitignore">
+      <created>1594060523719</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1594060523719</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="made the application on launcher" />
+    <MESSAGE value="tried to add testing for rest endponits" />
+    <MESSAGE value="add mongo on docker-compose" />
+    <MESSAGE value="remove idea launcher from gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove idea launcher from gitignore" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2362" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594060079320">
@@ -67,13 +138,29 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2635" y="314" key="#com.intellij.ide.util.TreeClassChooserDialog/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594060076379" />
-    <state x="2436" y="180" key="Maven.ArtifactSearchDialog" timestamp="1594060460330">
+    <state x="2510" y="71" key="CommitChangelistDialog2" timestamp="1594060523631">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2436" y="180" key="Maven.ArtifactSearchDialog/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594060460330" />
-    <state x="2386" y="100" key="SettingsEditor" timestamp="1594060065620">
+    <state x="2510" y="71" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594060523631" />
+    <state x="2681" y="280" width="424" height="483" key="FileChooserDialogImpl" timestamp="1594067757144">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2386" y="100" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594060065620" />
+    <state x="2681" y="280" width="424" height="483" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594067757144" />
+    <state x="2436" y="180" width="924" height="683" key="Maven.ArtifactSearchDialog" timestamp="1594068760976">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2436" y="180" width="924" height="683" key="Maven.ArtifactSearchDialog/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594068760976" />
+    <state x="2386" y="100" key="SettingsEditor" timestamp="1594068554289">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2386" y="100" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594068554289" />
+    <state x="2498" y="258" key="Vcs.Push.Dialog.v2" timestamp="1594060765621">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2498" y="258" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594060765621" />
+    <state x="2562" y="238" key="run.anything.popup" timestamp="1594068072506">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2562" y="238" key="run.anything.popup/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594068072506" />
   </component>
 </project>
