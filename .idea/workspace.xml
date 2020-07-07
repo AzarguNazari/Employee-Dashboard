@@ -2,37 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce1a758f-3128-4ac3-8ec5-458509502ce3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/hateoas/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hateoas/src/main/java/com/jl/crm/web/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hateoas/src/main/java/com/jl/crm/web/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hateoas/src/main/java/com/jl/crm/web/UserControllerAdvice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hateoas/src/main/java/com/jl/crm/web/UserProfilePhotoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hateoas/src/test/java/web/UserControllerTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hateoas/src/test/java/web/UserProfilePhotoControllerTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hateoas/src/test/resources/spring-dog-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hateoas/todo.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oauth/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oauth/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oauth/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oauth/src/main/java/com/jl/crm/web/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oauth/src/main/java/com/jl/crm/web/CurrentUserSessionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oauth/src/main/java/com/jl/crm/web/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oauth/src/main/java/com/jl/crm/web/UserControllerAdvice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oauth/src/main/java/com/jl/crm/web/UserProfilePhotoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oauth/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oauth/src/main/resources/keystore.p12" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oauth/src/test/java/com/jl/crm/web/OAuthSecuredUserControllerTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oauth/src/test/java/com/jl/crm/web/SecurityRequestPostProcessors.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oauth/todo.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/advice/EmployeeControllerAdvice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service/exceptions/EmployeeNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/responses/user-controller-add-customer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/spring-dog-3.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/restAPI/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/restAPI/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/restAPI/controller/EmployeeControllerInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/restAPI/controller/EmployeeControllerInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/dashboard/employeedashboard/service/UserServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/dashboard/employeedashboard/service/EmployeeControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +18,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1eK9JUOebeiUt51eVfigEopP4zK" />
@@ -66,6 +42,12 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java/com/example/dashboard/employeedashboard/authSecurityTest" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller" />
+      <recent name="$PROJECT_DIR$/src/test/java/com/example/dashboard/employeedashboard/hateousTest" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/test" />
@@ -119,7 +101,21 @@
       <option name="project" value="LOCAL" />
       <updated>1594060523719</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add auth and hatoes">
+      <created>1594069609218</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1594069609218</updated>
+    </task>
+    <task id="LOCAL-00006" summary="_clean up the project structure">
+      <created>1594160141492</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1594160141492</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -127,7 +123,9 @@
     <MESSAGE value="tried to add testing for rest endponits" />
     <MESSAGE value="add mongo on docker-compose" />
     <MESSAGE value="remove idea launcher from gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove idea launcher from gitignore" />
+    <MESSAGE value="add auth and hatoes" />
+    <MESSAGE value="_clean up the project structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="_clean up the project structure" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2362" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594060079320">
@@ -138,26 +136,68 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2635" y="314" key="#com.intellij.ide.util.TreeClassChooserDialog/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594060076379" />
-    <state x="2510" y="71" key="CommitChangelistDialog2" timestamp="1594060523631">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="615" y="69" key="CommitChangelistDialog2" timestamp="1594160141292">
+      <screen x="36" y="0" width="1884" height="1044" />
     </state>
-    <state x="2510" y="71" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594060523631" />
+    <state x="2510" y="71" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594069609004" />
+    <state x="615" y="69" key="CommitChangelistDialog2/36.0.1884.1044@36.0.1884.1044" timestamp="1594160141292" />
     <state x="2681" y="280" width="424" height="483" key="FileChooserDialogImpl" timestamp="1594067757144">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2681" y="280" width="424" height="483" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594067757144" />
-    <state x="2436" y="180" width="924" height="683" key="Maven.ArtifactSearchDialog" timestamp="1594068760976">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1838" height="61" key="GridCell.Tab.0.bottom" timestamp="1594160345110">
+      <screen x="36" y="0" width="1884" height="1044" />
+    </state>
+    <state width="1838" height="61" key="GridCell.Tab.0.bottom/36.0.1884.1044@36.0.1884.1044" timestamp="1594160345110" />
+    <state width="1838" height="61" key="GridCell.Tab.0.center" timestamp="1594160345110">
+      <screen x="36" y="0" width="1884" height="1044" />
+    </state>
+    <state width="1838" height="61" key="GridCell.Tab.0.center/36.0.1884.1044@36.0.1884.1044" timestamp="1594160345110" />
+    <state width="1838" height="61" key="GridCell.Tab.0.left" timestamp="1594160345109">
+      <screen x="36" y="0" width="1884" height="1044" />
+    </state>
+    <state width="1838" height="61" key="GridCell.Tab.0.left/36.0.1884.1044@36.0.1884.1044" timestamp="1594160345109" />
+    <state width="1838" height="61" key="GridCell.Tab.0.right" timestamp="1594160345110">
+      <screen x="36" y="0" width="1884" height="1044" />
+    </state>
+    <state width="1838" height="61" key="GridCell.Tab.0.right/36.0.1884.1044@36.0.1884.1044" timestamp="1594160345110" />
+    <state width="1838" height="61" key="GridCell.Tab.1.bottom" timestamp="1594160345111">
+      <screen x="36" y="0" width="1884" height="1044" />
+    </state>
+    <state width="1838" height="61" key="GridCell.Tab.1.bottom/36.0.1884.1044@36.0.1884.1044" timestamp="1594160345111" />
+    <state width="1838" height="61" key="GridCell.Tab.1.center" timestamp="1594160345111">
+      <screen x="36" y="0" width="1884" height="1044" />
+    </state>
+    <state width="1838" height="61" key="GridCell.Tab.1.center/36.0.1884.1044@36.0.1884.1044" timestamp="1594160345111" />
+    <state width="1838" height="61" key="GridCell.Tab.1.left" timestamp="1594160345111">
+      <screen x="36" y="0" width="1884" height="1044" />
+    </state>
+    <state width="1838" height="61" key="GridCell.Tab.1.left/36.0.1884.1044@36.0.1884.1044" timestamp="1594160345111" />
+    <state width="1838" height="61" key="GridCell.Tab.1.right" timestamp="1594160345111">
+      <screen x="36" y="0" width="1884" height="1044" />
+    </state>
+    <state width="1838" height="61" key="GridCell.Tab.1.right/36.0.1884.1044@36.0.1884.1044" timestamp="1594160345111" />
+    <state x="542" y="174" width="924" height="683" key="Maven.ArtifactSearchDialog" timestamp="1594160163217">
+      <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state x="2436" y="180" width="924" height="683" key="Maven.ArtifactSearchDialog/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594068760976" />
+    <state x="542" y="174" key="Maven.ArtifactSearchDialog/36.0.1884.1044@36.0.1884.1044" timestamp="1594160163217" />
     <state x="2386" y="100" key="SettingsEditor" timestamp="1594068554289">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2386" y="100" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594068554289" />
-    <state x="2498" y="258" key="Vcs.Push.Dialog.v2" timestamp="1594060765621">
+    <state x="2498" y="258" key="Vcs.Push.Dialog.v2" timestamp="1594069612772">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2498" y="258" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594060765621" />
+    <state x="2498" y="258" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594069612772" />
+    <state x="780" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594159405489">
+      <screen x="36" y="0" width="1884" height="1044" />
+    </state>
+    <state x="780" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/36.0.1884.1044@36.0.1884.1044" timestamp="1594159405489" />
+    <state x="695" y="261" width="711" height="522" key="find.popup" timestamp="1594160070538">
+      <screen x="36" y="0" width="1884" height="1044" />
+    </state>
+    <state x="695" y="261" width="711" height="522" key="find.popup/36.0.1884.1044@36.0.1884.1044" timestamp="1594160070538" />
     <state x="2562" y="238" key="run.anything.popup" timestamp="1594068072506">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
