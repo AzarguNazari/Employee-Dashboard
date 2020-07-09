@@ -297,17 +297,21 @@
 <th:block th:include="fragments/scripts :: scripts"></th:block>
 
 <script>
+
     $(document).ready(function(){
 
-
-
         $(".removeTask").click(function(){
-            var $this = $(this).parentsUntil(".taskCard").slideUp(500);
+            var $this = $(this);
             $.ajax({
                 type : "DELETE",
                 contentType : "application/json",
                 url : "/tasks/" + + $(this).parent("div").data("task-id"),
-                dataType : 'json'
+                dataType : 'json',
+                statusCode: {
+                    200: function() {
+                       $this.parents(".taskCard").hide(500);
+                    }
+                }
             });
         })
 
