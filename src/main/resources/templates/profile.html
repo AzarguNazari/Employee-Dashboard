@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/header :: header(title='Profile')"></head>
+
+<body id="page-top">
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <th:block th:replace="fragments/sideBarMenu :: sidemenu"></th:block>
+    <!-- End of Sidebar -->
+
+    <div class="d-flex flex-column" id="content-wrapper">
+
+        <div id="content">
+
+            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                <!-- Sidebar Toggle (Topbar) -->
+                <button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop">
+                    <i class="fa fa-bars"></i>
+                </button>
+
+
+                <!-- Topbar Navbar -->
+                <ul class="navbar-nav ml-auto">
+
+                    <!-- Nav Item - Alerts -->
+                    <li class="nav-item dropdown no-arrow mx-1">
+                        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                           data-toggle="dropdown"
+                           href="#"
+                           id="alertsDropdown" role="button">
+                            <i class="fas fa-bell fa-fw"></i>
+                            <!-- Counter - Alerts -->
+                            <span class="badge badge-danger badge-counter">3+</span>
+                        </a>
+                        <!-- Dropdown - Alerts -->
+                        <div aria-labelledby="alertsDropdown"
+                             class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in">
+                            <h6 class="dropdown-header">
+                                Alerts Center
+                            </h6>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="mr-3">
+                                    <div class="icon-circle bg-primary">
+                                        <i class="fas fa-file-alt text-white"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="small text-gray-500">December 12, 2019</div>
+                                    <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                </div>
+                            </a>
+                            <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                        </div>
+                    </li>
+
+                    <!-- Nav Item - Messages -->
+                    <li class="nav-item dropdown no-arrow mx-1">
+                        <a aria-expanded="false"
+                           aria-haspopup="true"
+                           class="nav-link dropdown-toggle"
+                           data-toggle="dropdown"
+                           href="#"
+                           id="messagesDropdown" role="button">
+                            <i class="fas fa-envelope fa-fw"></i>
+                            <!-- Counter - Messages -->
+                            <span class="badge badge-danger badge-counter">7</span>
+                        </a>
+                        <!-- Dropdown - Messages -->
+                        <div aria-labelledby="messagesDropdown"
+                             class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in">
+                            <h6 class="dropdown-header">
+                                Message Center
+                            </h6>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="dropdown-list-image mr-3">
+                                    <img alt="" class="rounded-circle"
+                                         src="https://source.unsplash.com/fn_BT9fwg_E/60x60">
+                                    <div class="status-indicator bg-success"></div>
+                                </div>
+                                <div class="font-weight-bold">
+                                    <div class="text-truncate">Hi there! I am wondering if you can help me with a
+                                        problem I've been
+                                        having.
+                                    </div>
+                                    <div class="small text-gray-500">Emily Fowler · 58m</div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+                        </div>
+                    </li>
+
+                    <div class="topbar-divider d-none d-sm-block"></div>
+
+                    <li th:replace="fragments/topBar :: userInfo"></li>
+
+                </ul>
+
+            </nav>
+            <!-- End of Topbar -->
+
+
+            <!-- Profile -->
+            <div class="row justify-content-center" th:fragment="profileBox">
+                <div class="col-xl-8 col-lg-12 col-md-9">
+                    <div class="card o-hidden border-0 shadow-lg my-5">
+                        <div class="card-body p-0">
+                            <div class="row" th:if="${message != null}">
+                                <div class="col-lg-12" th:if="${message == 'success'}">
+                                    <div class="card bg-gradient-success">
+                                        <div class="text-center text-white">
+                                            <p>Successfully updated</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12" th:if="${message == 'danger'}">
+                                    <div class="card bg-gradient-warning">
+                                        <div class="text-center text-white">
+                                            <p>Sorry couldn't update</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Nested Row within Card Body -->
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="p-5">
+                                        <div class="text-center">
+                                            <h1 class="h4 text-gray-900 mb-4">Profile</h1>
+                                        </div>
+                                        <form class="user" action="#" th:action="@{/dashboard/profile}" method="post" th:object="${userdto}">
+                                            <div class="form-group row">
+                                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                                    <input class="form-control form-control-user"
+                                                           id="firstname"
+                                                           type="text"
+                                                           th:field="*{firstName}"
+                                                    >
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <input class="form-control form-control-user"
+                                                           id="lastname"
+                                                           type="text"
+                                                           th:field="*{lastName}"
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <input aria-describedby="emailHelp"
+                                                       class="form-control form-control-user"
+                                                       id="username"
+                                                       type="text"
+                                                       th:field="*{username}"
+                                                >
+                                            </div>
+                                            <div class="form-group">
+                                                <input aria-describedby="emailHelp"
+                                                       class="form-control form-control-user"
+                                                       id="email"
+                                                       type="email"
+                                                       th:field="*{email}"
+                                                >
+                                            </div>
+                                            <div class="form-group">
+                                                <input class="form-control form-control-user"
+                                                       id="password"
+                                                       type="password"
+                                                       th:field="*{password1}"
+                                                >
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                                    <input class="form-control form-control-user"
+                                                           id="salary"
+                                                           type="text"
+                                                           th:field="*{salary}"
+                                                    >
+                                                </div>
+                                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                                    <input class="form-control form-control-user"
+                                                           id="position"
+                                                           th:field="*{position}"
+                                                           type="text">
+                                                </div>
+                                            </div>
+                                            <input class="btn btn-outline-success btn-user btn-block" type="submit" value="Edit">
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <th:block th:include="fragments/footer :: footer"></th:block>
+    </div>
+</div>
+
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
+
+<th:block th:include="fragments/scripts :: scripts"></th:block>
+
+</body>
+
+</html>
