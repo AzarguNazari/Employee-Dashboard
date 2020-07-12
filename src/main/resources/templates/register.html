@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
-<head>
-    <title>Register Page</title>
-    <th:block th:include="fragments/head :: head"></th:block>
-
-</head>
+<head th:replace="fragments/header :: header(title='Register')"></head>
 
 <body class="bg-gradient-primary">
 
@@ -25,24 +21,24 @@
                                 <div class="text-center">
                                     <h1 class="h4 text-gray-900 mb-4">Register Employee</h1>
                                 </div>
-                                <form action="#" class="user" th:action="@{/dashboard/register}" method="POST" th:object="${userdto}">                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input class="form-control form-control-user"
-                                                   id="firstname"
-                                                   placeholder="First Name"
-                                                   type="text"
-                                                   th:field="*{firstName}"
-                                            >
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <input class="form-control form-control-user"
-                                                   id="lastname"
-                                                   placeholder="Last Name"
-                                                   type="text"
-                                                   th:field="*{lastName}"
-                                            >
-                                        </div>
+                                <form action="#" class="user" th:action="@{/register}" method="POST" th:object="${userdto}">                                    <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input class="form-control form-control-user"
+                                               id="firstname"
+                                               placeholder="First Name"
+                                               type="text"
+                                               th:field="*{firstName}"
+                                        >
                                     </div>
+                                    <div class="col-sm-6">
+                                        <input class="form-control form-control-user"
+                                               id="lastname"
+                                               placeholder="Last Name"
+                                               type="text"
+                                               th:field="*{lastName}"
+                                        >
+                                    </div>
+                                </div>
                                     <div class="form-group">
                                         <input aria-describedby="emailHelp"
                                                class="form-control form-control-user"

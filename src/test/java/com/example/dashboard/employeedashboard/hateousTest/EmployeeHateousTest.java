@@ -1,4 +1,4 @@
-//package com.example.dashboard.employeedashboard.hateousTest;
+package com.example.dashboard.employeedashboard.hateousTest;//package com.example.dashboard.employeedashboard.hateousTest;
 //
 //@RunWith(SpringJUnit4ClassRunner.class)
 //@ContextConfiguration(classes = Application.class, loader = SpringApplicationContextLoader.class)

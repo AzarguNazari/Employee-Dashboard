@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
-<head>
-
-    <title>Tasks</title>
-    <th:block th:include="fragments/head :: head"></th:block>
-
-</head>
+<head th:replace="fragments/header :: header(title='Dashboard Task')"></head>
 
 <body id="page-top">
 
@@ -163,32 +158,32 @@
                                     <h4 class="small font-weight-bold">Progress<span class="float-right" data-th-text="${task.getPercentage()}">20%</span></h4>
                                     <div class="progress mb-4">
                                         <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20"
-                                              th:class="${task.getPercentage()}  >= 50 ? 'progress-bar bg-success' : 'progress-bar bg-warning'"
+                                             th:class="${task.getPercentage()}  >= 50 ? 'progress-bar bg-success' : 'progress-bar bg-warning'"
                                              role="progressbar" th:attrappend="style='width:' + ${task.getPercentage()} + '%'"></div>
                                     </div>
                                 </div>
                                 <hr>
                                 <div class="row">
-                                        <div th:attr="data-task-id=${task.getId()}">
-                                            <button class="btn btn-danger btn-icon-split btn-sm removeTask">
+                                    <div th:attr="data-task-id=${task.getId()}">
+                                        <button class="btn btn-danger btn-icon-split btn-sm removeTask">
                                                 <span class="icon text-white-50">
                                                   <i class="fas fa-trash"></i>
                                                 </span>
-                                                <span class="text">Remove</span>
-                                            </button>
-                                            <button class="btn btn-success btn-icon-split btn-sm doneTask">
+                                            <span class="text">Remove</span>
+                                        </button>
+                                        <button class="btn btn-success btn-icon-split btn-sm doneTask">
                                                 <span class="icon text-white-50">
                                                   <i class="fas fa-trash"></i>
                                                 </span>
-                                                <span class="text">Done</span>
-                                            </button>
-                                            <button class="btn btn-secondary btn-icon-split btn-sm updateTask" data-target="#taskUpdate" data-toggle="modal">
+                                            <span class="text">Done</span>
+                                        </button>
+                                        <button class="btn btn-secondary btn-icon-split btn-sm updateTask" data-target="#taskUpdate" data-toggle="modal">
                                                 <span class="icon text-white-50">
                                                   <i class="fas fa-trash"></i>
                                                 </span>
-                                                <span class="text">Update</span>
-                                            </button>
-                                        </div>
+                                            <span class="text">Update</span>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -1,11 +1,8 @@
 package com.example.dashboard.employeedashboard;
 
-import com.example.dashboard.employeedashboard.model.Employee;
-import com.example.dashboard.employeedashboard.model.Title;
+import com.example.dashboard.employeedashboard.model.employee.Employee;
+import com.example.dashboard.employeedashboard.model.employee.Title;
 
-import javax.persistence.Column;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import java.util.Arrays;
 import java.util.List;
 

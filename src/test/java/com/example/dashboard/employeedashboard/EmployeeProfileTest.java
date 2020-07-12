@@ -1,22 +1,25 @@
-//package com.example.dashboard.employeedashboard;
-//
-//
-//import org.junit.jupiter.api.Test;
-//
-//public class EmployeeProfileTest {
-//
-//    @Test
-//    public void givenUserDoesNotExists_whenUserInfoIsRetrieved_then404IsReceived() throws ClientProtocolException, IOException {
-//
-//        String jsonMimeType = "application/json";
-//        HttpUriRequest request = new HttpGet( "https://api.github.com/users/eugenp" );
-//
-//        // When
-//        HttpResponse response = HttpClientBuilder.create().build().execute( request );
-//
-//        // Then
-//        String mimeType = ContentType.getOrDefault(response.getEntity()).getMimeType();
-//        assertEquals( jsonMimeType, mimeType );
-//    }
-//
-//}
+package com.example.dashboard.employeedashboard;
+
+import com.example.dashboard.employeedashboard.model.employee.Employee;
+import com.example.dashboard.employeedashboard.repository.EmployeeRepository;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.util.Assert;
+
+import java.util.Optional;
+
+@SpringBootTest
+public class EmployeeProfileTest {
+
+    @Autowired
+    private EmployeeRepository employeeRepository;
+
+    @Test
+    public void findEmployeeByUsername() {
+
+        Optional<Employee> username1 = employeeRepository.findByUsername("username1");
+        Assert.isTrue(username1.isPresent(), "Employee exists");
+    }
+
+}

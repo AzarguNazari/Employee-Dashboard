@@ -1,20 +1,19 @@
 /*---------------------------------------------USER ROLES INSERT----------------------------------------------------*/
-INSERT INTO ROLE(id, name) SELECT 1,'ADMIN' WHERE NOT EXISTS (SELECT * from role where id = 1);
-INSERT INTO ROLE(id, name) SELECT 2,'USER' WHERE NOT EXISTS (SELECT * from role where id = 2);
+INSERT INTO ROLE VALUES(1,'ADMIN');
+INSERT INTO ROLE VALUES(2,'USER');
 
 /*---------------------- EMPLOYEE INSERT ---------------------------------*/
-INSERT INTO EMPLOYEE(id, firstname, lastname, username, password, salary, title, role_id)
-	SELECT 1, 'Adam', 'Smith', 'username1', 'password', 3000 , 'DEVELOPER',  1
-	WHERE NOT EXISTS (SELECT * from EMPLOYEE where id = 1);
+INSERT INTO EMPLOYEE(id, firstname, lastname, username, password, salary, title)
+	VALUES(1, 'Adam', 'Smith', 'username1', 'password1', 3000 , 'DEVELOPER');
 
-INSERT INTO EMPLOYEE(id, firstname, lastname, username, password, salary, title, role_id)
-	SELECT 2, 'Ahmad', 'Nadimi', 'username2', 'password2', 4000 , 'HR',  2
-	WHERE NOT EXISTS (SELECT * from EMPLOYEE where id = 2);
+INSERT INTO EMPLOYEE(id, firstname, lastname, username, password, salary, title)
+	VALUES(2, 'Ahmad', 'Nadimi', 'username2', 'password2', 4000 , 'HR');
 
-INSERT INTO EMPLOYEE(id, firstname, lastname, username, password, salary, title, role_id)
-SELECT 3, 'Jamshid', 'Nazari', 'username3', 'password3', 4000 , 'MANAGER',  1
-WHERE NOT EXISTS (SELECT * from EMPLOYEE where id = 3);
+INSERT INTO EMPLOYEE(id, firstname, lastname, username, password, salary, title)
+VALUES(3, 'Jamshid', 'Nazari', 'username3', 'password3', 4000 , 'MANAGER');
 
+INSERT INTO USER_ROLES VALUES (1, 1);
+INSERT INTO USER_ROLES VALUES (1, 2);
 
 /*----------------------- TASKS INSERT ---------------------------*/
 INSERT INTO TASK(id, taskname, description, priority, percentage)

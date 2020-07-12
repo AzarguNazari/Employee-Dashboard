@@ -2,10 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 
-<head>
-    <title>Login Page</title>
-    <th:block th:include="fragments/head :: head"></th:block>
-
+<head th:replace="fragments/header :: header(title='Login')">
 </head>
 
 <body class="bg-gradient-primary">
@@ -36,6 +33,7 @@
                                         <input aria-describedby="emailHelp"
                                                class="form-control form-control-user"
                                                name="username"
+                                               id="username"
                                                placeholder="Username"
                                                required type="text">
                                         <!--th:field="*{username}"-->
@@ -43,6 +41,7 @@
                                     <div class="form-group">
                                         <input class="form-control form-control-user"
                                                name="password"
+                                               id="password"
                                                placeholder="Password"
                                                required
                                                type="password">
