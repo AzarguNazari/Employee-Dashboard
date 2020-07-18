@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
 <div th:fragment="footer">
-    <th:block th:replace="fragments/logoutPopup :: logoutPopup"></th:block>
-    <th:block th:include="fragments/scripts :: scripts"></th:block>
+
+
     <footer class="sticky-footer bg-white">
         <div class="container my-auto">
             <div class="copyright text-center my-auto">
@@ -11,5 +11,13 @@
             </div>
         </div>
     </footer>
+
+    <script th:src="@{/dashboard/vendor/jquery/jquery.min.js}"></script>
+    <script th:src="@{/dashboard/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+    <script th:src="@{/dashboard/vendor/chart.js/Chart.min.js}"></script>
+    <script th:src="@{/dashboard/vendor/jquery-easing/jquery.easing.min.js}"></script>
+    <script th:src="@{/dashboard/dist/js/sb-admin-2.min.js}"></script>
+    <script th:src="@{/dashboard/dist/js/demo/chart-area-demo.js}"></script>
+    <script th:src="@{/dashboard/dist/js/demo/chart-pie-demo.js}"></script>
 </div>
 </html>

@@ -9,7 +9,7 @@
 <div id="wrapper">
 
     <!-- Sidebar -->
-    <th:block th:replace="fragments/sideBarMenu :: sidemenu"></th:block>
+    <th:block th:replace="fragments/leftSideBar :: leftSideBar"></th:block>
     <!-- End of Sidebar -->
 
     <!-- Content Wrapper -->
@@ -183,11 +183,7 @@
     </div>
 </div>
 
-<th:block th:replace="fragments/footer :: footer"></th:block>
-
-<!-- Logout Modal-->
-
-<th:block th:include="fragments/scripts :: scripts"></th:block>
+<th:block th:include="fragments/footer :: footer"></th:block>
 
 </body>
 

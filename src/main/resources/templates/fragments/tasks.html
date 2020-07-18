@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<!-- Main Content -->
+<div id="content" th:fragment="tasks">
+
+    <!-- Topbar -->
+    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+        <!-- Sidebar Toggle (Topbar) -->
+        <button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop">
+            <i class="fa fa-bars"></i>
+        </button>
+
+        <!-- Topbar Search -->
+        <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" action="#"
+              th:action="@{/tasks/create}" th:object="${task}" method="post">
+            <button class="btn btn-success btn-sm" type="button" data-target="#newTask" data-toggle="modal">
+                Create New Task <i class="fas fa-plus fa-sm"></i>
+            </button>
+        </form>
+
+        <!-- Topbar Navbar -->
+        <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item dropdown no-arrow d-sm-none">
+                <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                   href="#"
+                   id="searchDropdown" role="button">
+                    <i class="fas fa-search fa-fw"></i>
+                </a>
+                <!-- Dropdown - Messages -->
+                <div aria-labelledby="searchDropdown"
+                     class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in">
+                    <form class="form-inline mr-auto w-100 navbar-search">
+                        <div class="input-group">
+                            <input aria-describedby="basic-addon2" aria-label="Search"
+                                   class="form-control bg-light border-0 small"
+                                   placeholder="Search for..." type="text">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </li>
+
+            <!-- Nav Item - Alerts -->
+            <li class="nav-item dropdown no-arrow mx-1">
+                <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                   data-toggle="dropdown"
+                   href="#"
+                   id="alertsDropdown" role="button">
+                    <i class="fas fa-bell fa-fw"></i>
+                    <!-- Counter - Alerts -->
+                    <span class="badge badge-danger badge-counter">3+</span>
+                </a>
+                <!-- Dropdown - Alerts -->
+                <div aria-labelledby="alertsDropdown"
+                     class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in">
+                    <h6 class="dropdown-header">
+                        Alerts Center
+                    </h6>
+                    <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="mr-3">
+                            <div class="icon-circle bg-primary">
+                                <i class="fas fa-file-alt text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="small text-gray-500">December 12, 2019</div>
+                            <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                        </div>
+                    </a>
+                    <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                </div>
+            </li>
+
+            <!-- Nav Item - Messages -->
+            <li class="nav-item dropdown no-arrow mx-1">
+                <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                   data-toggle="dropdown"
+                   href="#"
+                   id="messagesDropdown" role="button">
+                    <i class="fas fa-envelope fa-fw"></i>
+                    <!-- Counter - Messages -->
+                    <span class="badge badge-danger badge-counter">7</span>
+                </a>
+                <!-- Dropdown - Messages -->
+                <div aria-labelledby="messagesDropdown"
+                     class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in">
+                    <h6 class="dropdown-header">
+                        Message Center
+                    </h6>
+                    <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="dropdown-list-image mr-3">
+                            <img alt="" class="rounded-circle"
+                                 src="https://source.unsplash.com/fn_BT9fwg_E/60x60">
+                            <div class="status-indicator bg-success"></div>
+                        </div>
+                        <div class="font-weight-bold">
+                            <div class="text-truncate">Hi there! I am wondering if you can help me with a
+                                problem I've been
+                                having.
+                            </div>
+                            <div class="small text-gray-500">Emily Fowler · 58m</div>
+                        </div>
+                    </a>
+                    <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+                </div>
+            </li>
+
+            <div class="topbar-divider d-none d-sm-block"></div>
+
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+                <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                   href="#"
+                   id="userDropdown" role="button">
+                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">Hazar Gul Nazari</span>
+                    <img class="img-profile rounded-circle"
+                         src="https://avatars3.githubusercontent.com/u/17498897?s=460&u=d1a85e09c650a3d54adc23a6e327d8ebad5e26d9&v=4">
+                </a>
+                <!-- Dropdown - User Information -->
+                <div aria-labelledby="userDropdown"
+                     class="dropdown-menu dropdown-menu-right shadow animated--grow-in">
+                    <a class="dropdown-item" th:href="@{/dashboard/profile}">
+                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                        Profile
+                    </a>
+                    <a class="dropdown-item" th:href="@{/dashboard/setting}">
+                        <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                        Settings
+                    </a>
+                    <a class="dropdown-item" th:href="@{/dashboard/activities}">
+                        <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                        Activity Log
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" data-target="#logoutModal" data-toggle="modal">
+                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                        Logout
+                    </a>
+                </div>
+            </li>
+
+
+        </ul>
+
+    </nav>
+    <!-- End of Topbar -->
+
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-12 col-md-9">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div>
+                            <form class="user">
+                                <div class="form-group">
+                                    <input aria-describedby="emailHelp"
+                                           class="form-control form-control-user text-center"
+                                           id="search"
+                                           placeholder="Search Task" required type="search">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Content Row -->
+
+        <div class="row">
+
+            <!-- Task -->
+            <div class="col-xl-4 col-lg-5 taskCard" data-th-each="task: ${tasks}">
+                <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-primary" data-th-text="${task.getTaskname()}"></h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                        <div>
+                            <h5 class="font-weight-bold">Description</h5>
+                            <p data-th-text="${task.getDescription()}">This task is about creating</p>
+                        </div>
+                        <div>
+                            <h4 class="small font-weight-bold">Progress<span class="float-right"
+                                                                             data-th-text="${task.getPercentage()}">20%</span>
+                            </h4>
+                            <div class="progress mb-4">
+                                <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20"
+                                     th:class="${task.getPercentage()}  >= 50 ? 'progress-bar bg-success' : 'progress-bar bg-warning'"
+                                     role="progressbar"
+                                     th:attrappend="style='width:' + ${task.getPercentage()} + '%'"></div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div th:attr="data-task-id=${task.getId()}">
+                                <button class="btn btn-danger btn-icon-split btn-sm removeTask">
+                                                <span class="icon text-white-50">
+                                                  <i class="fas fa-trash"></i>
+                                                </span>
+                                    <span class="text">Remove</span>
+                                </button>
+                                <button class="btn btn-success btn-icon-split btn-sm doneTask">
+                                                <span class="icon text-white-50">
+                                                  <i class="fas fa-trash"></i>
+                                                </span>
+                                    <span class="text">Done</span>
+                                </button>
+                                <button class="btn btn-secondary btn-icon-split btn-sm updateTask"
+                                        data-target="#taskUpdate" data-toggle="modal">
+                                                <span class="icon text-white-50">
+                                                  <i class="fas fa-trash"></i>
+                                                </span>
+                                    <span class="text">Update</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div aria-hidden="true" aria-labelledby="createNewTask" class="modal fade" id="newTask" role="dialog" tabindex="-1">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-center">Create New Task</h5>
+                        <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <textarea class="form-control">Task description</textarea>
+                            <hr>
+                            <input class="form-control" id="deadline" required type="date"/>
+                            <hr>
+                            <label>Assign To</label>
+                            <select class="form-control" id="assignee">
+                                <option value="ahmad">Ahmad</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-success" type="button">Add Task</button>
+                        <button class="btn btn-danger" data-dismiss="modal" type="button">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Create New Task Modal-->
+        <div aria-hidden="true" aria-labelledby="updateTask" class="modal fade" id="taskUpdate" role="dialog" tabindex="-1">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-center">Update Task</h5>
+                        <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <textarea class="form-control">Task description</textarea>
+                            <hr>
+                            <label>Progress Percentage</label>
+                            <input class="form-control" id="progressPercentage" type="number">
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-success" type="button">Update Task</button>
+                        <button class="btn btn-danger" data-dismiss="modal" type="button">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+
+
+    <script>
+        $(document).ready(function () {
+            $(".removeTask").click(function () {
+                var $this = $(this).parentsUntil(".taskCard").slideUp(500);
+                $.ajax({
+                    type: "DELETE",
+                    contentType: "application/json",
+                    url: "/tasks/" + +$(this).parent("div").data("task-id"),
+                    dataType: 'json'
+                });
+            })
+
+        });
+    </script>
+</div>
+<!-- End of Main Content -->
+
+</html>UserDetailsService

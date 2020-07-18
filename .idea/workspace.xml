@@ -25,7 +25,102 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce1a758f-3128-4ac3-8ec5-458509502ce3" name="Default Changelist" comment="" />
+    <list default="true" id="ce1a758f-3128-4ac3-8ec5-458509502ce3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/EmployeeDashboardApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/model/employee/Title.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/model/task/Priority.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/service/interfaces/AttendenceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/service/interfaces/ChatService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/service/interfaces/DashboardService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/alert.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/tasks.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/layout/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/layout/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/layout/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/EmployeeDashboardApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/config/GeneralConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/config/GeneralConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/config/PostRunning.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/config/PostRunning.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/controller/MvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller/mvc/AnnouncementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/controller/mvc/AnnouncementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller/mvc/AttendenceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/controller/mvc/AttendenceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller/mvc/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/controller/mvc/ChatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller/mvc/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/controller/mvc/DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller/mvc/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/controller/mvc/ProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller/mvc/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/controller/mvc/TaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller/rest/CurrentUserSessionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/controller/rest/CurrentUserSessionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller/rest/EmployeeControllerInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/controller/rest/EmployeeControllerInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller/rest/EmployeeRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/controller/rest/EmployeeRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller/rest/TaskRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/controller/rest/TaskRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller/rest/UserProfilePhotoRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/controller/rest/UserProfilePhotoRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller/rest/UserRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/controller/rest/UserRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller/rest/UserRestControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/controller/rest/UserRestControllerAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/exception/EmployeeNotFound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/exception/EmployeeNotFound.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/exception/EmployeeNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/exception/EmployeeNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/exception/ExceptionResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/exception/ExceptionResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/exception/InvalidInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/exception/InvalidInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/exception/MySimpleMappingExceptionResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/exception/MySimpleMappingExceptionResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/exception/advice/controllers/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/exception/advice/controllers/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/exception/advice/controllers/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/exception/advice/controllers/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/exception/advice/model/ExceptionJSONInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/exception/advice/model/ExceptionJSONInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/model/dto/LoginUserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/model/dto/LoginUserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/model/employee/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/model/employee/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/model/employee/EmployeeDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/model/employee/EmployeeDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/model/employee/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/model/employee/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/model/employee/Title.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/model/security/AuthUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/model/security/AuthUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/model/security/Calender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/model/security/Calender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/model/security/CustomEmployeeDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/model/security/CustomEmployeeDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/model/task/Priority.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/model/task/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/model/task/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/model/task/TaskDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/model/task/TaskDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/model/task/TaskUpdateDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/model/task/TaskUpdateDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/repository/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/repository/EmployeeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/repository/RoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/repository/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/repository/TaskRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/security/CustomEmployeeDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/security/CustomEmployeeDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/security/CustomLogoutHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/security/CustomLogoutHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/security/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/security/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service/AnnouncementServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/service/AnnouncementServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service/AttendenceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/service/AttendenceServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service/ChatServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/service/ChatServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service/DashboardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/service/DashboardServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/service/EmployeeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service/ProfileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/service/ProfileServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service/TaskServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/service/TaskServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service/exceptions/EmployeeNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/service/exceptions/EmployeeNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service/interfaces/AnnouncementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/service/interfaces/AnnouncementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service/interfaces/AttendenceService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service/interfaces/ChatService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service/interfaces/DashboardService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service/interfaces/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/service/interfaces/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service/interfaces/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/service/interfaces/TaskService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/util/UserUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/util/UserUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/activities.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/activities.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/announcement.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/announcement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/attendance.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/attendance.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/chat.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/chat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/scripts.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/scripts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/sideBarMenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/leftSideBar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/topBar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/topBar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/profile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/setting.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/setting.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/tasks.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/dashboard/employeedashboard/Common.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dashboard/Common.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/dashboard/employeedashboard/EmployeeProfileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dashboard/EmployeeProfileTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/dashboard/employeedashboard/authSecurityTest/OAuthSecuredUserControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dashboard/authSecurityTest/OAuthSecuredUserControllerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/dashboard/employeedashboard/authSecurityTest/SecurityRequestPostProcessors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dashboard/authSecurityTest/SecurityRequestPostProcessors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/dashboard/employeedashboard/hateousTest/EmployeeHateousTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dashboard/hateousTest/EmployeeHateousTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/dashboard/employeedashboard/hateousTest/UserProfilePhotoControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dashboard/hateousTest/UserProfilePhotoControllerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/dashboard/employeedashboard/service/EmployeeControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dashboard/service/EmployeeControllerTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,6 +149,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1eK9JUOebeiUt51eVfigEopP4zK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -66,6 +162,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -73,24 +175,25 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/test/java/com/example/dashboard/employeedashboard/authSecurityTest" />
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller" />
-      <recent name="$PROJECT_DIR$/src/test/java/com/example/dashboard/employeedashboard/hateousTest" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/fragments/taskfragments" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller" />
       <recent name="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service" />
       <recent name="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/repository" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/model" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/fragments" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/fragments/taskfragments" />
+      <recent name="$PROJECT_DIR$/src/test/java/com/example/dashboard/employeedashboard/authSecurityTest" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Application">
     <configuration name="Application" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="com.example.dashboard.employeedashboard.EmployeeDashboardApplication" />
-      <module name="Employee-Dashboard" />
+      <option name="MAIN_CLASS_NAME" value="com.dashboard.EmployeeDashboardApplication" />
+      <module name="Employee-Dashboard2" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -99,8 +202,15 @@
       <envs>
         <env name="spring.profiles.active" value="dev" />
       </envs>
-      <option name="MAIN_CLASS_NAME" value="com.example.dashboard.employeedashboard.EmployeeDashboardApplication" />
-      <module name="Employee-Dashboard" />
+      <option name="MAIN_CLASS_NAME" value="com.example.dashboard.EmployeeDashboardApplication" />
+      <module name="Employee-Dashboard2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmployeeDashboardApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="Employee-Dashboard2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.dashboard.EmployeeDashboardApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -115,7 +225,6 @@
     <list>
       <item itemvalue="Application.Application" />
       <item itemvalue="Application.Dev Dashboard Employee" />
-      <item itemvalue="Spring Boot.EmployeeDashboardApplication" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -130,6 +239,7 @@
       <updated>1594059345362</updated>
       <workItem from="1594541640339" duration="1526000" />
       <workItem from="1594543190829" duration="695000" />
+      <workItem from="1594570237777" duration="4151000" />
     </task>
     <task id="LOCAL-00001" summary="made the application on launcher">
       <created>1594060485284</created>
@@ -218,6 +328,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="made the application on launcher" />
@@ -234,12 +345,12 @@
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state x="466" y="100" key="#Project_Structure/36.0.1884.1044@36.0.1884.1044" timestamp="1594541646560" />
-    <state x="470" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594540219267">
+    <state x="470" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595070553880">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state x="2362" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594060079320" />
-    <state x="470" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594540219267" />
-    <state x="470" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/36.0.1884.1044@36.0.1884.1044" timestamp="1594459839008" />
+    <state x="470" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594548259014" />
+    <state x="470" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/36.0.1884.1044@36.0.1884.1044" timestamp="1595070553880" />
     <state x="734" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594542245987">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
@@ -248,84 +359,101 @@
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state x="791" y="241" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594538518051" />
-    <state x="738" y="304" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1594539446925">
+    <state x="738" y="304" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1595070550996">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state x="2635" y="314" key="#com.intellij.ide.util.TreeClassChooserDialog/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594060076379" />
-    <state x="738" y="304" key="#com.intellij.ide.util.TreeClassChooserDialog/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594539446925" />
-    <state x="738" y="304" key="#com.intellij.ide.util.TreeClassChooserDialog/36.0.1884.1044@36.0.1884.1044" timestamp="1594459836309" />
+    <state x="738" y="304" key="#com.intellij.ide.util.TreeClassChooserDialog/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594548257626" />
+    <state x="738" y="304" key="#com.intellij.ide.util.TreeClassChooserDialog/36.0.1884.1044@36.0.1884.1044" timestamp="1595070550996" />
     <state x="2606" y="390" width="584" height="271" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1594461079271">
       <screen x="0" y="0" width="3840" height="1044" />
     </state>
     <state x="2606" y="390" width="584" height="271" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.3840.1044@0.0.3840.1044" timestamp="1594461079271" />
-    <state x="1329" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594540343889">
-      <screen x="36" y="0" width="1884" height="1044" />
+    <state x="3238" y="280" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594571048788">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2636" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3840.1044@0.0.3840.1044" timestamp="1594460646059" />
+    <state x="3238" y="280" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594571048788" />
     <state x="1329" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594540343889" />
     <state x="416" y="0" key="CommitChangelistDialog2" timestamp="1594544691055">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state x="2510" y="71" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594069609004" />
     <state x="416" y="0" key="CommitChangelistDialog2/36.0.1884.1044@36.0.1884.1044" timestamp="1594544691055" />
-    <state x="539" y="127" width="827" height="844" key="DiffContextDialog" timestamp="1594544691607">
+    <state x="539" y="127" width="827" height="844" key="DiffContextDialog" timestamp="1594550681239">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state x="2056" y="100" width="1684" height="844" key="DiffContextDialog/0.0.3840.1044@0.0.3840.1044" timestamp="1594460312706" />
-    <state x="539" y="127" width="827" height="844" key="DiffContextDialog/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594538502715" />
+    <state x="539" y="127" width="827" height="844" key="DiffContextDialog/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594550681239" />
     <state x="539" y="127" width="827" height="844" key="DiffContextDialog/36.0.1884.1044@36.0.1884.1044" timestamp="1594544691607" />
     <state x="2681" y="280" width="424" height="483" key="FileChooserDialogImpl" timestamp="1594067757144">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2681" y="280" width="424" height="483" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594067757144" />
-    <state width="1838" height="715" key="GridCell.Tab.0.bottom" timestamp="1594543833732">
+    <state width="1838" height="498" key="GridCell.Tab.0.bottom" timestamp="1595070625223">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state width="1838" height="5" key="GridCell.Tab.0.bottom/0.0.3840.1044@0.0.3840.1044" timestamp="1594462020116" />
-    <state width="876" height="327" key="GridCell.Tab.0.bottom/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594541545918" />
-    <state width="1838" height="715" key="GridCell.Tab.0.bottom/36.0.1884.1044@36.0.1884.1044" timestamp="1594543833732" />
-    <state width="1838" height="715" key="GridCell.Tab.0.center" timestamp="1594543833731">
+    <state width="1838" height="2" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594572101602" />
+    <state width="1838" height="2" key="GridCell.Tab.0.bottom/1920.0.1920.1080/36.0.1884.1044@1920.0.1920.1080" timestamp="1594591371237" />
+    <state width="1838" height="451" key="GridCell.Tab.0.bottom/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594552386461" />
+    <state width="1838" height="498" key="GridCell.Tab.0.bottom/36.0.1884.1044@36.0.1884.1044" timestamp="1595070625223" />
+    <state width="1838" height="498" key="GridCell.Tab.0.center" timestamp="1595070625222">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state width="1838" height="5" key="GridCell.Tab.0.center/0.0.3840.1044@0.0.3840.1044" timestamp="1594462020116" />
-    <state width="876" height="327" key="GridCell.Tab.0.center/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594541545918" />
-    <state width="1838" height="715" key="GridCell.Tab.0.center/36.0.1884.1044@36.0.1884.1044" timestamp="1594543833731" />
-    <state width="1838" height="715" key="GridCell.Tab.0.left" timestamp="1594543833730">
+    <state width="1838" height="2" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594572101602" />
+    <state width="1838" height="2" key="GridCell.Tab.0.center/1920.0.1920.1080/36.0.1884.1044@1920.0.1920.1080" timestamp="1594591371237" />
+    <state width="1838" height="451" key="GridCell.Tab.0.center/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594552386461" />
+    <state width="1838" height="498" key="GridCell.Tab.0.center/36.0.1884.1044@36.0.1884.1044" timestamp="1595070625222" />
+    <state width="1838" height="498" key="GridCell.Tab.0.left" timestamp="1595070625222">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state width="1838" height="5" key="GridCell.Tab.0.left/0.0.3840.1044@0.0.3840.1044" timestamp="1594462020115" />
-    <state width="876" height="327" key="GridCell.Tab.0.left/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594541545918" />
-    <state width="1838" height="715" key="GridCell.Tab.0.left/36.0.1884.1044@36.0.1884.1044" timestamp="1594543833730" />
-    <state width="1838" height="715" key="GridCell.Tab.0.right" timestamp="1594543833732">
+    <state width="1838" height="2" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594572101602" />
+    <state width="1838" height="2" key="GridCell.Tab.0.left/1920.0.1920.1080/36.0.1884.1044@1920.0.1920.1080" timestamp="1594591371237" />
+    <state width="1838" height="451" key="GridCell.Tab.0.left/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594552386461" />
+    <state width="1838" height="498" key="GridCell.Tab.0.left/36.0.1884.1044@36.0.1884.1044" timestamp="1595070625222" />
+    <state width="1838" height="498" key="GridCell.Tab.0.right" timestamp="1595070625223">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state width="1838" height="5" key="GridCell.Tab.0.right/0.0.3840.1044@0.0.3840.1044" timestamp="1594462020116" />
-    <state width="876" height="327" key="GridCell.Tab.0.right/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594541545918" />
-    <state width="1838" height="715" key="GridCell.Tab.0.right/36.0.1884.1044@36.0.1884.1044" timestamp="1594543833732" />
-    <state width="1838" height="715" key="GridCell.Tab.1.bottom" timestamp="1594543833588">
+    <state width="1838" height="2" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594572101602" />
+    <state width="1838" height="2" key="GridCell.Tab.0.right/1920.0.1920.1080/36.0.1884.1044@1920.0.1920.1080" timestamp="1594591371237" />
+    <state width="1838" height="451" key="GridCell.Tab.0.right/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594552386461" />
+    <state width="1838" height="498" key="GridCell.Tab.0.right/36.0.1884.1044@36.0.1884.1044" timestamp="1595070625223" />
+    <state width="1838" height="498" key="GridCell.Tab.1.bottom" timestamp="1595070625224">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state width="1838" height="5" key="GridCell.Tab.1.bottom/0.0.3840.1044@0.0.3840.1044" timestamp="1594462019958" />
-    <state width="876" height="327" key="GridCell.Tab.1.bottom/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594541545918" />
-    <state width="1838" height="715" key="GridCell.Tab.1.bottom/36.0.1884.1044@36.0.1884.1044" timestamp="1594543833588" />
-    <state width="1838" height="715" key="GridCell.Tab.1.center" timestamp="1594543833588">
+    <state width="1838" height="2" key="GridCell.Tab.1.bottom/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594572101487" />
+    <state width="1838" height="2" key="GridCell.Tab.1.bottom/1920.0.1920.1080/36.0.1884.1044@1920.0.1920.1080" timestamp="1594591371237" />
+    <state width="1838" height="451" key="GridCell.Tab.1.bottom/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594552386347" />
+    <state width="1838" height="498" key="GridCell.Tab.1.bottom/36.0.1884.1044@36.0.1884.1044" timestamp="1595070625224" />
+    <state width="1838" height="498" key="GridCell.Tab.1.center" timestamp="1595070625224">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state width="1838" height="5" key="GridCell.Tab.1.center/0.0.3840.1044@0.0.3840.1044" timestamp="1594462019958" />
-    <state width="876" height="327" key="GridCell.Tab.1.center/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594541545918" />
-    <state width="1838" height="715" key="GridCell.Tab.1.center/36.0.1884.1044@36.0.1884.1044" timestamp="1594543833588" />
-    <state width="1838" height="715" key="GridCell.Tab.1.left" timestamp="1594543833587">
+    <state width="1838" height="2" key="GridCell.Tab.1.center/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594572101486" />
+    <state width="1838" height="2" key="GridCell.Tab.1.center/1920.0.1920.1080/36.0.1884.1044@1920.0.1920.1080" timestamp="1594591371237" />
+    <state width="1838" height="451" key="GridCell.Tab.1.center/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594552386346" />
+    <state width="1838" height="498" key="GridCell.Tab.1.center/36.0.1884.1044@36.0.1884.1044" timestamp="1595070625224" />
+    <state width="1838" height="498" key="GridCell.Tab.1.left" timestamp="1595070625223">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state width="1838" height="5" key="GridCell.Tab.1.left/0.0.3840.1044@0.0.3840.1044" timestamp="1594462019957" />
-    <state width="876" height="327" key="GridCell.Tab.1.left/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594541545918" />
-    <state width="1838" height="715" key="GridCell.Tab.1.left/36.0.1884.1044@36.0.1884.1044" timestamp="1594543833587" />
-    <state width="1838" height="715" key="GridCell.Tab.1.right" timestamp="1594543833588">
+    <state width="1838" height="2" key="GridCell.Tab.1.left/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594572101486" />
+    <state width="1838" height="2" key="GridCell.Tab.1.left/1920.0.1920.1080/36.0.1884.1044@1920.0.1920.1080" timestamp="1594591371237" />
+    <state width="1838" height="451" key="GridCell.Tab.1.left/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594552386346" />
+    <state width="1838" height="498" key="GridCell.Tab.1.left/36.0.1884.1044@36.0.1884.1044" timestamp="1595070625223" />
+    <state width="1838" height="498" key="GridCell.Tab.1.right" timestamp="1595070625224">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state width="1838" height="5" key="GridCell.Tab.1.right/0.0.3840.1044@0.0.3840.1044" timestamp="1594462019958" />
-    <state width="876" height="327" key="GridCell.Tab.1.right/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594541545918" />
-    <state width="1838" height="715" key="GridCell.Tab.1.right/36.0.1884.1044@36.0.1884.1044" timestamp="1594543833588" />
+    <state width="1838" height="2" key="GridCell.Tab.1.right/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594572101487" />
+    <state width="1838" height="2" key="GridCell.Tab.1.right/1920.0.1920.1080/36.0.1884.1044@1920.0.1920.1080" timestamp="1594591371237" />
+    <state width="1838" height="451" key="GridCell.Tab.1.right/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594552386347" />
+    <state width="1838" height="498" key="GridCell.Tab.1.right/36.0.1884.1044@36.0.1884.1044" timestamp="1595070625224" />
     <state x="542" y="174" width="924" height="683" key="Maven.ArtifactSearchDialog" timestamp="1594160163217">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
@@ -335,11 +463,15 @@
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state x="765" y="225" key="RollbackChangesDialog/36.0.1884.1044@36.0.1884.1044" timestamp="1594459829664" />
-    <state x="493" y="97" key="SettingsEditor" timestamp="1594543166450">
+    <state x="493" y="97" key="SettingsEditor" timestamp="1595070440159">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state x="2386" y="100" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594068554289" />
-    <state x="493" y="97" key="SettingsEditor/36.0.1884.1044@36.0.1884.1044" timestamp="1594543166450" />
+    <state x="493" y="97" key="SettingsEditor/36.0.1884.1044@36.0.1884.1044" timestamp="1595070440159" />
+    <state x="79" y="126" width="1684" height="844" key="VCS.FileHistoryDialog" timestamp="1594550681239">
+      <screen x="36" y="0" width="1884" height="1044" />
+    </state>
+    <state x="79" y="126" width="1684" height="844" key="VCS.FileHistoryDialog/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594550681239" />
     <state x="2498" y="258" key="Vcs.Push.Dialog.v2" timestamp="1594069612772">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -353,19 +485,21 @@
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state x="780" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/36.0.1884.1044@36.0.1884.1044" timestamp="1594159405489" />
-    <state x="996" y="261" width="712" height="522" key="find.popup" timestamp="1594502772330">
-      <screen x="36" y="0" width="1884" height="1044" />
+    <state x="2898" y="270" width="726" height="540" key="find.popup" timestamp="1594572019133">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="1956" y="261" width="1450" height="522" key="find.popup/0.0.3840.1044@0.0.3840.1044" timestamp="1594460825692" />
+    <state x="2898" y="270" width="726" height="540" key="find.popup/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594572019133" />
     <state x="996" y="261" width="712" height="522" key="find.popup/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594502772330" />
     <state x="695" y="261" width="711" height="522" key="find.popup/36.0.1884.1044@36.0.1884.1044" timestamp="1594160070538" />
     <state x="2562" y="238" key="run.anything.popup" timestamp="1594068072506">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2562" y="238" key="run.anything.popup/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594068072506" />
-    <state x="641" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1594503281019">
+    <state x="641" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1595070431821">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state x="641" y="230" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594503281019" />
+    <state x="641" y="230" width="672" height="678" key="search.everywhere.popup/36.0.1884.1044@36.0.1884.1044" timestamp="1595070431821" />
   </component>
 </project>
