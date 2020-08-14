@@ -24,8 +24,6 @@ To build docker image use the below command:
 - Employee can add log time to the task
 - Employee can request for vacation
 
-![](https://github.com/AzarguNazari/employee-dashboard/blob/master/documentation/images/mainpage.png?raw=true)
-
 ![](https://github.com/AzarguNazari/employee-dashboard/blob/master/documentation/images/taskpage.png?raw=true)
 
 ![](https://github.com/AzarguNazari/employee-dashboard/blob/master/documentation/images/attendence.png?raw=true)
