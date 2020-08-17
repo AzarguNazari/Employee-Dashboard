@@ -134,6 +134,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EmployeeDashboardApplication (3)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="employee-dashboard" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dashboard.EmployeeDashboardApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EmployeeDashboardApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="Employee-Dashboard" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.dashboard.employeedashboard.EmployeeDashboardApplication" />
@@ -147,6 +154,7 @@
       <item itemvalue="Spring Boot.EmployeeDashboardApplication" />
       <item itemvalue="Spring Boot.EmployeeDashboardApplication (1)" />
       <item itemvalue="Spring Boot.EmployeeDashboardApplication (2)" />
+      <item itemvalue="Spring Boot.EmployeeDashboardApplication (3)" />
     </list>
   </component>
   <component name="SvnConfiguration">
