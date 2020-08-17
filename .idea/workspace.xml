@@ -25,10 +25,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce1a758f-3128-4ac3-8ec5-458509502ce3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee-dashboard/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/employee-dashboard/.gitignore" afterDir="false" />
-    </list>
+    <list default="true" id="ce1a758f-3128-4ac3-8ec5-458509502ce3" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,7 +44,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="add_frontend" />
+        <entry key="$PROJECT_DIR$" value="add_backend" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -88,11 +85,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/documentation/media" />
       <recent name="$PROJECT_DIR$/employee-dashboard/src" />
       <recent name="$PROJECT_DIR$/src/main/resources/templates/fragments" />
       <recent name="$PROJECT_DIR$/src/main/resources/templates/fragments/taskfragments" />
       <recent name="$PROJECT_DIR$/src/test/java/com/example/dashboard/employeedashboard/authSecurityTest" />
-      <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/templates/fragments/taskfragments" />
@@ -105,7 +102,7 @@
   <component name="RunManager" selected="Application.Application">
     <configuration name="Application" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.dashboard.EmployeeDashboardApplication" />
-      <module name="Employee-Dashboard2" />
+      <module name="employee-dashboard" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -114,36 +111,8 @@
       <envs>
         <env name="spring.profiles.active" value="dev" />
       </envs>
-      <option name="MAIN_CLASS_NAME" value="com.example.dashboard.EmployeeDashboardApplication" />
-      <module name="Employee-Dashboard2" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EmployeeDashboardApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="Employee-Dashboard2" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.dashboard.EmployeeDashboardApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EmployeeDashboardApplication (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="MAIN_CLASS_NAME" value="com.dashboard.EmployeeDashboardApplication" />
       <module name="employee-dashboard" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.employeedashboard.EmployeeDashboardApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EmployeeDashboardApplication (3)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="employee-dashboard" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dashboard.EmployeeDashboardApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EmployeeDashboardApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="Employee-Dashboard" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.dashboard.employeedashboard.EmployeeDashboardApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -151,10 +120,6 @@
     <list>
       <item itemvalue="Application.Application" />
       <item itemvalue="Application.Dev Dashboard Employee" />
-      <item itemvalue="Spring Boot.EmployeeDashboardApplication" />
-      <item itemvalue="Spring Boot.EmployeeDashboardApplication (1)" />
-      <item itemvalue="Spring Boot.EmployeeDashboardApplication (2)" />
-      <item itemvalue="Spring Boot.EmployeeDashboardApplication (3)" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -170,7 +135,7 @@
       <workItem from="1594541640339" duration="1526000" />
       <workItem from="1594543190829" duration="695000" />
       <workItem from="1594570237777" duration="4151000" />
-      <workItem from="1597701211318" duration="681000" />
+      <workItem from="1597701211318" duration="1014000" />
     </task>
     <task id="LOCAL-00001" summary="made the application on launcher">
       <created>1594060485284</created>
@@ -235,7 +200,28 @@
       <option name="project" value="LOCAL" />
       <updated>1597701884455</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="make gitignore simple">
+      <created>1597701982023</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1597701982023</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add architecture design">
+      <created>1597702243513</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1597702243513</updated>
+    </task>
+    <task id="LOCAL-00012" summary="change documentation resources">
+      <created>1597702253680</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1597702253681</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,19 +271,22 @@
     <MESSAGE value="refactor" />
     <MESSAGE value="add frontend" />
     <MESSAGE value="add backend module" />
-    <option name="LAST_COMMIT_MESSAGE" value="add backend module" />
+    <MESSAGE value="make gitignore simple" />
+    <MESSAGE value="add architecture design" />
+    <MESSAGE value="change documentation resources" />
+    <option name="LAST_COMMIT_MESSAGE" value="change documentation resources" />
   </component>
   <component name="WindowStateProjectService">
     <state x="466" y="100" key="#Project_Structure" timestamp="1594541646560">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state x="466" y="100" key="#Project_Structure/36.0.1884.1044@36.0.1884.1044" timestamp="1594541646560" />
-    <state x="470" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595070553880">
+    <state x="470" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597702288111">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state x="2362" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594060079320" />
     <state x="470" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594548259014" />
-    <state x="470" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/36.0.1884.1044@36.0.1884.1044" timestamp="1595070553880" />
+    <state x="470" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/36.0.1884.1044@36.0.1884.1044" timestamp="1597702288111" />
     <state x="734" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594542245987">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
@@ -306,12 +295,12 @@
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state x="791" y="241" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594538518051" />
-    <state x="738" y="304" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1595070550996">
+    <state x="738" y="304" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1597702275756">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state x="2635" y="314" key="#com.intellij.ide.util.TreeClassChooserDialog/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594060076379" />
     <state x="738" y="304" key="#com.intellij.ide.util.TreeClassChooserDialog/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594548257626" />
-    <state x="738" y="304" key="#com.intellij.ide.util.TreeClassChooserDialog/36.0.1884.1044@36.0.1884.1044" timestamp="1595070550996" />
+    <state x="738" y="304" key="#com.intellij.ide.util.TreeClassChooserDialog/36.0.1884.1044@36.0.1884.1044" timestamp="1597702275756" />
     <state x="2606" y="390" width="584" height="271" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1594461079271">
       <screen x="0" y="0" width="3840" height="1044" />
     </state>
@@ -323,11 +312,11 @@
     <state x="3238" y="280" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594571048788" />
     <state x="1329" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594540343889" />
     <state x="1329" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/36.0.1884.1044@36.0.1884.1044" timestamp="1597701669351" />
-    <state x="416" y="0" key="CommitChangelistDialog2" timestamp="1597701883698">
+    <state x="416" y="0" key="CommitChangelistDialog2" timestamp="1597702253608">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state x="2510" y="71" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594069609004" />
-    <state x="416" y="0" key="CommitChangelistDialog2/36.0.1884.1044@36.0.1884.1044" timestamp="1597701883698" />
+    <state x="416" y="0" key="CommitChangelistDialog2/36.0.1884.1044@36.0.1884.1044" timestamp="1597702253608" />
     <state x="539" y="127" width="827" height="844" key="DiffContextDialog" timestamp="1594550681239">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
@@ -411,29 +400,29 @@
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state x="765" y="225" key="RollbackChangesDialog/36.0.1884.1044@36.0.1884.1044" timestamp="1594459829664" />
-    <state x="493" y="97" key="SettingsEditor" timestamp="1595070440159">
+    <state x="493" y="97" key="SettingsEditor" timestamp="1597702181811">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state x="2386" y="100" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594068554289" />
-    <state x="493" y="97" key="SettingsEditor/36.0.1884.1044@36.0.1884.1044" timestamp="1595070440159" />
+    <state x="493" y="97" key="SettingsEditor/36.0.1884.1044@36.0.1884.1044" timestamp="1597702181811" />
     <state x="79" y="126" width="1684" height="844" key="VCS.FileHistoryDialog" timestamp="1594550681239">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state x="79" y="126" width="1684" height="844" key="VCS.FileHistoryDialog/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594550681239" />
-    <state x="603" y="249" key="Vcs.Push.Dialog.v2" timestamp="1597701887291">
+    <state x="603" y="249" key="Vcs.Push.Dialog.v2" timestamp="1597701984524">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state x="2498" y="258" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594069612772" />
-    <state x="603" y="249" key="Vcs.Push.Dialog.v2/36.0.1884.1044@36.0.1884.1044" timestamp="1597701887291" />
+    <state x="603" y="249" key="Vcs.Push.Dialog.v2/36.0.1884.1044@36.0.1884.1044" timestamp="1597701984524" />
     <state x="333" y="124" key="VcsDiffUtil.ChangesDialog" timestamp="1594544563898">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state x="2512" y="209" key="VcsDiffUtil.ChangesDialog/0.0.3840.1044@0.0.3840.1044" timestamp="1594460103153" />
     <state x="333" y="124" key="VcsDiffUtil.ChangesDialog/36.0.1884.1044@36.0.1884.1044" timestamp="1594544563898" />
-    <state x="780" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597701337707">
+    <state x="780" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597702038549">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
-    <state x="780" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/36.0.1884.1044@36.0.1884.1044" timestamp="1597701337707" />
+    <state x="780" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/36.0.1884.1044@36.0.1884.1044" timestamp="1597702038549" />
     <state x="2898" y="270" width="726" height="540" key="find.popup" timestamp="1594572019133">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
