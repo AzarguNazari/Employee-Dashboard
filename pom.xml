@@ -3,13 +3,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-
     <groupId>com.dashboard</groupId>
     <artifactId>employee-dashboard</artifactId>
+    <packaging>pom</packaging>
     <version>1-SNAPSHOT</version>
     <description>An example of employee dashboard</description>
 
     <modules>
         <module>employee-dashboard</module>
+        <module>analytics</module>
     </modules>
 </project>

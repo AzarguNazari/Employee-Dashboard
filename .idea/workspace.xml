@@ -25,7 +25,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce1a758f-3128-4ac3-8ec5-458509502ce3" name="Default Changelist" comment="" />
+    <list default="true" id="ce1a758f-3128-4ac3-8ec5-458509502ce3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/analytics/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,9 +121,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EmployeeDashboardApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="employee-dashboard" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dashboard.EmployeeDashboardApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Application" />
       <item itemvalue="Application.Dev Dashboard Employee" />
+      <item itemvalue="Spring Boot.EmployeeDashboardApplication" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -221,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597702253681</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="change gitignore">
+      <created>1597702358343</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1597702358343</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,7 +293,8 @@
     <MESSAGE value="make gitignore simple" />
     <MESSAGE value="add architecture design" />
     <MESSAGE value="change documentation resources" />
-    <option name="LAST_COMMIT_MESSAGE" value="change documentation resources" />
+    <MESSAGE value="change gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="change gitignore" />
   </component>
   <component name="WindowStateProjectService">
     <state x="466" y="100" key="#Project_Structure" timestamp="1594541646560">
@@ -312,17 +332,17 @@
     <state x="3238" y="280" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594571048788" />
     <state x="1329" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594540343889" />
     <state x="1329" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/36.0.1884.1044@36.0.1884.1044" timestamp="1597701669351" />
-    <state x="416" y="0" key="CommitChangelistDialog2" timestamp="1597702253608">
+    <state x="416" y="0" key="CommitChangelistDialog2" timestamp="1597702358280">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state x="2510" y="71" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594069609004" />
-    <state x="416" y="0" key="CommitChangelistDialog2/36.0.1884.1044@36.0.1884.1044" timestamp="1597702253608" />
-    <state x="539" y="127" width="827" height="844" key="DiffContextDialog" timestamp="1594550681239">
+    <state x="416" y="0" key="CommitChangelistDialog2/36.0.1884.1044@36.0.1884.1044" timestamp="1597702358280" />
+    <state x="539" y="127" width="827" height="844" key="DiffContextDialog" timestamp="1597702350507">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state x="2056" y="100" width="1684" height="844" key="DiffContextDialog/0.0.3840.1044@0.0.3840.1044" timestamp="1594460312706" />
     <state x="539" y="127" width="827" height="844" key="DiffContextDialog/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594550681239" />
-    <state x="539" y="127" width="827" height="844" key="DiffContextDialog/36.0.1884.1044@36.0.1884.1044" timestamp="1594544691607" />
+    <state x="539" y="127" width="827" height="844" key="DiffContextDialog/36.0.1884.1044@36.0.1884.1044" timestamp="1597702350507" />
     <state x="2681" y="280" width="424" height="483" key="FileChooserDialogImpl" timestamp="1594067757144">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -409,11 +429,11 @@
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state x="79" y="126" width="1684" height="844" key="VCS.FileHistoryDialog/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594550681239" />
-    <state x="603" y="249" key="Vcs.Push.Dialog.v2" timestamp="1597701984524">
+    <state x="603" y="249" key="Vcs.Push.Dialog.v2" timestamp="1597702360926">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state x="2498" y="258" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594069612772" />
-    <state x="603" y="249" key="Vcs.Push.Dialog.v2/36.0.1884.1044@36.0.1884.1044" timestamp="1597701984524" />
+    <state x="603" y="249" key="Vcs.Push.Dialog.v2/36.0.1884.1044@36.0.1884.1044" timestamp="1597702360926" />
     <state x="333" y="124" key="VcsDiffUtil.ChangesDialog" timestamp="1594544563898">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
@@ -430,10 +450,10 @@
     <state x="2898" y="270" width="726" height="540" key="find.popup/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594572019133" />
     <state x="996" y="261" width="712" height="522" key="find.popup/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594502772330" />
     <state x="695" y="261" width="711" height="522" key="find.popup/36.0.1884.1044@36.0.1884.1044" timestamp="1594160070538" />
-    <state x="442" y="227" key="new project wizard" timestamp="1597701472729">
+    <state x="442" y="227" key="new project wizard" timestamp="1597702675121">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
-    <state x="442" y="227" key="new project wizard/36.0.1884.1044@36.0.1884.1044" timestamp="1597701472729" />
+    <state x="442" y="227" key="new project wizard/36.0.1884.1044@36.0.1884.1044" timestamp="1597702675121" />
     <state x="2562" y="238" key="run.anything.popup" timestamp="1594068072506">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
