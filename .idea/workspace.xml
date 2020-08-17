@@ -26,105 +26,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce1a758f-3128-4ac3-8ec5-458509502ce3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/EmployeeDashboardApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/model/employee/Title.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/model/task/Priority.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/service/interfaces/AttendenceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/service/interfaces/ChatService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/service/interfaces/DashboardService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/alert.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/tasks.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/layout/footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/layout/header.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/layout/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/EmployeeDashboardApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/config/GeneralConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/config/GeneralConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/config/PostRunning.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/config/PostRunning.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/controller/MvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller/mvc/AnnouncementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/controller/mvc/AnnouncementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller/mvc/AttendenceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/controller/mvc/AttendenceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller/mvc/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/controller/mvc/ChatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller/mvc/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/controller/mvc/DashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller/mvc/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/controller/mvc/ProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller/mvc/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/controller/mvc/TaskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller/rest/CurrentUserSessionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/controller/rest/CurrentUserSessionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller/rest/EmployeeControllerInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/controller/rest/EmployeeControllerInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller/rest/EmployeeRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/controller/rest/EmployeeRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller/rest/TaskRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/controller/rest/TaskRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller/rest/UserProfilePhotoRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/controller/rest/UserProfilePhotoRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller/rest/UserRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/controller/rest/UserRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller/rest/UserRestControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/controller/rest/UserRestControllerAdvice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/exception/EmployeeNotFound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/exception/EmployeeNotFound.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/exception/EmployeeNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/exception/EmployeeNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/exception/ExceptionResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/exception/ExceptionResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/exception/InvalidInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/exception/InvalidInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/exception/MySimpleMappingExceptionResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/exception/MySimpleMappingExceptionResolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/exception/advice/controllers/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/exception/advice/controllers/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/exception/advice/controllers/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/exception/advice/controllers/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/exception/advice/model/ExceptionJSONInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/exception/advice/model/ExceptionJSONInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/model/dto/LoginUserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/model/dto/LoginUserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/model/employee/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/model/employee/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/model/employee/EmployeeDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/model/employee/EmployeeDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/model/employee/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/model/employee/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/model/employee/Title.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/model/security/AuthUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/model/security/AuthUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/model/security/Calender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/model/security/Calender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/model/security/CustomEmployeeDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/model/security/CustomEmployeeDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/model/task/Priority.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/model/task/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/model/task/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/model/task/TaskDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/model/task/TaskDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/model/task/TaskUpdateDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/model/task/TaskUpdateDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/repository/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/repository/EmployeeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/repository/RoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/repository/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/repository/TaskRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/security/CustomEmployeeDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/security/CustomEmployeeDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/security/CustomLogoutHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/security/CustomLogoutHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/security/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/security/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service/AnnouncementServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/service/AnnouncementServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service/AttendenceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/service/AttendenceServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service/ChatServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/service/ChatServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service/DashboardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/service/DashboardServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/service/EmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service/ProfileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/service/ProfileServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service/TaskServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/service/TaskServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service/exceptions/EmployeeNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/service/exceptions/EmployeeNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service/interfaces/AnnouncementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/service/interfaces/AnnouncementService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service/interfaces/AttendenceService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service/interfaces/ChatService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service/interfaces/DashboardService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service/interfaces/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/service/interfaces/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service/interfaces/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/service/interfaces/TaskService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/util/UserUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/util/UserUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/activities.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/activities.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/announcement.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/announcement.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/attendance.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/attendance.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/chat.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/chat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/head.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/scripts.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/scripts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/sideBarMenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/leftSideBar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/topBar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/topBar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/profile.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/setting.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/setting.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/tasks.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/dashboard/employeedashboard/Common.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dashboard/Common.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/dashboard/employeedashboard/EmployeeProfileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dashboard/EmployeeProfileTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/dashboard/employeedashboard/authSecurityTest/OAuthSecuredUserControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dashboard/authSecurityTest/OAuthSecuredUserControllerTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/dashboard/employeedashboard/authSecurityTest/SecurityRequestPostProcessors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dashboard/authSecurityTest/SecurityRequestPostProcessors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/dashboard/employeedashboard/hateousTest/EmployeeHateousTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dashboard/hateousTest/EmployeeHateousTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/dashboard/employeedashboard/hateousTest/UserProfilePhotoControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dashboard/hateousTest/UserProfilePhotoControllerTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/dashboard/employeedashboard/service/EmployeeControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dashboard/service/EmployeeControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -225,6 +136,8 @@
     <list>
       <item itemvalue="Application.Application" />
       <item itemvalue="Application.Dev Dashboard Employee" />
+      <item itemvalue="Spring Boot.EmployeeDashboardApplication" />
+      <item itemvalue="Spring Boot.EmployeeDashboardApplication (1)" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -240,6 +153,7 @@
       <workItem from="1594541640339" duration="1526000" />
       <workItem from="1594543190829" duration="695000" />
       <workItem from="1594570237777" duration="4151000" />
+      <workItem from="1597701211318" duration="89000" />
     </task>
     <task id="LOCAL-00001" summary="made the application on launcher">
       <created>1594060485284</created>
