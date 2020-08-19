@@ -1,6 +1,6 @@
 package com.dashboard.security;
 
-import com.dashboard.model.employee.Employee;
+import com.dashboard.model.Employee;
 import com.dashboard.repository.EmployeeRepository;
 import com.dashboard.service.exceptions.EmployeeNotFoundException;
 import com.dashboard.model.security.CustomEmployeeDetails;

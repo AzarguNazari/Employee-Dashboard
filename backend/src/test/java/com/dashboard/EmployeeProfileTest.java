@@ -1,6 +1,6 @@
 package com.dashboard;
 
-import com.dashboard.model.employee.Employee;
+import com.dashboard.model.Employee;
 import com.dashboard.repository.EmployeeRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

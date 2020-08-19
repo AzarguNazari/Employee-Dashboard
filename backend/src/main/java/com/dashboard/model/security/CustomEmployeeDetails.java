@@ -1,6 +1,6 @@
 package com.dashboard.model.security;
 
-import com.dashboard.model.employee.Employee;
+import com.dashboard.model.Employee;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

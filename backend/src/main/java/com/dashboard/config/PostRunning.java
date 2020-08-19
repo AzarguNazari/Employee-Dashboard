@@ -1,12 +1,12 @@
 package com.dashboard.config;
 
-import com.dashboard.model.employee.Employee;
-import com.dashboard.model.employee.Title;
-import com.dashboard.model.task.Priority;
-import com.dashboard.model.task.Task;
+import com.dashboard.model.Employee;
+import com.dashboard.model.Title;
+import com.dashboard.model.Priority;
+import com.dashboard.model.Task;
 import com.dashboard.repository.RoleRepository;
 import com.dashboard.repository.TaskRepository;
-import com.dashboard.service.interfaces.EmployeeService;
+import com.dashboard.service.interfaces.EmployeeServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -17,7 +17,7 @@ import org.springframework.context.annotation.Configuration;
 public class PostRunning implements CommandLineRunner {
 
     @Autowired
-    private EmployeeService employeeService;
+    private EmployeeServiceInterface employeeServiceInterface;
     @Autowired
     private TaskRepository taskRepository;
     @Autowired
@@ -44,14 +44,14 @@ public class PostRunning implements CommandLineRunner {
 
         // EMPLOYEES
         Employee employee1 = new Employee("username1", "firstname1", "lastname1", "password1", 1000, Title.DEVELOPER);
-        employeeService.addNewEmployee(employee1);
+        employeeServiceInterface.addNewEmployee(employee1);
         Employee employee2 = new Employee("username2", "firstname2", "lastname2", "password2", 2000, Title.DEVELOPER);
-        employeeService.addNewEmployee(employee2);
+        employeeServiceInterface.addNewEmployee(employee2);
         Employee employee3 = new Employee("username3", "firstname3", "lastname3", "password3", 3000, Title.HR);
-        employeeService.addNewEmployee(employee3);
+        employeeServiceInterface.addNewEmployee(employee3);
         Employee employee4 = new Employee("username4", "firstname4", "lastname4", "password4", 4000, Title.MANAGER);
-        employeeService.addNewEmployee(employee4);
+        employeeServiceInterface.addNewEmployee(employee4);
         Employee employee5 = new Employee("username5", "firstname5", "lastname5", "password5", 5000, Title.DEVELOPER);
-        employeeService.addNewEmployee(employee5);
+        employeeServiceInterface.addNewEmployee(employee5);
     }
 }

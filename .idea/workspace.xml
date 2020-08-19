@@ -26,17 +26,72 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce1a758f-3128-4ac3-8ec5-458509502ce3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/frontend/frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/serviceWorker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/setupTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/setupTests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/frontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/yarn.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/common/Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/controller/TaskControllerInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/model/RoleType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/model/Status.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/useful/controller/BankAccountController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/useful/controller/BankAccountControllerInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/useful/exception/AccountExistException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/useful/exception/AccountNameException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/useful/exception/ApiError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/useful/exception/ApiSubError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/useful/exception/ApiValidationError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/useful/exception/BankAccountNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/useful/exception/InvalidBalanceException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/useful/exception/InvalidIBANException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/useful/exception/InvalidNameException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/useful/exception/LowerCaseClassNameResolver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/useful/listener/RabbitConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/useful/modal/BankAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/useful/repository/BankAccountRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/useful/service/BankAccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/useful/service/BankAccountServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/config/PostRunning.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/config/PostRunning.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/controller/mvc/AnnouncementController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/controller/mvc/AttendenceController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/controller/mvc/ChatController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/controller/mvc/DashboardController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/controller/mvc/ProfileController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/controller/mvc/TaskController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/controller/rest/CurrentUserSessionController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/controller/rest/EmployeeControllerInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/controller/EmployeeControllerInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/controller/rest/EmployeeRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/controller/EmployeeRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/controller/rest/TaskRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/controller/TaskRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/controller/rest/UserProfilePhotoRestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/controller/rest/UserRestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/controller/rest/UserRestControllerAdvice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/model/employee/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/model/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/model/employee/EmployeeDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/model/EmployeeDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/model/employee/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/model/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/model/employee/Title.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/model/Title.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/model/security/AuthUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/model/security/Calender.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/model/security/CustomEmployeeDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/model/security/CustomEmployeeDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/model/task/Priority.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/model/Priority.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/model/task/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/model/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/model/task/TaskDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/model/dto/TaskDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/model/task/TaskUpdateDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/model/dto/TaskUpdateDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/repository/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/repository/EmployeeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/repository/RoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/repository/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/repository/TaskRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/security/CustomEmployeeDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/security/CustomEmployeeDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/service/AnnouncementServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/service/AnnouncementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/service/AttendenceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/service/AttendenceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/service/ChatServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/service/ChatService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/service/DashboardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/service/DashboardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/service/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/service/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/service/ProfileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/service/ProfileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/service/TaskServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/service/TaskService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/service/interfaces/AnnouncementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/service/interfaces/AnnouncementServiceInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/service/interfaces/AttendenceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/service/interfaces/AttendenceServiceInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/service/interfaces/ChatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/service/interfaces/ChatServiceInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/service/interfaces/DashboardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/service/interfaces/DashboardServiceInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/service/interfaces/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/service/interfaces/EmployeeServiceInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/service/interfaces/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dashboard/service/interfaces/TaskServiceInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/dashboard/Common.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/dashboard/Common.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/dashboard/EmployeeProfileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/dashboard/EmployeeProfileTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +137,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="14" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/src/main/java/com/dashboard/useful" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -96,12 +151,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.dashboard" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend/src/main/java/com/dashboard/useful" />
+      <recent name="$PROJECT_DIR$/frontend" />
       <recent name="$PROJECT_DIR$/src/main/resources/templates/fragments/taskfragments" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/repository" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.dashboard.model" />
+      <recent name="com.dashboard.controller" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend" />
@@ -156,6 +218,7 @@
       <workItem from="1594543190829" duration="695000" />
       <workItem from="1594570237777" duration="4151000" />
       <workItem from="1597701211318" duration="1014000" />
+      <workItem from="1597861410247" duration="492000" />
     </task>
     <task id="LOCAL-00001" summary="made the application on launcher">
       <created>1594060485284</created>
@@ -262,7 +325,21 @@
       <option name="project" value="LOCAL" />
       <updated>1597843718403</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="refactor frontend">
+      <created>1597843910774</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1597843910774</updated>
+    </task>
+    <task id="LOCAL-00017" summary="add front-end dockerization">
+      <created>1597844117628</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1597844117628</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,7 +395,9 @@
     <MESSAGE value="change gitignore" />
     <MESSAGE value="add template of front-end" />
     <MESSAGE value="refactor front-end" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor front-end" />
+    <MESSAGE value="refactor frontend" />
+    <MESSAGE value="add front-end dockerization" />
+    <option name="LAST_COMMIT_MESSAGE" value="add front-end dockerization" />
   </component>
   <component name="WindowStateProjectService">
     <state x="466" y="100" key="#Project_Structure" timestamp="1594541646560">
@@ -335,9 +414,10 @@
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state x="734" y="324" key="#com.intellij.fileTypes.FileTypeChooser/36.0.1884.1044@36.0.1884.1044" timestamp="1594542245987" />
-    <state x="791" y="241" key="#com.intellij.ide.util.MemberChooser" timestamp="1594538518051">
-      <screen x="36" y="0" width="1884" height="1044" />
+    <state x="1539" y="241" key="#com.intellij.ide.util.MemberChooser" timestamp="1597861744135">
+      <screen x="0" y="0" width="3840" height="1044" />
     </state>
+    <state x="1539" y="241" key="#com.intellij.ide.util.MemberChooser/0.0.3840.1044@0.0.3840.1044" timestamp="1597861744135" />
     <state x="791" y="241" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594538518051" />
     <state x="738" y="304" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1597702275756">
       <screen x="36" y="0" width="1884" height="1044" />
@@ -349,10 +429,22 @@
       <screen x="0" y="0" width="3840" height="1044" />
     </state>
     <state x="2522" y="189" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.3840.1044@0.0.3840.1044" timestamp="1597832548888" />
+    <state x="2462" y="444" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1597844283532">
+      <screen x="0" y="0" width="3840" height="1044" />
+    </state>
+    <state x="2462" y="444" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.3840.1044@0.0.3840.1044" timestamp="1597844283532" />
     <state x="2606" y="390" width="584" height="271" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1594461079271">
       <screen x="0" y="0" width="3840" height="1044" />
     </state>
     <state x="2606" y="390" width="584" height="271" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.3840.1044@0.0.3840.1044" timestamp="1594461079271" />
+    <state x="2681" y="401" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1597844285192">
+      <screen x="0" y="0" width="3840" height="1044" />
+    </state>
+    <state x="2681" y="401" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.3840.1044@0.0.3840.1044" timestamp="1597844285192" />
+    <state x="2034" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597846839444">
+      <screen x="0" y="0" width="3840" height="1044" />
+    </state>
+    <state x="2034" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.3840.1044@0.0.3840.1044" timestamp="1597846839444" />
     <state x="2636" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597843630912">
       <screen x="0" y="0" width="3840" height="1044" />
     </state>
@@ -360,10 +452,10 @@
     <state x="3238" y="280" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594571048788" />
     <state x="1329" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594540343889" />
     <state x="1329" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/36.0.1884.1044@36.0.1884.1044" timestamp="1597701669351" />
-    <state x="2537" y="62" key="CommitChangelistDialog2" timestamp="1597843718335">
+    <state x="2537" y="62" key="CommitChangelistDialog2" timestamp="1597844117555">
       <screen x="0" y="0" width="3840" height="1044" />
     </state>
-    <state x="2537" y="62" key="CommitChangelistDialog2/0.0.3840.1044@0.0.3840.1044" timestamp="1597843718335" />
+    <state x="2537" y="62" key="CommitChangelistDialog2/0.0.3840.1044@0.0.3840.1044" timestamp="1597844117555" />
     <state x="2510" y="71" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594069609004" />
     <state x="416" y="0" key="CommitChangelistDialog2/36.0.1884.1044@36.0.1884.1044" timestamp="1597702253608" />
     <state x="539" y="127" width="827" height="844" key="DiffContextDialog" timestamp="1594550681239">
@@ -458,10 +550,10 @@
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state x="79" y="126" width="1684" height="844" key="VCS.FileHistoryDialog/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594550681239" />
-    <state x="2825" y="134" key="Vcs.Push.Dialog.v2" timestamp="1597843720876">
+    <state x="2825" y="134" key="Vcs.Push.Dialog.v2" timestamp="1597844120376">
       <screen x="0" y="0" width="3840" height="1044" />
     </state>
-    <state x="2825" y="134" key="Vcs.Push.Dialog.v2/0.0.3840.1044@0.0.3840.1044" timestamp="1597843720876" />
+    <state x="2825" y="134" key="Vcs.Push.Dialog.v2/0.0.3840.1044@0.0.3840.1044" timestamp="1597844120376" />
     <state x="2498" y="258" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594069612772" />
     <state x="603" y="249" key="Vcs.Push.Dialog.v2/36.0.1884.1044@36.0.1884.1044" timestamp="1597701984524" />
     <state x="333" y="124" key="VcsDiffUtil.ChangesDialog" timestamp="1594544563898">
@@ -488,9 +580,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2562" y="238" key="run.anything.popup/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594068072506" />
-    <state x="641" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1595070431821">
-      <screen x="36" y="0" width="1884" height="1044" />
+    <state x="1233" y="230" width="1370" height="678" key="search.everywhere.popup" timestamp="1597846582666">
+      <screen x="0" y="0" width="3840" height="1044" />
     </state>
+    <state x="1233" y="230" width="1370" height="678" key="search.everywhere.popup/0.0.3840.1044@0.0.3840.1044" timestamp="1597846582666" />
     <state x="641" y="230" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594503281019" />
     <state x="641" y="230" width="672" height="678" key="search.everywhere.popup/36.0.1884.1044@36.0.1884.1044" timestamp="1595070431821" />
   </component>
