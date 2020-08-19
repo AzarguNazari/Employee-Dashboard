@@ -26,7 +26,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce1a758f-3128-4ac3-8ec5-458509502ce3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/logo.svg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +240,21 @@
       <option name="project" value="LOCAL" />
       <updated>1597702253681</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="change gitignore">
+      <created>1597843489352</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1597843489352</updated>
+    </task>
+    <task id="LOCAL-00014" summary="add template of front-end">
+      <created>1597843537201</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1597843537201</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,7 +307,9 @@
     <MESSAGE value="make gitignore simple" />
     <MESSAGE value="add architecture design" />
     <MESSAGE value="change documentation resources" />
-    <option name="LAST_COMMIT_MESSAGE" value="change documentation resources" />
+    <MESSAGE value="change gitignore" />
+    <MESSAGE value="add template of front-end" />
+    <option name="LAST_COMMIT_MESSAGE" value="add template of front-end" />
   </component>
   <component name="WindowStateProjectService">
     <state x="466" y="100" key="#Project_Structure" timestamp="1594541646560">
@@ -319,16 +344,17 @@
       <screen x="0" y="0" width="3840" height="1044" />
     </state>
     <state x="2606" y="390" width="584" height="271" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.3840.1044@0.0.3840.1044" timestamp="1594461079271" />
-    <state x="1329" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597701669351">
-      <screen x="36" y="0" width="1884" height="1044" />
+    <state x="2636" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597843630912">
+      <screen x="0" y="0" width="3840" height="1044" />
     </state>
-    <state x="2636" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3840.1044@0.0.3840.1044" timestamp="1594460646059" />
+    <state x="2636" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3840.1044@0.0.3840.1044" timestamp="1597843630912" />
     <state x="3238" y="280" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594571048788" />
     <state x="1329" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594540343889" />
     <state x="1329" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/36.0.1884.1044@36.0.1884.1044" timestamp="1597701669351" />
-    <state x="416" y="0" key="CommitChangelistDialog2" timestamp="1597702253608">
-      <screen x="36" y="0" width="1884" height="1044" />
+    <state x="2537" y="62" key="CommitChangelistDialog2" timestamp="1597843537103">
+      <screen x="0" y="0" width="3840" height="1044" />
     </state>
+    <state x="2537" y="62" key="CommitChangelistDialog2/0.0.3840.1044@0.0.3840.1044" timestamp="1597843537103" />
     <state x="2510" y="71" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594069609004" />
     <state x="416" y="0" key="CommitChangelistDialog2/36.0.1884.1044@36.0.1884.1044" timestamp="1597702253608" />
     <state x="539" y="127" width="827" height="844" key="DiffContextDialog" timestamp="1594550681239">
@@ -423,9 +449,10 @@
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state x="79" y="126" width="1684" height="844" key="VCS.FileHistoryDialog/1920.0.1920.1080/36.0.1884.1044@36.0.1884.1044" timestamp="1594550681239" />
-    <state x="603" y="249" key="Vcs.Push.Dialog.v2" timestamp="1597701984524">
-      <screen x="36" y="0" width="1884" height="1044" />
+    <state x="2825" y="134" key="Vcs.Push.Dialog.v2" timestamp="1597843540896">
+      <screen x="0" y="0" width="3840" height="1044" />
     </state>
+    <state x="2825" y="134" key="Vcs.Push.Dialog.v2/0.0.3840.1044@0.0.3840.1044" timestamp="1597843540896" />
     <state x="2498" y="258" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1044@1920.0.1920.1080" timestamp="1594069612772" />
     <state x="603" y="249" key="Vcs.Push.Dialog.v2/36.0.1884.1044@36.0.1884.1044" timestamp="1597701984524" />
     <state x="333" y="124" key="VcsDiffUtil.ChangesDialog" timestamp="1594544563898">
