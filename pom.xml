@@ -10,7 +10,7 @@
     <description>An example of employee dashboard</description>
 
     <modules>
-        <module>employee-dashboard</module>
+        <module>backend</module>
         <module>analytics</module>
     </modules>
 </project>
