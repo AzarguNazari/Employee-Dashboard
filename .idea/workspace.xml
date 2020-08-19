@@ -26,9 +26,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce1a758f-3128-4ac3-8ec5-458509502ce3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,19 +86,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/documentation/media" />
-      <recent name="$PROJECT_DIR$/employee-dashboard/src" />
-      <recent name="$PROJECT_DIR$/src/main/resources/templates/fragments" />
-      <recent name="$PROJECT_DIR$/src/main/resources/templates/fragments/taskfragments" />
-      <recent name="$PROJECT_DIR$/src/test/java/com/example/dashboard/employeedashboard/authSecurityTest" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/templates/fragments/taskfragments" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller" />
       <recent name="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service" />
       <recent name="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/repository" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/documentation/media" />
+      <recent name="$PROJECT_DIR$/employee-dashboard/src" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/fragments" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/fragments/taskfragments" />
+      <recent name="$PROJECT_DIR$/src/test/java/com/example/dashboard/employeedashboard/authSecurityTest" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Application">
