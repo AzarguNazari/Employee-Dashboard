@@ -26,9 +26,146 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce1a758f-3128-4ac3-8ec5-458509502ce3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/analytics/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scripts/charts/chartJS/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scripts/charts/easyPieChart/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scripts/charts/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scripts/charts/sparkline/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scripts/chat/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scripts/constants/colors.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scripts/datatable/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scripts/datepicker/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scripts/email/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scripts/fullcalendar/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scripts/googleMaps/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scripts/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scripts/masonry/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scripts/popover/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scripts/scrollbar/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scripts/search/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scripts/sidebar/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scripts/skycons/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scripts/utils/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scripts/vectorMaps/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scripts/vectorMaps/jquery-jvectormap-world-mill.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/static/fonts/icons/fontawesome/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/static/fonts/icons/fontawesome/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/static/fonts/icons/fontawesome/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/static/fonts/icons/fontawesome/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/static/fonts/icons/fontawesome/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/static/fonts/icons/fontawesome/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/static/fonts/icons/themify/themify.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/static/fonts/icons/themify/themify.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/static/fonts/icons/themify/themify.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/static/fonts/icons/themify/themify.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/static/images/404.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/static/images/500.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/static/images/bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/static/images/datatables/sort_asc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/static/images/datatables/sort_asc_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/static/images/datatables/sort_both.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/static/images/datatables/sort_desc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/static/images/datatables/sort_desc_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/static/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/static/images/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/components/easyPieChart.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/components/footer.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/components/forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/components/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/components/loader.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/components/masonry.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/components/pageContainer.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/components/progressBar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/components/sidebar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/components/topbar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/generic/base.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/generic/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/screens/chat.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/screens/email.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/screens/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/settings/baseColors.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/settings/borders.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/settings/breakpoints.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/settings/fonts.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/settings/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/settings/materialColors.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/tools/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/tools/mixins/clearfix.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/tools/mixins/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/tools/mixins/mediaQueriesRanges.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/tools/mixins/placeholder.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/utils/colors.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/utils/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/utils/layout/helpers/border.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/utils/layout/helpers/flex.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/utils/layout/helpers/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/utils/layout/helpers/layout.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/utils/layout/helpers/lists.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/utils/layout/helpers/margin.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/utils/layout/helpers/objects.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/utils/layout/helpers/padding.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/utils/layout/helpers/positions.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/utils/layout/helpers/pseudo.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/utils/layout/helpers/sizes.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/utils/layout/helpers/typography.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/utils/layout/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/utils/layout/mixins/generateResponsive.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/utils/layout/mixins/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/utils/layout/mixins/mediaQueryCondition.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/utils/layout/utils/center.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/utils/layout/utils/gap.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/utils/layout/utils/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/utils/layout/utils/layers.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/spec/utils/layout/utils/peers.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/vendor/datepicker.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/vendor/font-awesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/vendor/fullcalendar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/vendor/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/vendor/jquery.datatables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/vendor/perfectScrollbar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/vendor/sparkline.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles/vendor/themify-icons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/basic-table.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/blank.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/buttons.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/calendar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/charts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/chat.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/compose.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/datatable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/email.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/forms.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/google-maps.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/signin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/signup.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ui.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/vector-maps.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/webpack.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/webpack/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/webpack/devServer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/webpack/manifest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/webpack/plugins/caseSensitivePlugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/webpack/plugins/copyPlugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/webpack/plugins/dashboardPlugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/webpack/plugins/extractPlugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/webpack/plugins/htmlPlugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/webpack/plugins/imageminPlugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/webpack/plugins/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/webpack/plugins/internal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/webpack/rules/css.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/webpack/rules/fonts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/webpack/rules/images.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/webpack/rules/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/webpack/rules/js.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/webpack/rules/sass.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +211,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="14" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tempFrontend/frontend" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -88,22 +225,22 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/documentation/media" />
-      <recent name="$PROJECT_DIR$/employee-dashboard/src" />
-      <recent name="$PROJECT_DIR$/src/main/resources/templates/fragments" />
-      <recent name="$PROJECT_DIR$/src/main/resources/templates/fragments/taskfragments" />
-      <recent name="$PROJECT_DIR$/src/test/java/com/example/dashboard/employeedashboard/authSecurityTest" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tempFrontend/frontend" />
       <recent name="$PROJECT_DIR$/src/main/resources/templates/fragments/taskfragments" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/controller" />
       <recent name="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/service" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/example/dashboard/employeedashboard/repository" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend" />
+      <recent name="$PROJECT_DIR$/documentation/media" />
+      <recent name="$PROJECT_DIR$/employee-dashboard/src" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/fragments" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/fragments/taskfragments" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Application">
+  <component name="RunManager" selected="JavaScript Debug.chat.html">
     <configuration name="Application" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.dashboard.EmployeeDashboardApplication" />
       <module name="employee-dashboard" />
@@ -121,6 +258,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="chat.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Employee-Dashboard/frontend/src/chat.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="EmployeeDashboardApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="employee-dashboard" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.dashboard.EmployeeDashboardApplication" />
@@ -132,7 +272,13 @@
       <item itemvalue="Application.Application" />
       <item itemvalue="Application.Dev Dashboard Employee" />
       <item itemvalue="Spring Boot.EmployeeDashboardApplication" />
+      <item itemvalue="JavaScript Debug.chat.html" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.chat.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -148,6 +294,8 @@
       <workItem from="1594543190829" duration="695000" />
       <workItem from="1594570237777" duration="4151000" />
       <workItem from="1597701211318" duration="1014000" />
+      <workItem from="1597732944436" duration="11000" />
+      <workItem from="1597783468870" duration="3968000" />
     </task>
     <task id="LOCAL-00001" summary="made the application on launcher">
       <created>1594060485284</created>
