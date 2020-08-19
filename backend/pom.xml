@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.employeedashboard</groupId>
-    <artifactId>demo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>employee-dashboard</name>
+    <artifactId>backend</artifactId>
+    <version>1-SNAPSHOT</version>
+    <name>backend</name>
     <description>Employee Dashboard Application</description>
 
     <properties>
