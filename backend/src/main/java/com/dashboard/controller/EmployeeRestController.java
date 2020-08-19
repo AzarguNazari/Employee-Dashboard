@@ -1,7 +1,7 @@
 package com.dashboard.controller;
 
 import com.dashboard.model.Employee;
-import com.dashboard.exception.EmployeeNotFound;
+import com.dashboard.exception.NotFoundException;
 import com.dashboard.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
@@ -40,7 +40,7 @@ public class EmployeeRestController implements EmployeeControllerInterface {
         Optional<Employee> employee = employeeService.getEmployeeById(id);
 
         if (!employee.isPresent())
-            throw new EmployeeNotFound(id);
+            throw new NotFoundException(id);
 
         EntityModel<Employee> entityModel = new EntityModel<>(employee.get());
 
@@ -62,7 +62,7 @@ public class EmployeeRestController implements EmployeeControllerInterface {
         if (foundEmployee.isPresent()) {
             employeeService.updateEmployee(employeeId, employee);
         } else {
-            throw new EmployeeNotFound(employeeId);
+            throw new NotFoundException(employeeId);
         }
     }
 }
