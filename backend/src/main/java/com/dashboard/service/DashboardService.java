@@ -5,13 +5,14 @@ import com.dashboard.model.EmployeeDto;
 import com.dashboard.model.Title;
 import com.dashboard.exception.InvalidInput;
 import com.dashboard.repository.EmployeeRepository;
+import com.dashboard.service.interfaces.DashboardServiceInterface;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 @Slf4j
-public class DashboardService implements DashboardService {
+public class DashboardService implements DashboardServiceInterface {
 
     @Autowired
     private EmployeeRepository employeeRepository;

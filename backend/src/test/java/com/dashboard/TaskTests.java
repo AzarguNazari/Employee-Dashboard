@@ -7,6 +7,7 @@ import com.dashboard.model.Task;
 import com.dashboard.service.TaskService;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -14,6 +15,7 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -42,16 +44,24 @@ public class TaskTests {
     @Autowired
     private TaskService taskService;
 
-    @Test
-    public void contexLoads() throws Exception {
+    @BeforeEach
+    public void contextLoads() throws Exception {
         assertThat(bankAccountController).isNotNull();
         assertThat(taskService).isNotNull();
+        Task task = new Task();
+        task.setPercentage(50);
+        task.setPriority(Priority.HIGH);
+        task.setStatus(Status.DONE);
+        task.setDescription("clean all unused branches");
+        task.setTaskname("Git Branch Cleaning");
         taskService.deleteAllTasks();
+        taskService.addNewTask(task);
+        assertThat(taskService.getAllTasks()).hasSize(1);
     }
 
     @Test
     public void addNewAccount() throws URISyntaxException {
-        final String baseUrl = "http://localhost:" + port + "/v1/api/tasks";
+        final String baseUrl = "http://localhost:" + this.port + "/v1/api/tasks";
         URI uri = new URI(baseUrl);
         Task task = new Task();
         task.setPercentage(50);
@@ -63,13 +73,17 @@ public class TaskTests {
         headers.set("X-COM-PERSIST", "true");
         HttpEntity<Task> request = new HttpEntity<>(task, headers);
         ResponseEntity<String> result = this.restTemplate.postForEntity(uri, request, String.class);
-        //Verify request succeed
-        Assert.assertEquals(200, result.getStatusCodeValue());
+        Assert.assertEquals(201, result.getStatusCodeValue());
     }
 
     @Test
-    public void getAllList() {
-
+    public void getAllList() throws URISyntaxException {
+        final String baseUrl = "http://localhost:" + this.port + "/v1/api/tasks";
+        URI uri = new URI(baseUrl);
+        final ResponseEntity<List> tasks = this.restTemplate.getForEntity(uri, List.class);
+        assertThat(tasks).isNotNull();
+        assertThat(tasks.getBody()).hasSize(1);
+        Assert.assertEquals(200, tasks.getStatusCodeValue());
     }
 
     @Test
