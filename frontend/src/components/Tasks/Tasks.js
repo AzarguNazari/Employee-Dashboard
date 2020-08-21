@@ -1,8 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import classnames from "classnames";
 // @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
+import {makeStyles} from "@material-ui/core/styles";
 import Checkbox from "@material-ui/core/Checkbox";
 import Tooltip from "@material-ui/core/Tooltip";
 import IconButton from "@material-ui/core/IconButton";
@@ -32,16 +31,13 @@ export default function Tasks(props) {
     }
     setChecked(newChecked);
   };
-  const { tasksIndexes, tasks, rtlActive } = props;
-  const tableCellClasses = classnames(classes.tableCell, {
-    [classes.tableCellRTL]: rtlActive
-  });
+  const { tasksIndexes, tasks } = props;
   return (
     <Table className={classes.table}>
       <TableBody>
         {tasksIndexes.map(value => (
           <TableRow key={value} className={classes.tableRow}>
-            <TableCell className={tableCellClasses}>
+            <TableCell>
               <Checkbox
                 checked={checked.indexOf(value) !== -1}
                 tabIndex={-1}
@@ -54,7 +50,7 @@ export default function Tasks(props) {
                 }}
               />
             </TableCell>
-            <TableCell className={tableCellClasses}>{tasks[value]}</TableCell>
+            <TableCell>{tasks[value]}</TableCell>
             <TableCell className={classes.tableActions}>
               <Tooltip
                 id="tooltip-top"
@@ -101,6 +97,5 @@ export default function Tasks(props) {
 Tasks.propTypes = {
   tasksIndexes: PropTypes.arrayOf(PropTypes.number),
   tasks: PropTypes.arrayOf(PropTypes.node),
-  rtlActive: PropTypes.bool,
   checkedIndexes: PropTypes.array
 };
