@@ -1,44 +1,37 @@
-/*!
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import {Redirect, Route, Router, Switch} from "react-router-dom"
+import {createBrowserHistory} from "history";
+import * as serviceWorker from './serviceWorker';
+import Signin from "./View/SignIn";
+import Register from "./View/Register";
+import NotFound from "./View/NotFound"
+import Meeting from "./View/Meeting"
+import Announcement from "./View/Announcement"
+import Messages from "./View/Messages"
+import Notification from "./View/Notification"
+import Attendance from "./View/Attendance"
+import Dashboard from "./View/Dashboard"
 
-=========================================================
-* Material Dashboard React - v1.9.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/material-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-import React from "react";
-import ReactDOM from "react-dom";
-import { createBrowserHistory } from "history";
-import { Router, Route, Switch, Redirect } from "react-router-dom";
-
-// core components
-import Admin from "layouts/Admin.js";
-
-import "assets/css/material-dashboard-react.css?v=1.9.0";
-import NotFound from './components/notfound/NotFound'
-
-import Signin from './components/EntryPage/Signin'
-import Register from './components/EntryPage/Register'
-const hist = createBrowserHistory();
+const hist = createBrowserHistory()
 
 ReactDOM.render(
-  <Router history={hist}>
-    <Switch>
-      <Route path="/login" component={Signin} />
-      <Route path="/admin" component={Admin} />
-      <Route path="/register" component={Register} />
-      <Route component={NotFound} />
-      <Redirect from="/" to="/admin/dashboard" />
-    </Switch>
-  </Router>,
-  document.getElementById("root")
+    <Router history={hist}>
+        <Switch>
+            <Route path="/login" component={Signin} />
+            <Route path="/register" component={Register} />
+            <Route path="/dashboard" component={Dashboard} />
+            <Route path="/profile" component={Dashboard} />
+            <Route path="/meeting" component={Meeting} />
+            <Route path="/announcements" component={Announcement} />
+            <Route path="/message" component={Messages} />
+            <Route path="/notifications" component={Notification} />
+            <Route path="/attendance" component={Attendance} />
+            <Route component={NotFound} />
+            <Redirect from="/" to="/dashboard" />
+        </Switch>
+    </Router>,
+  document.getElementById('root')
 );
+serviceWorker.unregister();
