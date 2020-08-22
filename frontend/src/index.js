@@ -12,7 +12,7 @@ import Announcement from "./View/Announcement"
 import Messages from "./View/Messages"
 import Notification from "./View/Notification"
 import Attendance from "./View/Attendance"
-import Dashboard from "./View/Dashboard"
+import Dashboard from "./View/Dashboard/Dashboard"
 
 const hist = createBrowserHistory()
 
