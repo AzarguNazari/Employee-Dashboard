@@ -1,4 +1,4 @@
-package com.dashboard.controller;
+package com.dashboard.controller.interfaces;
 
 import com.dashboard.model.Employee;
 import org.springframework.data.domain.Pageable;
