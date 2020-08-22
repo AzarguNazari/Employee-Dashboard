@@ -8,8 +8,7 @@ import org.springframework.web.bind.annotation.*;
 public interface TaskControllerInterface {
 
     @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
-    void createTask(@RequestBody Task task);
+    ResponseEntity<?> createTask(@RequestBody Task task);
 
     @GetMapping
     ResponseEntity<?> getAllTasks();

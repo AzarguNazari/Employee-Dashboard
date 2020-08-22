@@ -1,9 +1,10 @@
 package com.dashboard.controller;
 
-import com.dashboard.exception.ApiError;
-import com.dashboard.exception.BadRequestException;
+import com.dashboard.exception.*;
 import com.dashboard.model.Employee;
 import com.dashboard.service.EmployeeService;
+import lombok.extern.log4j.Log4j;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -13,7 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/v1/employees")
-public class EmployeeRestController implements EmployeeControllerInterface {
+@Log4j2
+public class EmployeeController implements EmployeeControllerInterface {
 
     @Autowired
     private EmployeeService employeeService;
@@ -54,10 +56,13 @@ public class EmployeeRestController implements EmployeeControllerInterface {
     }
 
     @Override
-    public ResponseEntity<?> deleteEmployeeById(Integer id) {
+    public ResponseEntity<?> deleteEmployeeById(Integer employeeID) {
         try{
-            employeeService.deleteEmployeeById(id);
-            return new ResponseEntity<>("Employee with id " + id + " is deleted", HttpStatus.OK);
+            employeeService.deleteEmployeeById(employeeID);
+            return new ResponseEntity<>("Employee with id " + employeeID + " is deleted", HttpStatus.OK);
+        }
+        catch(EmployeeNotFoundException ex){
+            return ExceptionFactory.EMPLOYEE_NOT_FOUND(employeeID);
         }
         catch(Exception ex){
             return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
@@ -68,10 +73,49 @@ public class EmployeeRestController implements EmployeeControllerInterface {
     public ResponseEntity<?> updateEmployee(Integer employeeId, Employee employee) {
         try{
             employeeService.updateEmployee(employeeId, employee);
+            log.debug("Employee {} is updated", employee);
             return new ResponseEntity<>("Employee with id " + employeeId + " is updated", HttpStatus.OK);
+        }
+        catch(EmployeeNotFoundException ex){
+            return ExceptionFactory.EMPLOYEE_NOT_FOUND(employeeId);
         }
         catch(Exception ex){
             return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @Override
+    public ResponseEntity<?> assignTask(Integer employeeID, Integer taskID) {
+        try{
+            employeeService.assignTask(employeeID, taskID);
+            log.debug("Task {} is assigned to {}", taskID, employeeID);
+            return new ResponseEntity<>("Task with ID " + taskID + " is assigned to Employee with ID " + employeeID, HttpStatus.OK);
+        }
+        catch(TaskNotFoundException ex){
+            return ExceptionFactory.TASK_NOT_FOUND(taskID);
+        }
+        catch(EmployeeNotFoundException ex){
+            return ExceptionFactory.EMPLOYEE_NOT_FOUND(employeeID);
+        }
+        catch(Exception ex){
+            return ExceptionFactory.INTERNAL_EXCEPTION();
+        }
+    }
+
+    @Override
+    public ResponseEntity<?> unassignTask(Integer employeeID, Integer taskID) {
+        try{
+            employeeService.unassignTask(employeeID, taskID);
+            return new ResponseEntity<>("Task with ID " + taskID + " is assigned to Employee with ID " + employeeID, HttpStatus.OK);
+        }
+        catch(TaskNotFoundException ex){
+            return ExceptionFactory.TASK_NOT_FOUND(taskID);
+        }
+        catch(EmployeeNotFoundException ex){
+            return ExceptionFactory.EMPLOYEE_NOT_FOUND(employeeID);
+        }
+        catch(Exception ex){
+            return ExceptionFactory.INTERNAL_EXCEPTION();
         }
     }
 }

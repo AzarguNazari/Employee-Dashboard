@@ -1,8 +1,8 @@
 package com.dashboard.security;
 
+import com.dashboard.exception.EmployeeNotFoundException;
 import com.dashboard.model.Employee;
 import com.dashboard.repository.EmployeeRepository;
-import com.dashboard.service.exceptions.EmployeeNotFoundException;
 import com.dashboard.model.security.CustomEmployeeDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -22,7 +22,7 @@ public class CustomEmployeeDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Optional<Employee> employee = employeeRepository.findByUsername(username);
-        employee.orElseThrow(() -> new EmployeeNotFoundException("Employee not found"));
+        employee.orElseThrow(() -> new EmployeeNotFoundException());
         return employee.map(CustomEmployeeDetails::new).get();
     }
 }

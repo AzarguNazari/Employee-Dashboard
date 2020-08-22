@@ -23,4 +23,8 @@ public interface EmployeeServiceInterface {
     void deleteEmployeeById(Integer id);
 
     void updateEmployee(Integer employeeId, Employee employee);
+
+    void assignTask(Integer employeeId, Integer taskID);
+
+    void unassignTask(Integer employeeId, Integer taskID);
 }

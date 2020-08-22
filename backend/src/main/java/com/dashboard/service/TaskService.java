@@ -1,16 +1,12 @@
 package com.dashboard.service;
 
-import com.dashboard.exception.NotFoundException;
+import com.dashboard.exception.EmployeeNotFoundException;
 import com.dashboard.model.Priority;
 import com.dashboard.model.Task;
 import com.dashboard.repository.TaskRepository;
 import com.dashboard.service.interfaces.TaskServiceInterface;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -44,7 +40,7 @@ public class TaskService implements TaskServiceInterface {
     public Task getTaskById(Integer id) {
         final Optional<Task> byId = taskRepository.findById(id);
         if(byId.isPresent()) return byId.get();
-        else throw new NotFoundException();
+        else throw new EmployeeNotFoundException();
     }
 
     public List<Task> getAllTasks(){

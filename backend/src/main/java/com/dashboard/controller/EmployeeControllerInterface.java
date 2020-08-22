@@ -25,4 +25,11 @@ public interface EmployeeControllerInterface {
 
     @PutMapping("/{id}")
     ResponseEntity<?> updateEmployee(@PathVariable Integer employeeId, @RequestBody Employee employee);
+
+    // Task Operation with Employee
+    @PostMapping("/{employeeID}/tasks/{taskID}")
+    ResponseEntity<?> assignTask(@PathVariable Integer employeeID, @PathVariable Integer taskID);
+
+    @DeleteMapping("/{employeeID}/tasks/{taskID}")
+    ResponseEntity<?> unassignTask(@PathVariable Integer employeeID, @PathVariable Integer taskID);
 }
