@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/v1/api/tasks")
+@RequestMapping("/api/v1/tasks")
 @Slf4j
 public class TaskRestController implements TaskControllerInterface {
 

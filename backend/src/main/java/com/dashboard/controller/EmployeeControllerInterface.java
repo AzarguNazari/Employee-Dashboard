@@ -4,6 +4,7 @@ import com.dashboard.model.Employee;
 import org.springframework.data.domain.Pageable;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,18 +12,17 @@ import java.util.List;
 public interface EmployeeControllerInterface {
 
     @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
-    void createEmployee(@RequestBody Employee employee);
+    ResponseEntity<?> createEmployee(@RequestBody Employee employee);
 
     @GetMapping
-    List<EntityModel<Employee>> getAllEmployees(Pageable pageable);
+    ResponseEntity<?> getAllEmployees(Pageable pageable);
 
     @GetMapping("/{id}")
-    EntityModel<Employee> getEmployeeById(@PathVariable Integer id);
+    ResponseEntity<?> getEmployeeById(@PathVariable Integer id);
 
     @DeleteMapping("/{id}")
-    void deleteEmployeeById(@PathVariable Integer id);
+    ResponseEntity<?> deleteEmployeeById(@PathVariable Integer id);
 
     @PutMapping("/{id}")
-    void updateEmployee(@PathVariable Integer employeeId, @RequestBody Employee employee);
+    ResponseEntity<?> updateEmployee(@PathVariable Integer employeeId, @RequestBody Employee employee);
 }

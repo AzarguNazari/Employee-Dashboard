@@ -1,12 +1,10 @@
 package com.dashboard.service;
 
+import com.dashboard.exception.BadRequestException;
 import com.dashboard.model.Employee;
-import com.dashboard.model.EmployeeDto;
-import com.dashboard.model.Title;
 import com.dashboard.repository.EmployeeRepository;
 import com.dashboard.service.interfaces.EmployeeServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -30,19 +28,18 @@ public class EmployeeService implements EmployeeServiceInterface {
 
     @Override
     public void addNewEmployee(Employee employee){
-        employeeRepository.save(employee);
+        if(employee.getId() != null){
+            final Optional<Employee> byId = employeeRepository.findById(employee.getId());
+            if(byId.isPresent()) throw new BadRequestException();
+        }
+        else{
+            employeeRepository.save(employee);
+        }
     }
 
     @Override
-    public void addNewEmployee(EmployeeDto employee){
-        Employee tempEmployee = new Employee(employee.getUsername(), employee.getFirstName(), employee.getLastName(), employee.getPassword1(), employee.getSalary(), Title.valueOf(employee.getPosition()));
-
-//        employeeRepository.save(employee);
-    }
-
-    @Override
-    public List<Employee> getAllEmployees(Pageable pageable){
-        return employeeRepository.findAll(pageable).toList();
+    public List<Employee> getAllEmployees(){
+        return employeeRepository.findAll();
     }
 
     @Override

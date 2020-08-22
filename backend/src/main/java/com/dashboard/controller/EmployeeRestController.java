@@ -1,68 +1,77 @@
-//package com.dashboard.controller;
-//
-//import com.dashboard.model.Employee;
-//import com.dashboard.exception.NotFoundException;
-//import com.dashboard.service.EmployeeService;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.data.domain.PageRequest;
-//import org.springframework.data.domain.Pageable;
-//import org.springframework.hateoas.EntityModel;
-//import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
-//import org.springframework.web.bind.annotation.*;
-//
-//import java.util.List;
-//import java.util.Optional;
-//import java.util.stream.Collectors;
-//
-//import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
-//import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
-//
-//@RequestMapping("/api/v1/employees")
-//@RestController
-//public class EmployeeRestController implements EmployeeControllerInterface {
-//
-//    @Autowired
-//    private EmployeeService employeeService;
-//
-//    @Override
-//    public void createEmployee(Employee employee) {
-//        employeeService.addNewEmployee(employee);
-//    }
-//
-//    @Override
-//    public List<EntityModel<Employee>> getAllEmployees(Pageable pageable) {
-//        return employeeService.getAllEmployees(pageable).stream().map(employee -> getEmployeeById(employee.getId())).collect(Collectors.toList());
-//    }
-//
-//
-//    @Override
-//    public EntityModel<Employee> getEmployeeById(Integer id) {
-//        Optional<Employee> employee = employeeService.getEmployeeById(id);
-//
-//        if (!employee.isPresent())
-//            throw new NotFoundException(id);
-//
-//        EntityModel<Employee> entityModel = new EntityModel<>(employee.get());
-//
-//        WebMvcLinkBuilder webLinker = linkTo(methodOn(this.getClass()).getAllEmployees(PageRequest.of(1, 10)));
-//
-//        entityModel.add(webLinker.withRel("all-employees"));
-//
-//        return entityModel;
-//    }
-//
-//    @Override
-//    public void deleteEmployeeById(Integer id) {
-//        employeeService.deleteEmployeeById(id);
-//    }
-//
-//    @Override
-//    public void updateEmployee(Integer employeeId, Employee employee) {
-//        Optional<Employee> foundEmployee = employeeService.getEmployeeById(employeeId);
-//        if (foundEmployee.isPresent()) {
-//            employeeService.updateEmployee(employeeId, employee);
-//        } else {
-//            throw new NotFoundException(employeeId);
-//        }
-//    }
-//}
+package com.dashboard.controller;
+
+import com.dashboard.exception.ApiError;
+import com.dashboard.exception.BadRequestException;
+import com.dashboard.model.Employee;
+import com.dashboard.service.EmployeeService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/api/v1/employees")
+public class EmployeeRestController implements EmployeeControllerInterface {
+
+    @Autowired
+    private EmployeeService employeeService;
+
+    @Override
+    public ResponseEntity<?> createEmployee(Employee employee) {
+        try{
+            employeeService.addNewEmployee(employee);
+            return new ResponseEntity<>("New employee created", HttpStatus.CREATED);
+        }
+        catch(BadRequestException ex){
+            return new ResponseEntity<>(new ApiError("Employee with id " + employee.getId() + " is already existed", HttpStatus.BAD_REQUEST), HttpStatus.BAD_REQUEST);
+        }
+        catch(Exception ex){
+            return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @Override
+    public ResponseEntity<?> getAllEmployees(Pageable pageable) {
+        try{
+            return new ResponseEntity<>(employeeService.getAllEmployees(), HttpStatus.OK);
+        }
+        catch(Exception ex){
+            return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+
+    @Override
+    public ResponseEntity<?> getEmployeeById(Integer id) {
+        try{
+            return new ResponseEntity<>(employeeService.getEmployeeById(id), HttpStatus.OK);
+        }
+        catch(Exception ex){
+            return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @Override
+    public ResponseEntity<?> deleteEmployeeById(Integer id) {
+        try{
+            employeeService.deleteEmployeeById(id);
+            return new ResponseEntity<>("Employee with id " + id + " is deleted", HttpStatus.OK);
+        }
+        catch(Exception ex){
+            return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @Override
+    public ResponseEntity<?> updateEmployee(Integer employeeId, Employee employee) {
+        try{
+            employeeService.updateEmployee(employeeId, employee);
+            return new ResponseEntity<>("Employee with id " + employeeId + " is updated", HttpStatus.OK);
+        }
+        catch(Exception ex){
+            return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+}
