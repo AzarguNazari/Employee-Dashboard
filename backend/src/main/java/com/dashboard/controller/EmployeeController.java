@@ -24,6 +24,7 @@ public class EmployeeController implements EmployeeControllerInterface {
     public ResponseEntity<?> createEmployee(Employee employee) {
         try{
             employeeService.addNewEmployee(employee);
+            log.debug("New employee {} is created", employee);
             return new ResponseEntity<>("New employee created", HttpStatus.CREATED);
         }
         catch(BadRequestException ex){
@@ -59,6 +60,7 @@ public class EmployeeController implements EmployeeControllerInterface {
     public ResponseEntity<?> deleteEmployeeById(Integer employeeID) {
         try{
             employeeService.deleteEmployeeById(employeeID);
+            log.debug("Employee with id {} is deleted", employeeID);
             return new ResponseEntity<>("Employee with id " + employeeID + " is deleted", HttpStatus.OK);
         }
         catch(EmployeeNotFoundException ex){
@@ -106,6 +108,7 @@ public class EmployeeController implements EmployeeControllerInterface {
     public ResponseEntity<?> unassignTask(Integer employeeID, Integer taskID) {
         try{
             employeeService.unassignTask(employeeID, taskID);
+            log.debug("Task {} is unassigned from to employee {}", taskID, employeeID);
             return new ResponseEntity<>("Task with ID " + taskID + " is assigned to Employee with ID " + employeeID, HttpStatus.OK);
         }
         catch(TaskNotFoundException ex){
