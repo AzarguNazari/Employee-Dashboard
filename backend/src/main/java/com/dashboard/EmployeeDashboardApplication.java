@@ -1,8 +1,7 @@
 package com.dashboard;
 
-import com.dashboard.model.Priority;
-import com.dashboard.model.Status;
-import com.dashboard.model.Task;
+import com.dashboard.model.*;
+import com.dashboard.repository.EmployeeRepository;
 import com.dashboard.repository.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
@@ -19,14 +18,30 @@ public class EmployeeDashboardApplication implements ApplicationRunner {
     @Autowired
     private TaskRepository taskRepository;
 
+    @Autowired
+    private EmployeeRepository employeeRepository;
+
     public static void main(String[] args) {
         SpringApplication.run(EmployeeDashboardApplication.class, args);
     }
 
 
     @Override
-    public void run(ApplicationArguments args) throws Exception {
+    public void run(ApplicationArguments args){
         generateTasks().forEach(taskRepository::save);
+        generateEmployees().forEach(employeeRepository::save);
+    }
+
+
+    public List<Employee> generateEmployees(){
+        Employee emp1 = new Employee();
+        emp1.setFirstName("firstname1");
+        emp1.setLastName("lastname1");
+        emp1.setPassword("password1");
+        emp1.setSalary(1000);
+        emp1.setTitle(Title.DEVELOPER);
+        emp1.setUsername("username1");
+        return Arrays.asList(emp1);
     }
 
     public List<Task> generateTasks(){
