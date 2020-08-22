@@ -1,11 +1,15 @@
 package com.dashboard.controller;
 
+import com.dashboard.exception.ApiError;
+import com.dashboard.exception.NotFoundException;
 import com.dashboard.model.Task;
 import com.dashboard.service.TaskService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,30 +31,58 @@ public class TaskRestController implements TaskControllerInterface {
     }
 
     @Override
-    public ResponseEntity<List<Task>> getAllTasks() {
-        return new ResponseEntity<>(taskService.getAllTasks(), HttpStatus.OK);
+    public ResponseEntity<?> getAllTasks() {
+        try{
+            return new ResponseEntity<>(taskService.getAllTasks(), HttpStatus.OK);
+        }
+        catch(Exception ex){
+            return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @Override
-    public ResponseEntity<Task> getTaskById(Integer id) {
-        final Optional<Task> taskById = taskService.getTaskById(id);
-        if(taskById.isPresent()) return new ResponseEntity<>(taskById.get(), HttpStatus.OK);
-        else return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    public ResponseEntity<?> getTaskById(Integer id) {
+        try{
+            return new ResponseEntity<>(taskService.getTaskById(id), HttpStatus.OK);
+        }
+        catch(NotFoundException ex){
+            log.debug("account {} is already existed", id);
+            return new ResponseEntity<>(new ApiError("account with id " + id + " is doesn't exist", HttpStatus.NOT_FOUND), HttpStatus.NOT_FOUND);
+        }
+        catch(Exception ex){
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @Override
-    public ResponseEntity<List<Task>> getTaskByStatus(String status) {
-        final List<Task> taskByStatus = taskService.findTaskByStatus(status);
-        return new ResponseEntity<>(taskByStatus, HttpStatus.OK);
+    public ResponseEntity<?> getTaskByStatus(String status) {
+        try{
+            return new ResponseEntity<>(taskService.findTaskByStatus(status), HttpStatus.OK);
+        }
+        catch(Exception ex){
+            return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @Override
-    public void deleteTaskById(Integer id) {
-        taskService.deleteTaskById(id);
+    public ResponseEntity<?> deleteTaskById(Integer id) {
+        try{
+            taskService.deleteTaskById(id);
+            return new ResponseEntity<>("Task with id " + id + " is deleted", HttpStatus.OK);
+        }
+        catch(Exception ex){
+            return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @Override
-    public void updateTask(Integer taskID, Task task) {
-        taskService.updateTask(taskID, task);
+    public ResponseEntity<?> updateTask(Integer taskID, Task task) {
+        try{
+            taskService.updateTask(taskID, task);
+            return getTaskById(taskID);
+        }
+        catch(Exception ex){
+            return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 }

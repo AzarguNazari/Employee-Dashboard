@@ -1,5 +1,6 @@
 package com.dashboard.service;
 
+import com.dashboard.exception.NotFoundException;
 import com.dashboard.model.Priority;
 import com.dashboard.model.Task;
 import com.dashboard.repository.TaskRepository;
@@ -40,8 +41,10 @@ public class TaskService implements TaskServiceInterface {
     }
 
     @Override
-    public Optional<Task> getTaskById(Integer id) {
-        return taskRepository.findById(id);
+    public Task getTaskById(Integer id) {
+        final Optional<Task> byId = taskRepository.findById(id);
+        if(byId.isPresent()) return byId.get();
+        else throw new NotFoundException();
     }
 
     public List<Task> getAllTasks(){
