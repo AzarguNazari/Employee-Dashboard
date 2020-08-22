@@ -7,14 +7,14 @@ import { makeStyles } from "@material-ui/core/styles";
 // @material-ui/icons
 import AddAlert from "@material-ui/icons/AddAlert";
 // core components
-import GridItem from "components/Grid/GridItem.js";
-import GridContainer from "components/Grid/GridContainer.js";
-import Button from "components/CustomButtons/Button.js";
-import SnackbarContent from "components/Snackbar/SnackbarContent.js";
-import Snackbar from "components/Snackbar/Snackbar.js";
-import Card from "components/Card/Card.js";
-import CardHeader from "components/Card/CardHeader.js";
-import CardBody from "components/Card/CardBody.js";
+import GridItem from "../../../../../frontend/src/components/Grid/GridItem.js";
+import GridContainer from "../../../../../frontend/src/components/Grid/GridContainer.js";
+import Button from "../../../../../frontend/src/components/CustomButtons/Button.js";
+import SnackbarContent from "../../../../../frontend/src/components/Snackbar/SnackbarContent.js";
+import Snackbar from "../../../../../frontend/src/components/Snackbar/Snackbar.js";
+import Card from "../../../../../frontend/src/components/Card/Card.js";
+import CardHeader from "../../../../../frontend/src/components/Card/CardHeader.js";
+import CardBody from "../../../../../frontend/src/components/Card/CardBody.js";
 
 const styles = {
   cardCategoryWhite: {
