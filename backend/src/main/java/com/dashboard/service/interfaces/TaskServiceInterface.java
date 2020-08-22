@@ -17,7 +17,7 @@ public interface TaskServiceInterface {
 
     void addNewTask(Task task);
 
-    Optional<Task> getTaskById(Integer id);
+    Task getTaskById(Integer id);
 
     List<Task> getAllTasks();
 
