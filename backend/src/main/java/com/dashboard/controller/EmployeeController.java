@@ -4,6 +4,7 @@ import com.dashboard.controller.interfaces.EmployeeControllerInterface;
 import com.dashboard.exception.*;
 import com.dashboard.model.Employee;
 import com.dashboard.service.EmployeeService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/v1/employees")
+@Tag(name = "Employees")
 @Log4j2
 public class EmployeeController implements EmployeeControllerInterface {
 

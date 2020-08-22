@@ -5,6 +5,7 @@ import com.dashboard.exception.ApiError;
 import com.dashboard.exception.EmployeeNotFoundException;
 import com.dashboard.model.Task;
 import com.dashboard.service.TaskService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/v1/tasks")
+@Tag(name = "Tasks")
 @Slf4j
 public class TaskController implements TaskControllerInterface {
 
