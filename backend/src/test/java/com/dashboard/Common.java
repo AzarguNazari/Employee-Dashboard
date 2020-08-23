@@ -11,8 +11,8 @@ public class Common {
     public static List<Employee> loadUser(){
 
         Employee employee1 = new Employee();
-        employee1.setFirstName("firstname1");
-        employee1.setLastName("lastname1");
+        employee1.setFirstname("firstname1");
+        employee1.setLastname("lastname1");
         employee1.setPassword("password1");
         employee1.setTitle(Title.DEVELOPER);
         employee1.setUsername("username1");
