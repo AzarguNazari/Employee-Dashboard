@@ -25,6 +25,7 @@ entity "Employee" as employee {
   *email: String
   *password: String
   *position: String
+  *avatar: Image
 }
 
 entity "Task" as task {
@@ -40,9 +41,17 @@ entity "Vacation" as vacation {
     *endPeriod: Date
 }
 
+entity "Announcement" as announcement {
+    *id: Integer <<PK>>
+    *title: String
+    *description: String
+    *created_date: Date
+}
+
 employee }..{task
 employee }..{role
 user .. employee
 employee }..{vacation
+employee }..{announcement
 
 @enduml
