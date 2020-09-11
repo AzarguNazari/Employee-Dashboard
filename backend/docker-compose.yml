@@ -33,7 +33,7 @@ services:
 #
 #  backend:
 #    build:
-#      context: .
+#      context: ./rest-api-module
 #      dockerfile: Dockerfile
 #    environment:
 #      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/employee_dashboard
