@@ -6,3 +6,5 @@
 - make security signin from frontend
 - make more micro-services
 - make gitlab_ci work
+- make use of resources during test
+- make documentation clear
