@@ -69,7 +69,6 @@ export default function SignIn() {
                         label="Last Name"
                         name="lastName"
                         autoComplete="lastName"
-                        autoFocus
                     />
                     <TextField
                         variant="outlined"
@@ -80,7 +79,6 @@ export default function SignIn() {
                         label="Email Address"
                         name="email"
                         autoComplete="email"
-                        autoFocus
                     />
                     <TextField
                         variant="outlined"
