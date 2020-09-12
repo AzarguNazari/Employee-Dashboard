@@ -1,14 +1,19 @@
+TRUNCATE ROLE, TASK, MESSAGE, ANNOUNCEMENT, ATTENDANCE, ATTENDANCE, EMPLOYEE, EMPLOYEE_ROLES CASCADE;
+
 /*---------------------------------------------USER ROLES INSERT----------------------------------------------------*/
 INSERT INTO ROLE VALUES(1,'ADMIN');
 INSERT INTO ROLE VALUES(2,'USER');
 
 /*----------------------- TASKS INSERT ---------------------------*/
+DELETE FROM TASK where id = 1;
 INSERT INTO TASK(id, taskname, description, priority, percentage, status)
 VALUES (1, 'Finish Project of Web Design', 'This project is an important port', 'HIGH', 20, 'READY');
 
+DELETE FROM TASK where id = 2;
 INSERT INTO TASK(id, taskname, description, priority, percentage, status)
 VALUES (2, 'Shipment task', 'The shipment process should be finished', 'NORMAL', 30, 'DONE');
 
+DELETE FROM TASK where id = 3;
 INSERT INTO TASK(id, taskname, description, priority, percentage, status)
 VALUES (3, 'New Development Phase', 'Creating new develpoment phase is important', 'LOW', 90, 'NOT_READY');
 

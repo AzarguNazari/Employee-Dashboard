@@ -4,11 +4,10 @@ import com.dashboard.model.Priority;
 import com.dashboard.model.Status;
 import com.dashboard.model.Task;
 import com.dashboard.repository.TaskRepository;
-import org.junit.Assert;
-import org.junit.Test;
 import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
@@ -26,7 +25,6 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
-@RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class AnnouncementsTest {
 
@@ -59,7 +57,7 @@ public class AnnouncementsTest {
         headers.set("X-COM-PERSIST", "true");
         HttpEntity<Task> request = new HttpEntity<>(task, headers);
         ResponseEntity<String> result = this.restTemplate.postForEntity(uri, request, String.class);
-        Assert.assertEquals(201, result.getStatusCodeValue());
+        Assertions.assertEquals(201, result.getStatusCodeValue());
     }
 
     @Test
@@ -72,7 +70,7 @@ public class AnnouncementsTest {
         final ResponseEntity<List> tasks = this.restTemplate.getForEntity(uri, List.class);
         assertThat(tasks).isNotNull();
         assertThat(tasks.getBody()).hasSize(4);
-        Assert.assertEquals(200, tasks.getStatusCodeValue());
+        Assertions.assertEquals(200, tasks.getStatusCodeValue());
     }
 
     @Test

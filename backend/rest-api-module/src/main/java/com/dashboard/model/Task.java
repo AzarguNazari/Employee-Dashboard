@@ -28,11 +28,13 @@ public class Task{
     @Column @NonNull
     private String description;
 
-    @Column @NonNull @Enumerated(EnumType.STRING)
+    @Column
+    @NonNull
+    @Enumerated(EnumType.STRING)
     private Priority priority;
 
     @Column
-    private int percentage;
+    private int percentage = 0;
 
     @Column @NotNull @Enumerated(EnumType.STRING)
     private Status status = Status.NOT_READY;

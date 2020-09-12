@@ -72,7 +72,7 @@ public class TaskController implements TaskControllerInterface {
     public ResponseEntity<?> deleteTaskById(Integer id) {
         try{
             taskService.deleteTaskById(id);
-            return new ResponseEntity<>("Task with id " + id + " is deleted", HttpStatus.OK);
+            return new ResponseEntity<>("Task with id " + id + " is deleted", HttpStatus.NO_CONTENT);
         }
         catch(Exception ex){
             return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
@@ -83,7 +83,7 @@ public class TaskController implements TaskControllerInterface {
     public ResponseEntity<?> updateTask(Integer taskID, Task task) {
         try{
             taskService.updateTask(taskID, task);
-            return getTaskById(taskID);
+            return new ResponseEntity<>(HttpStatus.OK);
         }
         catch(Exception ex){
             return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
