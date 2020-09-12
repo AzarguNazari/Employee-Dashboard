@@ -5,6 +5,6 @@ RUN apt-get update
 RUN apt-get install -y maven
 
 WORKDIR /code
-ADD pom.xml /code/pom.xml
+ADD rest-api-module/pom.xml /code/pom.xml
 ADD src /code/src
 CMD ["mvn", "spring-boot:run"]
