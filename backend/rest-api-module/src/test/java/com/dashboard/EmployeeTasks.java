@@ -11,8 +11,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
-import org.springframework.boot.test.context.TestConfiguration;
-import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
@@ -108,10 +106,8 @@ public class EmployeeTasks {
     @BeforeEach
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-
         tasks = generateTasks();
     }
-
 
     public List<Task> generateTasks(){
         Task task1 = new Task();
@@ -146,16 +142,5 @@ public class EmployeeTasks {
         task4.setTaskname("Discussion about Ticket 1");
 
         return Arrays.asList(task1, task2, task3, task4);
-    }
-
-    @TestConfiguration
-    protected static class Config {
-
-        @Bean
-        public TaskService taskService() {
-            return Mockito.mock(TaskService.class);
-        }
-
-
     }
 }
