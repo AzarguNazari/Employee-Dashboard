@@ -18,8 +18,11 @@ import java.util.Optional;
 @Transactional
 public class TaskService implements TaskServiceInterface {
 
-    @Autowired
-    private TaskRepository taskRepository;
+    private final TaskRepository taskRepository;
+
+    public TaskService(TaskRepository taskRepository){
+        this.taskRepository = taskRepository;
+    }
 
     @Override
     public void deleteAllTasks() {

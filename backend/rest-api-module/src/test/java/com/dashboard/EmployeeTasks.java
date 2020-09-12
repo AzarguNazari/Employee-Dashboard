@@ -1,122 +1,121 @@
 package com.dashboard;
 
+import com.dashboard.controller.TaskController;
 import com.dashboard.model.Priority;
 import com.dashboard.model.Status;
 import com.dashboard.model.Task;
-import com.dashboard.repository.TaskRepository;
-import org.junit.Assert;
-import org.junit.Test;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.web.client.TestRestTemplate;
-import org.springframework.boot.web.server.LocalServerPort;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
+import com.dashboard.service.TaskService;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
+import org.springframework.boot.test.context.TestConfiguration;
+import org.springframework.context.annotation.Bean;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.test.context.junit4.SpringRunner;
 
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.util.Arrays;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.Mockito.when;
 
-
-@RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class EmployeeTasks {
 
-    @LocalServerPort
-    private int port;
+    @Mock
+    private TaskService taskService;
 
-    @Autowired
-    private TestRestTemplate restTemplate;
+    @InjectMocks
+    private TaskController taskController;
 
-    @Autowired
-    private TaskRepository taskRepository;
-
-    @BeforeAll
-    public void contextLoads(){
-        generateTasks().forEach(taskRepository::save);
-        assertThat(taskRepository.count()).isEqualTo(4);
-    }
+    List<Task> tasks;
 
     @Test
-    public void addNewAccount() throws URISyntaxException {
-        final String baseUrl = "http://localhost:" + this.port + "/v1/api/tasks";
-        URI uri = new URI(baseUrl);
-        Task task = new Task();
-        task.setPercentage(50);
-        task.setPriority(Priority.HIGH);
-        task.setStatus(Status.DONE);
-        task.setDescription("clean all unused branches");
-        task.setTaskname("Git Branch Cleaning");
-        HttpHeaders headers = new HttpHeaders();
-        headers.set("X-COM-PERSIST", "true");
-        HttpEntity<Task> request = new HttpEntity<>(task, headers);
-        ResponseEntity<String> result = this.restTemplate.postForEntity(uri, request, String.class);
-        Assert.assertEquals(201, result.getStatusCodeValue());
-    }
+    public void two_tasks_exist() throws Exception{
+        when(taskService.getAllTasks()).thenReturn(tasks);
 
-    @Test
-    public void getAllList() throws URISyntaxException {
-        // load tasks
-        beforeTask();
+        final ResponseEntity<?> task = taskController.getAllTasks();
 
-        final String baseUrl = "http://localhost:" + this.port + "/v1/api/tasks";
-        URI uri = new URI(baseUrl);
-        final ResponseEntity<List> tasks = this.restTemplate.getForEntity(uri, List.class);
-        assertThat(tasks).isNotNull();
-        assertThat(tasks.getBody()).hasSize(4);
-        Assert.assertEquals(200, tasks.getStatusCodeValue());
-    }
+        assertNotNull(task);
+        assertThat(task.getStatusCode()).isEqualTo(HttpStatus.OK);
+        final List<Task> foundTask = (List<Task>) task.getBody();
+        assertNotNull(foundTask);
 
-    @Test
-    public void updateTask() throws URISyntaxException {
-
-        beforeTask();
-
-        final String baseUrl = "http://localhost:" + this.port + "/v1/api/tasks/1";
-        URI uri = new URI(baseUrl);
-        Task task = new Task();
-        task.setPercentage(100);
-        task.setPriority(Priority.HIGH);
-        task.setStatus(Status.DONE);
-        task.setDescription("clean all unused branches");
-        task.setTaskname("Git Branch Cleaning");
-        HttpHeaders headers = new HttpHeaders();
-        headers.set("X-COM-PERSIST", "true");
-        HttpEntity<Task> request = new HttpEntity<>(task, headers);
-        this.restTemplate.put(uri, request);
-    }
-
-    @AfterAll
-    public void cleanTestWorkspace(){
-        taskRepository.deleteAll();
-        assertThat(taskRepository.count()).isEqualTo(0);
-    }
-
-    @Test
-    public void deleteTask(){
+        assertThat(foundTask).isEqualTo(tasks);
 
     }
 
     @Test
-    public void deleteAllTask() {
+    public void getAllTasks_returnTwoTasks() throws Exception{
+        when(taskService.getTaskById(anyInt())).thenReturn(tasks.get(0));
 
+        final ResponseEntity<?> task = taskController.getTaskById(1);
+
+        assertNotNull(task);
+        assertThat(task.getStatusCode()).isEqualTo(HttpStatus.OK);
+        final Task foundTask = (Task) task.getBody();
+        assertThat(foundTask.getId()).isEqualTo(1);
     }
 
-    public void beforeTask(){
-        taskRepository.deleteAll();
-        generateTasks().forEach(taskRepository::save);
+    @Test
+    public void createNewAccount_returnTrue() throws Exception {
+
+        Mockito.doNothing().when(taskService).addNewTask(tasks.get(0));
+        when(taskService.getTaskById(anyInt())).thenReturn(tasks.get(0));
+
+        final ResponseEntity<?> createdTask = taskController.createTask(tasks.get(0));
+
+        assertNotNull(createdTask);
+
+        final ResponseEntity<?> taskById = taskController.getTaskById(1);
+        assertNotNull(taskById);
+
+        final Task task = (Task) taskById.getBody();
+        assertThat(task.getId()).isEqualTo(1);
     }
+
+    @Test
+    void updateTask1_returnsNewUpdateTask(){
+
+        Task task2 = tasks.get(1);
+
+        Mockito.doNothing().when(taskService).updateTask(1, task2);
+
+        final ResponseEntity<?> updateTask = taskController.updateTask(1, task2);
+
+        assertNotNull(updateTask);
+        assertThat(updateTask.getStatusCode()).isEqualTo(HttpStatus.OK);
+    }
+
+    @Test
+    void deleteTask1_returnNO_CONTENT_status(){
+
+        Mockito.doNothing().when(taskService).deleteTaskById(anyInt());
+
+        final ResponseEntity<?> updateTask = taskController.deleteTaskById(anyInt());
+
+        assertNotNull(updateTask);
+        assertThat(updateTask.getStatusCode()).isEqualTo(HttpStatus.NO_CONTENT);
+    }
+
+
+    // -------- setups
+
+    @BeforeEach
+    public void setUp() {
+        MockitoAnnotations.initMocks(this);
+
+        tasks = generateTasks();
+    }
+
 
     public List<Task> generateTasks(){
         Task task1 = new Task();
+        task1.setId(1);
         task1.setPercentage(50);
         task1.setPriority(Priority.NORMAL);
         task1.setStatus(Status.DONE);
@@ -124,6 +123,7 @@ public class EmployeeTasks {
         task1.setTaskname("Git Branch Cleaning");
 
         Task task2 = new Task();
+        task2.setId(2);
         task2.setPercentage(10);
         task2.setPriority(Priority.HIGH);
         task2.setStatus(Status.NOT_READY);
@@ -131,6 +131,7 @@ public class EmployeeTasks {
         task2.setTaskname("Ticket Creation");
 
         Task task3 = new Task();
+        task3.setId(3);
         task3.setPercentage(20);
         task3.setPriority(Priority.LOW);
         task3.setStatus(Status.NOT_READY);
@@ -146,5 +147,15 @@ public class EmployeeTasks {
 
         return Arrays.asList(task1, task2, task3, task4);
     }
-}
 
+    @TestConfiguration
+    protected static class Config {
+
+        @Bean
+        public TaskService taskService() {
+            return Mockito.mock(TaskService.class);
+        }
+
+
+    }
+}
