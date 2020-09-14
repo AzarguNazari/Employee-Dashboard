@@ -45,6 +45,9 @@ public class Employee{
     @JoinTable(name = "attendance_employee", joinColumns = @JoinColumn(name = "employee_id"), inverseJoinColumns = @JoinColumn(name = "attendance_id"))
     private Set<Message> attendance;
 
+    @OneToOne(mappedBy = "employee")
+    private User user;
+
     public Employee(){}
 
     public Employee(String username, String firstname, String lastname, String password, Integer salary, Title title){

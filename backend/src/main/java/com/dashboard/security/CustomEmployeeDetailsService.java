@@ -2,8 +2,8 @@ package com.dashboard.security;
 
 import com.dashboard.exception.EmployeeNotFoundException;
 import com.dashboard.model.Employee;
-import com.dashboard.repository.EmployeeRepository;
 import com.dashboard.model.security.CustomEmployeeDetails;
+import com.dashboard.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -28,6 +28,7 @@ public class CustomEmployeeDetailsService implements UserDetailsService {
 }
 
 class UserService {
+
     @Autowired
     PasswordEncoder passwordEncoder;
     @Autowired
