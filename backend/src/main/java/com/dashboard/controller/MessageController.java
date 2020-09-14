@@ -19,38 +19,39 @@ import org.springframework.web.bind.annotation.RestController;
 @Log4j2
 public class MessageController implements EmployeeControllerInterface {
 
+
     @Override
     public ResponseEntity<?> createEmployee(Employee employee) {
-        return null;
+        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
     }
 
     @Override
     public ResponseEntity<?> getAllEmployees(Pageable pageable) {
-        return null;
+        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
     }
 
     @Override
     public ResponseEntity<?> getEmployeeById(Integer id) {
-        return null;
+        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
     }
 
     @Override
     public ResponseEntity<?> deleteEmployeeById(Integer id) {
-        return null;
+        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
     }
 
     @Override
     public ResponseEntity<?> updateEmployee(Integer employeeId, Employee employee) {
-        return null;
+        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
     }
 
     @Override
     public ResponseEntity<?> assignTask(Integer employeeID, Integer taskID) {
-        return null;
+        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
     }
 
     @Override
     public ResponseEntity<?> unassignTask(Integer employeeID, Integer taskID) {
-        return null;
+        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
     }
 }

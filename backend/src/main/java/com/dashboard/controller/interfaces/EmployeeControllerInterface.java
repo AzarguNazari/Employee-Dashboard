@@ -1,6 +1,7 @@
 package com.dashboard.controller.interfaces;
 
 import com.dashboard.model.Employee;
+import com.dashboard.model.dto.LoginUserDto;
 import org.springframework.data.domain.Pageable;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.http.HttpStatus;
