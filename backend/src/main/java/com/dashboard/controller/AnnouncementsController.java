@@ -19,30 +19,73 @@ import org.springframework.web.bind.annotation.RestController;
 @Log4j2
 public class AnnouncementsController implements EmployeeControllerInterface {
 
+    @Autowired
+    private EmployeeService employeeService;
 
     @Override
     public ResponseEntity<?> createEmployee(Employee employee) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        try{
+            employeeService.addNewEmployee(employee);
+            log.debug("New employee {} is added", employee);
+            return new ResponseEntity<>("New employee is created", HttpStatus.CREATED);
+        }
+        catch(Exception ex){
+            return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @Override
     public ResponseEntity<?> getAllEmployees(Pageable pageable) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        try{
+            return new ResponseEntity<>(employeeService.getAllEmployees(), HttpStatus.OK);
+        }
+        catch(Exception ex){
+            return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @Override
     public ResponseEntity<?> getEmployeeById(Integer id) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        try{
+            return new ResponseEntity<>(employeeService.getEmployeeById(id), HttpStatus.OK);
+        }
+        catch(EmployeeNotFoundException ex){
+            log.debug("employee {} is already existed", id);
+            return new ResponseEntity<>(new ApiError("employee with id " + id + " doesn't exist", HttpStatus.NOT_FOUND), HttpStatus.NOT_FOUND);
+        }
+        catch(Exception ex){
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @Override
     public ResponseEntity<?> deleteEmployeeById(Integer id) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        try{
+            employeeService.deleteEmployeeById(id);
+            return new ResponseEntity<>(HttpStatus.OK);
+        }
+        catch(EmployeeNotFoundException ex){
+            log.debug("employee {} is already existed", id);
+            return new ResponseEntity<>(new ApiError("employee with id " + id + " doesn't exist", HttpStatus.NOT_FOUND), HttpStatus.NOT_FOUND);
+        }
+        catch(Exception ex){
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @Override
     public ResponseEntity<?> updateEmployee(Integer employeeId, Employee employee) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        try{
+            employeeService.updateEmployee(employeeId, employee);
+            return new ResponseEntity<>(HttpStatus.OK);
+        }
+        catch(EmployeeNotFoundException ex){
+            log.debug("employee {} is already existed", employeeId);
+            return new ResponseEntity<>(new ApiError("attendance with id " + employeeId + " doesn't exist", HttpStatus.NOT_FOUND), HttpStatus.NOT_FOUND);
+        }
+        catch(Exception ex){
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @Override
