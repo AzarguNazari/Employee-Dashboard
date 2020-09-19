@@ -1,6 +1,9 @@
 package com.dashboard.controller;
 
 import com.dashboard.controller.interfaces.AttendanceControllerInterface;
+import com.dashboard.exception.ApiError;
+import com.dashboard.exception.AttendanceNotFoundException;
+import com.dashboard.exception.EmployeeNotFoundException;
 import com.dashboard.model.Attendance;
 import com.dashboard.service.AttendanceService;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -25,26 +28,67 @@ public class AttendanceController implements AttendanceControllerInterface {
 
     @Override
     public ResponseEntity<?> createAttendance(Attendance attendance) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        try{
+            attendanceService.save(attendance);
+            log.debug("New task {} is added", attendance);
+            return new ResponseEntity<>("New attendance is added", HttpStatus.CREATED);
+        }
+        catch(Exception ex){
+            return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @Override
     public ResponseEntity<?> getAllAttendances(Pageable pageable) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        try{
+            return new ResponseEntity<>(attendanceService.getAllAttendances(), HttpStatus.OK);
+        }
+        catch(Exception ex){
+            return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @Override
     public ResponseEntity<?> getAttendanceById(Integer attendanceID) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        try{
+            return new ResponseEntity<>(attendanceService.getAttendanceById(attendanceID), HttpStatus.OK);
+        }
+        catch(AttendanceNotFoundException ex){
+            log.debug("attendance {} is already existed", attendanceID);
+            return new ResponseEntity<>(new ApiError("attendance with id " + attendanceID + " doesn't exist", HttpStatus.NOT_FOUND), HttpStatus.NOT_FOUND);
+        }
+        catch(Exception ex){
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @Override
     public ResponseEntity<?> deleteAttendanceById(Integer attendanceID) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        try{
+            attendanceService.delete(attendanceID);
+            return new ResponseEntity<>(HttpStatus.OK);
+        }
+        catch(AttendanceNotFoundException ex){
+            log.debug("attendance {} is already existed", attendanceID);
+            return new ResponseEntity<>(new ApiError("attendance with id " + attendanceID + " doesn't exist", HttpStatus.NOT_FOUND), HttpStatus.NOT_FOUND);
+        }
+        catch(Exception ex){
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @Override
     public ResponseEntity<?> updateAttendance(Integer attendanceID, Attendance attendance) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        try{
+            attendanceService.update(attendanceID, attendance);
+            return new ResponseEntity<>(HttpStatus.OK);
+        }
+        catch(AttendanceNotFoundException ex){
+            log.debug("attendance {} is already existed", attendanceID);
+            return new ResponseEntity<>(new ApiError("attendance with id " + attendanceID + " doesn't exist", HttpStatus.NOT_FOUND), HttpStatus.NOT_FOUND);
+        }
+        catch(Exception ex){
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 }

@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RestController;
 @Log4j2
 public class MessageController implements EmployeeControllerInterface {
 
-
     @Override
     public ResponseEntity<?> createEmployee(Employee employee) {
         return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
