@@ -13,10 +13,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-@RequestMapping("/api/v1/announcements")
-@Tag(name = "Announcements")
 @Log4j2
+@RestController
+@Tag(name = "Announcements")
+@RequestMapping("/api/v1/announcements")
 public class AnnouncementsController implements EmployeeControllerInterface {
 
     @Autowired
