@@ -8,10 +8,10 @@ import org.springframework.validation.annotation.Validated;
 import javax.persistence.*;
 import java.util.List;
 
-@Validated
-@Entity
-@Table(name="role")
 @Data
+@Entity
+@Validated
+@Table(name="role")
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @NoArgsConstructor
 public class Role{

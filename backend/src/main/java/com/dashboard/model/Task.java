@@ -10,10 +10,10 @@ import org.springframework.validation.annotation.Validated;
 import javax.persistence.*;
 import java.util.Set;
 
-@Validated
-@Entity
-@Table(name="task")
 @Data
+@Entity
+@Validated
+@Table(name="task")
 @NoArgsConstructor
 @RequiredArgsConstructor
 public class Task{

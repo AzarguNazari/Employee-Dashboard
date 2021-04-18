@@ -8,10 +8,11 @@ import org.hibernate.annotations.Fetch;
 import javax.persistence.*;
 import java.util.Set;
 
-@FieldDefaults(level = AccessLevel.PRIVATE)
-@Entity
+
 @Data
+@Entity
 @Table(name = "employee")
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class Employee{
 
     @Id @GeneratedValue Integer id;

@@ -5,11 +5,10 @@ import lombok.*;
 import javax.persistence.*;
 import java.util.Date;
 
+@Data
 @Entity
-@Table(name = "attendance")
-@Setter
-@Getter
 @NoArgsConstructor
+@Table(name = "attendance")
 public class Attendance {
 
     @Id

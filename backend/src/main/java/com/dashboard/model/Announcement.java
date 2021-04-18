@@ -1,5 +1,6 @@
 package com.dashboard.model;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -7,11 +8,10 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.util.Date;
 
+@Data
 @Entity
-@Table(name = "announcement")
-@Setter
-@Getter
 @NoArgsConstructor
+@Table(name = "announcement")
 public class Announcement {
 
     @Id

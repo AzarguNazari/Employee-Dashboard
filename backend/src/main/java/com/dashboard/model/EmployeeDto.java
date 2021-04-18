@@ -1,14 +1,9 @@
 package com.dashboard.model;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
-@Setter
-@Getter
+@Data
 @NoArgsConstructor
-@ToString
 public class EmployeeDto {
     private String firstName;
     private String lastName;

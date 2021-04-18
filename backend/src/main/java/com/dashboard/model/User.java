@@ -1,14 +1,14 @@
 package com.dashboard.model;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
 
+@Data
 @Entity
 @Table(name = "user")
-@Setter
-@Getter
 public class User {
 
     @Id
