@@ -16,15 +16,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-@RequestMapping("/api/v1/attendance")
-@Tag(name = "Attendance")
 @Log4j2
+@RestController
+@Tag(name = "Attendance")
+@RequestMapping("/api/v1/attendance")
 public class AttendanceController implements AttendanceControllerInterface {
 
     @Autowired
     private AttendanceService attendanceService;
-
 
     @Override
     public ResponseEntity<?> createAttendance(Attendance attendance) {
