@@ -13,11 +13,12 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ConditionalOnProperty("insertDataAuto")
+@ConditionalOnProperty(value = "insertDataAuto", havingValue = "true")
 public class PostRunning implements CommandLineRunner {
 
     @Autowired
     private EmployeeServiceInterface employeeServiceInterface;
+
     @Autowired
     private TaskRepository taskRepository;
     @Autowired
