@@ -3,7 +3,7 @@ package com.dashboard.service;
 import com.dashboard.exception.AttendanceNotFoundException;
 import com.dashboard.model.Attendance;
 import com.dashboard.repository.AttendanceRepository;
-import com.dashboard.service.interfaces.AttendanceServiceInterface;
+import com.dashboard.interfaces.serviceInterfaces.AttendanceServiceInterface;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,14 +27,14 @@ public class AttendanceService implements AttendanceServiceInterface {
     @Override
     public void delete(Integer attendanceId) {
         final Optional<Attendance> byId = attendanceRepository.findById(attendanceId);
-        if(!byId.isPresent()) throw new AttendanceNotFoundException();
+        if(byId.isEmpty()) throw new AttendanceNotFoundException();
         attendanceRepository.deleteById(attendanceId);
     }
 
     @Override
     public void update(Integer attendanceId, Attendance attendance) {
         final Optional<Attendance> byId = attendanceRepository.findById(attendanceId);
-        if(!byId.isPresent()) throw new AttendanceNotFoundException();
+        if(byId.isEmpty()) throw new AttendanceNotFoundException();
         attendanceRepository.deleteById(attendanceId);
         attendance.setId(attendanceId);
         attendanceRepository.save(attendance);
@@ -48,7 +48,7 @@ public class AttendanceService implements AttendanceServiceInterface {
     @Override
     public Attendance getAttendanceById(Integer attendanceId) {
         final Optional<Attendance> byId = attendanceRepository.findById(attendanceId);
-        if(!byId.isPresent()) throw new AttendanceNotFoundException();
+        if(byId.isEmpty()) throw new AttendanceNotFoundException();
         return byId.get();
     }
 }

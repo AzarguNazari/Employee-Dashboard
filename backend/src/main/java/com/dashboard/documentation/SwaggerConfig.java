@@ -17,11 +17,11 @@ public class SwaggerConfig {
     private String version;
 
     @Value("${openAPItitle}")
-    private String openAPItitle;
+    private String openAPITitle;
 
     @Bean
     public OpenAPI openApi(){
-        return new OpenAPI().info(new Info().title(openAPItitle).version(version).license(new License().name("Licence")));
+        return new OpenAPI().info(new Info().title(openAPITitle).version(version).license(new License().name("Licence")));
     }
 
     @Bean

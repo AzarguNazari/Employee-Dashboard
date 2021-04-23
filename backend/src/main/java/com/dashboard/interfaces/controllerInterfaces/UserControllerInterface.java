@@ -1,4 +1,4 @@
-package com.dashboard.controller.interfaces;
+package com.dashboard.interfaces.controllerInterfaces;
 
 import com.dashboard.model.User;
 import io.swagger.v3.oas.annotations.Operation;

@@ -4,9 +4,8 @@ import com.dashboard.exception.EmployeeNotFoundException;
 import com.dashboard.model.Priority;
 import com.dashboard.model.Task;
 import com.dashboard.repository.TaskRepository;
-import com.dashboard.service.interfaces.TaskServiceInterface;
+import com.dashboard.interfaces.serviceInterfaces.TaskServiceInterface;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;

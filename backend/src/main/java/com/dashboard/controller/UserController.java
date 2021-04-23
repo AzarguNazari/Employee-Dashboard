@@ -1,6 +1,6 @@
 package com.dashboard.controller;
 
-import com.dashboard.controller.interfaces.UserControllerInterface;
+import com.dashboard.interfaces.controllerInterfaces.UserControllerInterface;
 import com.dashboard.exception.UserNotFoundException;
 import com.dashboard.model.User;
 import com.dashboard.service.UserService;

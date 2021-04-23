@@ -22,7 +22,7 @@ public class CustomEmployeeDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Optional<Employee> employee = employeeRepository.findByUsername(username);
-        employee.orElseThrow(() -> new EmployeeNotFoundException());
+        employee.orElseThrow(EmployeeNotFoundException::new);
         return employee.map(CustomEmployeeDetails::new).get();
     }
 }

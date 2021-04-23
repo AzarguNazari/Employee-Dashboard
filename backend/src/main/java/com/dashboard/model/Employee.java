@@ -3,7 +3,6 @@ package com.dashboard.model;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.experimental.FieldDefaults;
-import org.hibernate.annotations.Fetch;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -67,6 +66,6 @@ public class Employee{
         this.password = employee.getPassword();
         this.salary = employee.getSalary();
         this.title = employee.getTitle();
-        this.setRoles(employee.getRoles());
+        this.roles = employee.getRoles();
     }
 }

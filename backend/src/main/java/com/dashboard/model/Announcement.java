@@ -1,9 +1,7 @@
 package com.dashboard.model;
 
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -24,8 +22,4 @@ public class Announcement {
     @Column
     @Temporal(TemporalType.DATE)
     private Date created;
-
-    public Announcement(String text){
-        this.text = text;
-    }
 }

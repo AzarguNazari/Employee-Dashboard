@@ -24,16 +24,6 @@ public class CustomEmployeeDetails extends Employee implements UserDetails {
     }
 
     @Override
-    public String getPassword() {
-        return super.getPassword();
-    }
-
-    @Override
-    public String getUsername() {
-        return super.getUsername();
-    }
-
-    @Override
     public boolean isAccountNonExpired() {
         return true;
     }

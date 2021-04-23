@@ -1,11 +1,10 @@
-package com.dashboard.controller.interfaces;
+package com.dashboard.interfaces.controllerInterfaces;
 
 import com.dashboard.model.Task;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,7 +23,7 @@ public interface TaskControllerInterface {
     ResponseEntity<?> getAllTasks();
 
     @GetMapping("/{id}")
-    @ApiResponses(value = {@ApiResponse(description = "Get a specific task with specifc ID",
+    @ApiResponses(value = {@ApiResponse(description = "Get a specific task with specific ID",
             responseCode = "200",
             content = @Content(schema = @Schema(implementation = ResponseEntity.class)))})
     ResponseEntity<?> getTaskById(@PathVariable Integer id);
@@ -36,7 +35,7 @@ public interface TaskControllerInterface {
     ResponseEntity<?> getTaskByStatus(@PathVariable String status);
 
     @DeleteMapping("/{id}")
-    @ApiResponses(value = {@ApiResponse(description = "Delete a task with speific ID",
+    @ApiResponses(value = {@ApiResponse(description = "Delete a task with specific ID",
             responseCode = "200",
             content = @Content(schema = @Schema(implementation = ResponseEntity.class)))})
     ResponseEntity<?> deleteTaskById(@PathVariable Integer id);
