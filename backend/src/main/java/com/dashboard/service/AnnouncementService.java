@@ -30,8 +30,8 @@ public class AnnouncementService implements AnnouncementServiceInterface {
 
     @Override
     public void update(Integer announcementId, Announcement announcement) {
-        final Optional<Announcement> byId = announcementRepository.findById(announcementId);
-        if(byId.isEmpty()) throw new AnnouncementNotFoundException();
+        announcementRepository.findById(announcementId)
+                              .orElseThrow(AnnouncementNotFoundException::new);
         announcementRepository.deleteById(announcementId);
         announcement.setId(announcementId);
         announcementRepository.save(announcement);
@@ -44,8 +44,7 @@ public class AnnouncementService implements AnnouncementServiceInterface {
 
     @Override
     public Announcement getAnnouncementById(Integer announcementId) {
-        final Optional<Announcement> byId = announcementRepository.findById(announcementId);
-        if(byId.isEmpty()) throw new AnnouncementNotFoundException();
-        return byId.get();
+        return announcementRepository.findById(announcementId)
+                                     .orElseThrow(AnnouncementNotFoundException::new);
     }
 }
