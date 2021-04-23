@@ -9,3 +9,4 @@
 - make use of resources during test
 - make documentation clear
 - release first version
+- Adopt vavr 
