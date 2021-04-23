@@ -8,3 +8,4 @@
 - make gitlab_ci work
 - make use of resources during test
 - make documentation clear
+- release first version
