@@ -3,7 +3,7 @@ package com.dashboard.service;
 import com.dashboard.exception.UserNotFoundException;
 import com.dashboard.model.User;
 import com.dashboard.repository.UserRepository;
-import com.dashboard.service.interfaces.UserServiceInterface;
+import com.dashboard.interfaces.serviceInterfaces.UserServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,14 +24,14 @@ public class UserService implements UserServiceInterface {
     @Override
     public void delete(Integer userId) {
         final Optional<User> byId = userRepository.findById(userId);
-        if(!byId.isPresent()) throw new UserNotFoundException();
+        if(byId.isEmpty()) throw new UserNotFoundException();
         userRepository.deleteById(userId);
     }
 
     @Override
     public void update(Integer userId, User user) {
         final Optional<User> byId = userRepository.findById(userId);
-        if(!byId.isPresent()) throw new UserNotFoundException();
+        if(byId.isEmpty()) throw new UserNotFoundException();
         user.setId(userId);
         userRepository.deleteById(userId);
         userRepository.save(user);
@@ -45,7 +45,7 @@ public class UserService implements UserServiceInterface {
     @Override
     public User getUserById(Integer userId) {
         final Optional<User> byId = userRepository.findById(userId);
-        if(!byId.isPresent()) throw new UserNotFoundException();
+        if(byId.isEmpty()) throw new UserNotFoundException();
         return byId.get();
     }
 }

@@ -1,6 +1,6 @@
 package com.dashboard.controller;
 
-import com.dashboard.controller.interfaces.TaskControllerInterface;
+import com.dashboard.interfaces.controllerInterfaces.TaskControllerInterface;
 import com.dashboard.exception.ApiError;
 import com.dashboard.exception.EmployeeNotFoundException;
 import com.dashboard.model.Task;

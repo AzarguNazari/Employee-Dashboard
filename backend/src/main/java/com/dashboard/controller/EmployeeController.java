@@ -1,6 +1,6 @@
 package com.dashboard.controller;
 
-import com.dashboard.controller.interfaces.EmployeeControllerInterface;
+import com.dashboard.interfaces.controllerInterfaces.EmployeeControllerInterface;
 import com.dashboard.exception.*;
 import com.dashboard.model.Employee;
 import com.dashboard.service.EmployeeService;

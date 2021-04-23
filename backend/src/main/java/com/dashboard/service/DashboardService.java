@@ -5,7 +5,7 @@ import com.dashboard.model.EmployeeDto;
 import com.dashboard.model.Title;
 import com.dashboard.exception.InvalidInput;
 import com.dashboard.repository.EmployeeRepository;
-import com.dashboard.service.interfaces.DashboardServiceInterface;
+import com.dashboard.interfaces.serviceInterfaces.DashboardServiceInterface;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

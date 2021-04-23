@@ -3,7 +3,7 @@ package com.dashboard.service;
 import com.dashboard.exception.AnnouncementNotFoundException;
 import com.dashboard.model.Announcement;
 import com.dashboard.repository.AnnouncementRepository;
-import com.dashboard.service.interfaces.AnnouncementServiceInterface;
+import com.dashboard.interfaces.serviceInterfaces.AnnouncementServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,14 +24,14 @@ public class AnnouncementService implements AnnouncementServiceInterface {
     @Override
     public void delete(Integer announcementId) {
         final Optional<Announcement> byId = announcementRepository.findById(announcementId);
-        if(!byId.isPresent()) throw new AnnouncementNotFoundException();
+        if(byId.isEmpty()) throw new AnnouncementNotFoundException();
         announcementRepository.deleteById(announcementId);
     }
 
     @Override
     public void update(Integer announcementId, Announcement announcement) {
         final Optional<Announcement> byId = announcementRepository.findById(announcementId);
-        if(!byId.isPresent()) throw new AnnouncementNotFoundException();
+        if(byId.isEmpty()) throw new AnnouncementNotFoundException();
         announcementRepository.deleteById(announcementId);
         announcement.setId(announcementId);
         announcementRepository.save(announcement);
@@ -45,7 +45,7 @@ public class AnnouncementService implements AnnouncementServiceInterface {
     @Override
     public Announcement getAnnouncementById(Integer announcementId) {
         final Optional<Announcement> byId = announcementRepository.findById(announcementId);
-        if(!byId.isPresent()) throw new AnnouncementNotFoundException();
+        if(byId.isEmpty()) throw new AnnouncementNotFoundException();
         return byId.get();
     }
 }

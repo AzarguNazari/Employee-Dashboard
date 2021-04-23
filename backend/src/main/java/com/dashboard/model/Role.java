@@ -1,12 +1,13 @@
 package com.dashboard.model;
 
 
-import lombok.*;
+import lombok.AccessLevel;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.validation.annotation.Validated;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Data
 @Entity

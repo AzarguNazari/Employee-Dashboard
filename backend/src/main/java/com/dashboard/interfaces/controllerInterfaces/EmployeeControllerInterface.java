@@ -1,18 +1,13 @@
-package com.dashboard.controller.interfaces;
+package com.dashboard.interfaces.controllerInterfaces;
 
 import com.dashboard.model.Employee;
-import com.dashboard.model.dto.LoginUserDto;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.data.domain.Pageable;
-import org.springframework.hateoas.EntityModel;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 public interface EmployeeControllerInterface {
 
@@ -29,13 +24,13 @@ public interface EmployeeControllerInterface {
     ResponseEntity<?> getAllEmployees(Pageable pageable);
 
     @GetMapping("/{id}")
-    @ApiResponses(value = {@ApiResponse(description = "Get a specific employee with specifc ID",
+    @ApiResponses(value = {@ApiResponse(description = "Get a specific employee with specific ID",
             responseCode = "200",
             content = @Content(schema = @Schema(implementation = ResponseEntity.class)))})
     ResponseEntity<?> getEmployeeById(@PathVariable Integer id);
 
     @DeleteMapping("/{id}")
-    @ApiResponses(value = {@ApiResponse(description = "Delete a employee with speific ID",
+    @ApiResponses(value = {@ApiResponse(description = "Delete a employee with specific ID",
             responseCode = "200",
             content = @Content(schema = @Schema(implementation = ResponseEntity.class)))})
     ResponseEntity<?> deleteEmployeeById(@PathVariable Integer id);

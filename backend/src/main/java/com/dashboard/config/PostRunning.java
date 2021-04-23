@@ -6,7 +6,7 @@ import com.dashboard.model.Priority;
 import com.dashboard.model.Task;
 import com.dashboard.repository.RoleRepository;
 import com.dashboard.repository.TaskRepository;
-import com.dashboard.service.interfaces.EmployeeServiceInterface;
+import com.dashboard.interfaces.serviceInterfaces.EmployeeServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -26,7 +26,7 @@ public class PostRunning implements CommandLineRunner {
 
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
 
         // ROLES
 //        Role admin = new Role("ADMIN");
@@ -35,9 +35,9 @@ public class PostRunning implements CommandLineRunner {
 //        roleRepository.save(user);
 
         // TASKS
-        Task task1 = new Task("Task1", "Descriptoin1", Priority.LOW);
-        Task task2 = new Task("Task2", "Descriptoin2", Priority.NORMAL);
-        Task task3 = new Task("Task3", "Descriptoin3", Priority.HIGH);
+        Task task1 = new Task("Task1", "Description 1", Priority.LOW);
+        Task task2 = new Task("Task2", "Description 2", Priority.NORMAL);
+        Task task3 = new Task("Task3", "Description 3", Priority.HIGH);
         taskRepository.save(task1);
         taskRepository.save(task2);
         taskRepository.save(task3);

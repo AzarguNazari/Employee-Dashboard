@@ -1,4 +1,4 @@
-package com.dashboard.service.interfaces;
+package com.dashboard.interfaces.serviceInterfaces;
 
 import com.dashboard.model.Attendance;
 

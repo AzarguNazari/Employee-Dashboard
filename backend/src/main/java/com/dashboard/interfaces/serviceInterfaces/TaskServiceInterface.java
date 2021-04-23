@@ -1,13 +1,9 @@
-package com.dashboard.service.interfaces;
+package com.dashboard.interfaces.serviceInterfaces;
 
 import com.dashboard.model.Priority;
-import com.dashboard.model.Status;
 import com.dashboard.model.Task;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface TaskServiceInterface {
 

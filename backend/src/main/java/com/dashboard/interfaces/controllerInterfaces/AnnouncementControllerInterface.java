@@ -1,12 +1,10 @@
-package com.dashboard.controller.interfaces;
+package com.dashboard.interfaces.controllerInterfaces;
 
 import com.dashboard.model.Announcement;
-import com.dashboard.model.Employee;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
-import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

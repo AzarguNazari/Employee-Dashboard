@@ -1,12 +1,10 @@
-package com.dashboard.controller.interfaces;
+package com.dashboard.interfaces.controllerInterfaces;
 
-import com.dashboard.model.Message;
 import com.dashboard.model.Message;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
-import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,13 +23,13 @@ public interface MessageControllerInterface {
     ResponseEntity<?> getAllMessages();
 
     @GetMapping("/{messageID}")
-    @ApiResponses(value = {@ApiResponse(description = "Get a specific message with specifc ID",
+    @ApiResponses(value = {@ApiResponse(description = "Get a specific message with specific ID",
             responseCode = "200",
             content = @Content(schema = @Schema(implementation = ResponseEntity.class)))})
     ResponseEntity<?> getMessageById(@PathVariable Integer messageID);
 
     @DeleteMapping("/{messageID}")
-    @ApiResponses(value = {@ApiResponse(description = "Delete a message with speific ID",
+    @ApiResponses(value = {@ApiResponse(description = "Delete a message with specific ID",
             responseCode = "200",
             content = @Content(schema = @Schema(implementation = ResponseEntity.class)))})
     ResponseEntity<?> deleteMessageById(@PathVariable Integer messageID);

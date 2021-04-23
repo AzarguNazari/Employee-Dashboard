@@ -7,7 +7,7 @@ import com.dashboard.model.Employee;
 import com.dashboard.model.Task;
 import com.dashboard.repository.EmployeeRepository;
 import com.dashboard.repository.TaskRepository;
-import com.dashboard.service.interfaces.EmployeeServiceInterface;
+import com.dashboard.interfaces.serviceInterfaces.EmployeeServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -68,14 +68,14 @@ public class EmployeeService implements EmployeeServiceInterface {
     @Override
     public void deleteEmployeeById(Integer employeeID){
         final Optional<Employee> employee = employeeRepository.findById(employeeID);
-        if(!employee.isPresent()) throw new EmployeeNotFoundException();
+        if(employee.isEmpty()) throw new EmployeeNotFoundException();
         employeeRepository.deleteById(employeeID);
     }
 
     @Override
     public void updateEmployee(Integer employeeId, Employee employee) {
         final Optional<Employee> emp = employeeRepository.findById(employeeId);
-        if(!emp.isPresent()) throw new EmployeeNotFoundException();
+        if(emp.isEmpty()) throw new EmployeeNotFoundException();
         employee.setId(employeeId);
         employeeRepository.deleteById(employeeId);
         employeeRepository.save(employee);
@@ -86,11 +86,11 @@ public class EmployeeService implements EmployeeServiceInterface {
 
         final Optional<Task> task = taskRepository.findById(taskID);
 
-        if(!task.isPresent()) throw new TaskNotFoundException();
+        if(task.isEmpty()) throw new TaskNotFoundException();
 
         final Optional<Employee> employee = employeeRepository.findById(employeeId);
 
-        if(!employee.isPresent()) throw new EmployeeNotFoundException();
+        if(employee.isEmpty()) throw new EmployeeNotFoundException();
 
         employee.get().getTasks().add(task.get());
     }
@@ -100,11 +100,11 @@ public class EmployeeService implements EmployeeServiceInterface {
 
         final Optional<Task> task = taskRepository.findById(taskID);
 
-        if(!task.isPresent()) throw new TaskNotFoundException();
+        if(task.isEmpty()) throw new TaskNotFoundException();
 
         final Optional<Employee> employee = employeeRepository.findById(employeeId);
 
-        if(!employee.isPresent()) throw new EmployeeNotFoundException();
+        if(employee.isEmpty()) throw new EmployeeNotFoundException();
 
         employee.get().getTasks().remove(task.get());
     }
