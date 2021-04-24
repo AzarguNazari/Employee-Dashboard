@@ -26,4 +26,6 @@ public interface TaskServiceInterface {
     void updateTask(Integer employeeId, Task task);
 
     List<Task> findTaskByStatus(String status);
+
+    boolean exist(Integer taskId);
 }

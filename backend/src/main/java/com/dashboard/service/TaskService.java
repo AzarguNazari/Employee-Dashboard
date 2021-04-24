@@ -79,6 +79,11 @@ public class TaskService implements TaskServiceInterface {
         return taskRepository.findByPriority(status);
     }
 
+    @Override
+    public boolean exist(Integer taskId) {
+        return taskRepository.findById(taskId).isEmpty();
+    }
+
     public void removeTask(int taskID){
         taskRepository.deleteById(taskID);
     }

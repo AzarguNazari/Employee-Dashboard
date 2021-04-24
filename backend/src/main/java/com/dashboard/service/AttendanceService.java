@@ -41,6 +41,11 @@ public class AttendanceService implements AttendanceServiceInterface {
     }
 
     @Override
+    public boolean exist(Integer attendanceId) {
+        return attendanceRepository.findById(attendanceId).isPresent();
+    }
+
+    @Override
     public List<Attendance> getAllAttendances() {
         return attendanceRepository.findAll();
     }

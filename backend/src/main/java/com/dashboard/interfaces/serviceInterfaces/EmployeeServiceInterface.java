@@ -27,4 +27,6 @@ public interface EmployeeServiceInterface {
     void assignTask(Integer employeeId, Integer taskID);
 
     void unassignTask(Integer employeeId, Integer taskID);
+
+    boolean exist(Integer employeeId);
 }
