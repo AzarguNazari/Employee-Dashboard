@@ -6,7 +6,7 @@
 - make signin page from frontend
 - release first version
 - Adopt vavr 
-- use (`docker pull postman/newman`) for postman testing
+- use (`docker pull postman/newman:5-alpine`) for postman testing
 
 ## API 
 
