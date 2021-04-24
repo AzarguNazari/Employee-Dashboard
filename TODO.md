@@ -1,7 +1,7 @@
 ## Todo list
 - add security
 - make all endpoint work
-- make tests for endpoints rest work
+- make junit tests for endpoints
 - make profile for front-end
 - make security signin from frontend
 - make more micro-services
