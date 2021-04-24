@@ -38,6 +38,11 @@ public class UserService implements UserServiceInterface {
     }
 
     @Override
+    public boolean exist(Integer userId) {
+        return userRepository.findById(userId).isPresent();
+    }
+
+    @Override
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }

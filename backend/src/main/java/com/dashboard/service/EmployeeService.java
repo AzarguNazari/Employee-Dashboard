@@ -109,4 +109,9 @@ public class EmployeeService implements EmployeeServiceInterface {
         employee.get().getTasks().remove(task.get());
     }
 
+    @Override
+    public boolean exist(Integer employeeId) {
+        return employeeRepository.findById(employeeId).isPresent();
+    }
+
 }
