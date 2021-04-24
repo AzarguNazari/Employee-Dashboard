@@ -7,3 +7,6 @@ To run locally:
 To run in dev mode:
 - `docker-compose up -d`
 - `./mvnw -pl backend/pom.xml  spring-boot:run -Dspring-boot.run.profiles=dev`
+
+## TODO List
+- For future improvement, you can use the `TODO.md` file
