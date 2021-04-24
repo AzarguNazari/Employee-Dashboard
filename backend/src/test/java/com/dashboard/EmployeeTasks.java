@@ -34,7 +34,7 @@ public class EmployeeTasks {
 
     @Test
     public void two_tasks_exist() throws Exception{
-        when(taskService.getAllTasks()).thenReturn(tasks);
+        when(taskService.getAll()).thenReturn(tasks);
 
         final ResponseEntity<?> task = taskController.getAllTasks();
 
@@ -62,7 +62,7 @@ public class EmployeeTasks {
     @Test
     public void createNewAccount_returnTrue() throws Exception {
 
-        Mockito.doNothing().when(taskService).addNewTask(tasks.get(0));
+        Mockito.doNothing().when(taskService).add(tasks.get(0));
         when(taskService.getTaskById(anyInt())).thenReturn(tasks.get(0));
 
         final ResponseEntity<?> createdTask = taskController.createTask(tasks.get(0));

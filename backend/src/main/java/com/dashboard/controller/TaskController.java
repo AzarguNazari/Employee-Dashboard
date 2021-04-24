@@ -25,7 +25,7 @@ public class TaskController implements TaskControllerInterface {
     @Override
     public ResponseEntity<?> createTask(Task task) {
         try{
-            taskService.addNewTask(task);
+            taskService.add(task);
             log.debug("New task {} is added", task);
             return new ResponseEntity<>("New task is created", HttpStatus.CREATED);
         }
@@ -37,7 +37,7 @@ public class TaskController implements TaskControllerInterface {
     @Override
     public ResponseEntity<?> getAllTasks() {
         try{
-            return new ResponseEntity<>(taskService.getAllTasks(), HttpStatus.OK);
+            return new ResponseEntity<>(taskService.getAll(), HttpStatus.OK);
         }
         catch(Exception ex){
             return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);

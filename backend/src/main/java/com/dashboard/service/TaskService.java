@@ -24,7 +24,7 @@ public class TaskService implements TaskServiceInterface {
     }
 
     @Override
-    public void deleteAllTasks() {
+    public void deleteAll() {
         taskRepository.deleteAll();
     }
 
@@ -34,7 +34,7 @@ public class TaskService implements TaskServiceInterface {
     }
 
     @Override
-    public void addNewTask(Task task) {
+    public void add(Task task) {
         taskRepository.save(task);
     }
 
@@ -45,7 +45,7 @@ public class TaskService implements TaskServiceInterface {
         else throw new EmployeeNotFoundException();
     }
 
-    public List<Task> getAllTasks(){
+    public List<Task> getAll(){
         return taskRepository.findAll();
     }
 

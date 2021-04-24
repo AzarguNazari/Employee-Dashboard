@@ -7,15 +7,15 @@ import java.util.List;
 
 public interface TaskServiceInterface {
 
-    void deleteAllTasks();
+    void deleteAll();
 
     void addAllTasks(List<Task> tasks);
 
-    void addNewTask(Task task);
+    void add(Task task);
 
     Task getTaskById(Integer id);
 
-    List<Task> getAllTasks();
+    List<Task> getAll();
 
     Long totalEmployees();
 
