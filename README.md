@@ -1,6 +1,5 @@
 # Employee Dashboard
-A spring boot rest good practices.
-
+A spring boot backend application with a good practice of REST.
 
 To run locally:
 - `./mvnw -pl backend/pom.xml spring-boot:run`
