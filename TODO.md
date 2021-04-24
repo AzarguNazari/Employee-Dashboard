@@ -1,12 +1,8 @@
 ## Todo list
-- add security
-- make all endpoint work
+- add security feature
+- make all endpoints work properly
 - make junit tests for endpoints
-- make profile for front-end
-- make security signin from frontend
-- make more micro-services
-- make gitlab_ci work
-- make use of resources during test
-- make documentation clear
+- add front-end 
+- make signin page from frontend
 - release first version
 - Adopt vavr 
