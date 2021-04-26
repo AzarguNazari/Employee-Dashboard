@@ -29,4 +29,6 @@ public interface EmployeeServiceInterface {
     void unassignTask(Integer employeeId, Integer taskID);
 
     boolean exist(Integer employeeId);
+
+    long count();
 }
