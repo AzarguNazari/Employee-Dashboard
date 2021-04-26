@@ -1,135 +1,125 @@
 package com.dashboard;
 
-import com.dashboard.model.Priority;
-import com.dashboard.model.Status;
-import com.dashboard.model.Task;
-import com.dashboard.repository.TaskRepository;
-import com.dashboard.service.TaskService;
-import org.junit.Ignore;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.web.client.TestRestTemplate;
-import org.springframework.boot.web.server.LocalServerPort;
 
-import java.util.Arrays;
-import java.util.List;
+import com.dashboard.controller.EmployeeController;
+import com.dashboard.model.Employee;
+import com.dashboard.model.Title;
+import com.dashboard.repository.EmployeeRepository;
+import com.dashboard.security.SecurityConfiguration;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+
+import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.BDDMockito.given;
+import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 
-@Ignore
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+/**
+ * This class demonstrates how to test a controller using Spring Boot Test
+ * (what makes it much closer to a Integration Test)
+ *
+ * @author moises.macero
+ */
+@ExtendWith(SpringExtension.class)
+@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
+@WebMvcTest(EmployeeController.class)
+@AutoConfigureMockMvc(addFilters = false)
 public class AnnouncementsTest {
 
-    @LocalServerPort
-    private int port;
+    @MockBean
+    private EmployeeRepository employeeRepository;
 
     @Autowired
     private TestRestTemplate restTemplate;
 
-    @Autowired
-    private TaskRepository taskRepository;
-
-
-    @Autowired
-    private TaskService taskService;
-
-    @BeforeEach
-    public void contextLoads(){
-        taskService.deleteAll();
-        assertThat(taskService.getAll().size()).isEqualTo(0);
-    }
-
     @Test
-    public void addNewAccount() {
-        Task task = new Task();
-        task.setPercentage(50);
-        task.setPriority(Priority.HIGH);
-        task.setStatus(Status.DONE);
-        task.setDescription("clean all unused branches");
-        task.setTaskname("Git Branch Cleaning");
-        taskService.add(task);
-        Assertions.assertEquals(false, taskService.getTaskById(1) == null);
-        Assertions.assertEquals(1, taskService.getTaskById(1).getId());
-    }
+    public void canRetrieveByIdWhenExists() {
+        // given
+        given(employeeRepository.findById(1))
+                .willReturn(Optional.of(new Employee("ali", "mahmood", "karimi", "pass123", 4000, Title.DEVELOPER)));
 
-    @Test
-    public void getAllList() {
-        Assertions.assertEquals(0, taskService.getAll().size());
+        // when
+        ResponseEntity<Employee> employeeResponse = restTemplate.getForEntity("/api/v1/employees/1", Employee.class);
+
+        // then
+        assertThat(employeeResponse.getStatusCode()).isEqualTo(HttpStatus.OK);
+        assertThat(employeeResponse.getBody().equals(Optional.of(new Employee("ali", "mahmood", "karimi", "pass123", 4000, Title.DEVELOPER))));
     }
 
 //    @Test
-//    public void updateTask() throws URISyntaxException {
+//    public void canRetrieveByIdWhenDoesNotExist() {
+//        // given
+//        given(employeeRepository.getSuperHero(2))
+//                .willThrow(new NonExistingHeroException());
 //
-//        beforeTask();
+//        // when
+//        ResponseEntity<SuperHero> superHeroResponse = restTemplate.getForEntity("/superheroes/2", SuperHero.class);
 //
-//        final String baseUrl = "http://localhost:" + this.port + "/v1/api/tasks/1";
-//        URI uri = new URI(baseUrl);
-//        Task task = new Task();
-//        task.setPercentage(100);
-//        task.setPriority(Priority.HIGH);
-//        task.setStatus(Status.DONE);
-//        task.setDescription("clean all unused branches");
-//        task.setTaskname("Git Branch Cleaning");
-//        HttpHeaders headers = new HttpHeaders();
-//        headers.set("X-COM-PERSIST", "true");
-//        HttpEntity<Task> request = new HttpEntity<>(task, headers);
-//        this.restTemplate.put(uri, request);
+//        // then
+//        assertThat(superHeroResponse.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
+//        assertThat(superHeroResponse.getBody()).isNull();
+//    }
+//
+//    @Test
+//    public void canRetrieveByNameWhenExists() {
+//        // given
+//        given(employeeRepository.getSuperHero("RobotMan"))
+//                .willReturn(Optional.of(new SuperHero("Rob", "Mannon", "RobotMan")));
+//
+//        // when
+//        ResponseEntity<SuperHero> superHeroResponse = restTemplate
+//                .getForEntity("/superheroes/?name=RobotMan", SuperHero.class);
+//
+//        // then
+//        assertThat(superHeroResponse.getStatusCode()).isEqualTo(HttpStatus.OK);
+//        assertThat(superHeroResponse.getBody().equals(new SuperHero("Rob", "Mannon", "RobotMan")));
+//    }
+//
+//    @Test
+//    public void canRetrieveByNameWhenDoesNotExist() {
+//        // given
+//        given(employeeRepository.getSuperHero("RobotMan"))
+//                .willReturn(Optional.empty());
+//
+//        // when
+//        ResponseEntity<SuperHero> superHeroResponse = restTemplate
+//                .getForEntity("/superheroes/?name=RobotMan", SuperHero.class);
+//
+//        // then
+//        assertThat(superHeroResponse.getStatusCode()).isEqualTo(HttpStatus.OK);
+//        assertThat(superHeroResponse.getBody()).isNull();
+//    }
+//
+//    @Test
+//    public void canCreateANewSuperHero() {
+//        // when
+//        ResponseEntity<SuperHero> superHeroResponse = restTemplate.postForEntity("/superheroes/",
+//                new SuperHero("Rob", "Mannon", "RobotMan"), SuperHero.class);
+//
+//        // then
+//        assertThat(superHeroResponse.getStatusCode()).isEqualTo(HttpStatus.CREATED);
+//    }
+//
+//    @Test
+//    public void headerIsPresent() throws Exception {
+//        // when
+//        ResponseEntity<SuperHero> superHeroResponse = restTemplate.getForEntity("/superheroes/2", SuperHero.class);
+//
+//        // then
+//        assertThat(superHeroResponse.getStatusCode()).isEqualTo(HttpStatus.OK);
+//        assertThat(superHeroResponse.getHeaders().get("X-SUPERHERO-APP")).containsOnly("super-header");
 //    }
 
-//    @AfterAll
-//    public void cleanTestWorkspace(){
-//        taskRepository.deleteAll();
-//        assertThat(taskRepository.count()).isEqualTo(0);
-//    }
-
-    @Test
-    public void deleteTask(){
-
-    }
-
-    @Test
-    public void deleteAllTask() {
-
-    }
-
-    public void beforeTask(){
-        taskRepository.deleteAll();
-        generateTasks().forEach(taskRepository::save);
-    }
-
-    public List<Task> generateTasks(){
-        Task task1 = new Task();
-        task1.setPercentage(50);
-        task1.setPriority(Priority.NORMAL);
-        task1.setStatus(Status.DONE);
-        task1.setDescription("clean all unused branches");
-        task1.setTaskname("Git Branch Cleaning");
-
-        Task task2 = new Task();
-        task2.setPercentage(10);
-        task2.setPriority(Priority.HIGH);
-        task2.setStatus(Status.NOT_READY);
-        task2.setDescription("Create new branch for ticket 11");
-        task2.setTaskname("Ticket Creation");
-
-        Task task3 = new Task();
-        task3.setPercentage(20);
-        task3.setPriority(Priority.LOW);
-        task3.setStatus(Status.NOT_READY);
-        task3.setDescription("clean all unused branches");
-        task3.setTaskname("Ticket Creation");
-
-        Task task4 = new Task();
-        task4.setPercentage(30);
-        task4.setPriority(Priority.HIGH);
-        task4.setStatus(Status.READY);
-        task4.setDescription("discuss with team members about ticket 1");
-        task4.setTaskname("Discussion about Ticket 1");
-
-        return Arrays.asList(task1, task2, task3, task4);
-    }
 }
-

@@ -114,4 +114,9 @@ public class EmployeeService implements EmployeeServiceInterface {
         return employeeRepository.findById(employeeId).isPresent();
     }
 
+    @Override
+    public long count() {
+        return employeeRepository.count();
+    }
+
 }

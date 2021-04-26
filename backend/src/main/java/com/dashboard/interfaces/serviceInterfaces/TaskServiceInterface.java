@@ -28,4 +28,6 @@ public interface TaskServiceInterface {
     List<Task> findTaskByStatus(String status);
 
     boolean exist(Integer taskId);
+
+    long count();
 }

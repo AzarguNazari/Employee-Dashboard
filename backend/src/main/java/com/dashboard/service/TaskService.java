@@ -84,6 +84,11 @@ public class TaskService implements TaskServiceInterface {
         return taskRepository.findById(taskId).isEmpty();
     }
 
+    @Override
+    public long count() {
+        return taskRepository.count();
+    }
+
     public void removeTask(int taskID){
         taskRepository.deleteById(taskID);
     }

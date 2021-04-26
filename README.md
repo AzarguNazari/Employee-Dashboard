@@ -1,6 +1,12 @@
 # Employee Dashboard
 A spring boot backend application with a good practice of REST.
 
+## Technologies
+- JDK 16
+- Spring boot
+- Intellij
+- JPA
+
 ## To run locally:
 - `./mvnw -pl backend/pom.xml spring-boot:run`
 
