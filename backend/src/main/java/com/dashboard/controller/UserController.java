@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Log4j2
 @RestController
-@Tag(name = "Users")
 @RequestMapping("/api/v1/users")
 public class UserController implements UserControllerInterface {
 

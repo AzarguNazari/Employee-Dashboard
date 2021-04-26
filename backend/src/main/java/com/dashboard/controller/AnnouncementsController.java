@@ -1,8 +1,11 @@
 package com.dashboard.controller;
 
+import com.dashboard.interfaces.controllerInterfaces.AnnouncementControllerInterface;
 import com.dashboard.interfaces.controllerInterfaces.EmployeeControllerInterface;
 import com.dashboard.exception.*;
+import com.dashboard.model.Announcement;
 import com.dashboard.model.Employee;
+import com.dashboard.service.AnnouncementService;
 import com.dashboard.service.EmployeeService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.log4j.Log4j2;
@@ -15,19 +18,21 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Log4j2
 @RestController
-@Tag(name = "Announcements")
 @RequestMapping("/api/v1/announcements")
-public class AnnouncementsController implements EmployeeControllerInterface {
+public class AnnouncementsController implements AnnouncementControllerInterface {
 
     @Autowired
-    private EmployeeService employeeService;
+    private AnnouncementService announcementService;
 
     @Override
-    public ResponseEntity<?> createEmployee(Employee employee) {
+    public ResponseEntity<?> createAnnouncement(Announcement announcement) {
         try{
-            employeeService.addNewEmployee(employee);
-            log.debug("New employee {} is added", employee);
-            return new ResponseEntity<>("New employee is created", HttpStatus.CREATED);
+            announcementService.save(announcement);
+            log.debug("New announcement {} is created", announcement);
+            return new ResponseEntity<>("New employee created", HttpStatus.CREATED);
+        }
+        catch(BadRequestException ex){
+            return new ResponseEntity<>(new ApiError("Announcement with id " + announcement.getId() + " is already existed", HttpStatus.BAD_REQUEST), HttpStatus.BAD_REQUEST);
         }
         catch(Exception ex){
             return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
@@ -35,9 +40,9 @@ public class AnnouncementsController implements EmployeeControllerInterface {
     }
 
     @Override
-    public ResponseEntity<?> getAllEmployees(Pageable pageable) {
+    public ResponseEntity<?> getAllEmployees() {
         try{
-            return new ResponseEntity<>(employeeService.getAllEmployees(), HttpStatus.OK);
+            return new ResponseEntity<>(announcementService.getAllAnnouncements(), HttpStatus.OK);
         }
         catch(Exception ex){
             return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
@@ -45,56 +50,32 @@ public class AnnouncementsController implements EmployeeControllerInterface {
     }
 
     @Override
-    public ResponseEntity<?> getEmployeeById(Integer id) {
+    public ResponseEntity<?> getEmployeeById(Integer announcementID) {
         try{
-            return new ResponseEntity<>(employeeService.getEmployeeById(id), HttpStatus.OK);
-        }
-        catch(EmployeeNotFoundException ex){
-            log.debug("employee {} is already existed", id);
-            return new ResponseEntity<>(new ApiError("employee with id " + id + " doesn't exist", HttpStatus.NOT_FOUND), HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(announcementService.getAnnouncementById(announcementID), HttpStatus.OK);
         }
         catch(Exception ex){
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
     @Override
-    public ResponseEntity<?> deleteEmployeeById(Integer id) {
+    public ResponseEntity<?> deleteEmployeeById(Integer announcementID) {
         try{
-            employeeService.deleteEmployeeById(id);
-            return new ResponseEntity<>(HttpStatus.OK);
+            announcementService.delete(announcementID);
+            log.debug("Announcement with id {} is deleted", announcementID);
+            return new ResponseEntity<>("Announcement with id " + announcementID + " is deleted", HttpStatus.OK);
         }
-        catch(EmployeeNotFoundException ex){
-            log.debug("employee {} is already existed", id);
-            return new ResponseEntity<>(new ApiError("employee with id " + id + " doesn't exist", HttpStatus.NOT_FOUND), HttpStatus.NOT_FOUND);
+        catch(AnnouncementNotFoundException ex){
+            return ExceptionFactory.EMPLOYEE_NOT_FOUND(announcementID);
         }
         catch(Exception ex){
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
     @Override
-    public ResponseEntity<?> updateEmployee(Integer employeeId, Employee employee) {
-        try{
-            employeeService.updateEmployee(employeeId, employee);
-            return new ResponseEntity<>(HttpStatus.OK);
-        }
-        catch(EmployeeNotFoundException ex){
-            log.debug("employee {} is already existed", employeeId);
-            return new ResponseEntity<>(new ApiError("attendance with id " + employeeId + " doesn't exist", HttpStatus.NOT_FOUND), HttpStatus.NOT_FOUND);
-        }
-        catch(Exception ex){
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
-
-    @Override
-    public ResponseEntity<?> assignTask(Integer employeeID, Integer taskID) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
-    }
-
-    @Override
-    public ResponseEntity<?> unassignTask(Integer employeeID, Integer taskID) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+    public ResponseEntity<?> updateEmployee(Integer announcementID, Announcement announcement) {
+        return null;
     }
 }

@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Log4j2
 @RestController
-@Tag(name = "Employees")
 @RequestMapping("/api/v1/employees")
 public class EmployeeController implements EmployeeControllerInterface {
 
