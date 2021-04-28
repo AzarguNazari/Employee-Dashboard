@@ -59,7 +59,7 @@ public class EmployeeController implements EmployeeControllerInterface {
     @Override
     public ResponseEntity<?> deleteEmployeeById(Integer employeeID) {
         try{
-            employeeService.deleteEmployeeById(employeeID);
+            employeeService.deleteById(employeeID);
             log.debug("Employee with id {} is deleted", employeeID);
             return new ResponseEntity<>("Employee with id " + employeeID + " is deleted", HttpStatus.OK);
         }
@@ -74,7 +74,7 @@ public class EmployeeController implements EmployeeControllerInterface {
     @Override
     public ResponseEntity<?> updateEmployee(Integer employeeId, Employee employee) {
         try{
-            employeeService.updateEmployee(employeeId, employee);
+            employeeService.update(employeeId, employee);
             log.debug("Employee {} is updated", employee);
             return new ResponseEntity<>("Employee with id " + employeeId + " is updated", HttpStatus.OK);
         }
