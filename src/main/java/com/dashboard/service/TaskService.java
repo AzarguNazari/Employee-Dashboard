@@ -1,6 +1,7 @@
 package com.dashboard.service;
 
 import com.dashboard.exception.EmployeeNotFoundException;
+import com.dashboard.interfaces.serviceInterfaces.CrudOperations;
 import com.dashboard.model.Priority;
 import com.dashboard.model.Task;
 import com.dashboard.repository.TaskRepository;
@@ -15,7 +16,7 @@ import java.util.Optional;
 @Service
 @Slf4j
 @Transactional
-public class TaskService implements TaskServiceInterface {
+public class TaskService implements CrudOperations<Task>, TaskServiceInterface {
 
     private final TaskRepository taskRepository;
 
@@ -34,12 +35,12 @@ public class TaskService implements TaskServiceInterface {
     }
 
     @Override
-    public void add(Task task) {
+    public void save(Task task) {
         taskRepository.save(task);
     }
 
     @Override
-    public Task getTaskById(Integer id) {
+    public Task getById(int id) {
         final Optional<Task> byId = taskRepository.findById(id);
         if(byId.isPresent()) return byId.get();
         else throw new EmployeeNotFoundException();
@@ -60,12 +61,12 @@ public class TaskService implements TaskServiceInterface {
     }
 
     @Override
-    public void deleteTaskById(Integer id) {
+    public void delete(int id) {
         taskRepository.deleteById(id);
     }
 
     @Override
-    public void updateTask(Integer taskId, Task task) {
+    public void update(int taskId, Task task) {
         Optional<Task> foundTask = taskRepository.findById(taskId);
         if(foundTask.isPresent()){
             task.setId(taskId);
@@ -80,7 +81,7 @@ public class TaskService implements TaskServiceInterface {
     }
 
     @Override
-    public boolean exist(Integer taskId) {
+    public boolean exist(int taskId) {
         return taskRepository.findById(taskId).isEmpty();
     }
 

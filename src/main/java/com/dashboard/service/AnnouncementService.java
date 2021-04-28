@@ -3,7 +3,7 @@ package com.dashboard.service;
 import com.dashboard.exception.AnnouncementNotFoundException;
 import com.dashboard.model.Announcement;
 import com.dashboard.repository.AnnouncementRepository;
-import com.dashboard.interfaces.serviceInterfaces.AnnouncementServiceInterface;
+import com.dashboard.interfaces.serviceInterfaces.CrudOperations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class AnnouncementService implements AnnouncementServiceInterface {
+public class AnnouncementService implements CrudOperations<Announcement> {
 
     @Autowired
     private AnnouncementRepository announcementRepository;
@@ -22,14 +22,14 @@ public class AnnouncementService implements AnnouncementServiceInterface {
     }
 
     @Override
-    public void delete(Integer announcementId) {
+    public void delete(int announcementId) {
         final Optional<Announcement> byId = announcementRepository.findById(announcementId);
         if(byId.isEmpty()) throw new AnnouncementNotFoundException();
         announcementRepository.deleteById(announcementId);
     }
 
     @Override
-    public void update(Integer announcementId, Announcement announcement) {
+    public void update(int announcementId, Announcement announcement) {
         if(exist(announcementId)){
             delete(announcementId);
             announcement.setId(announcementId);
@@ -39,17 +39,17 @@ public class AnnouncementService implements AnnouncementServiceInterface {
     }
 
     @Override
-    public boolean exist(Integer announcementId) {
+    public boolean exist(int announcementId) {
         return announcementRepository.findById(announcementId).isPresent();
     }
 
     @Override
-    public List<Announcement> getAllAnnouncements() {
+    public List<Announcement> getAll() {
         return announcementRepository.findAll();
     }
 
     @Override
-    public Announcement getAnnouncementById(Integer announcementId) {
+    public Announcement getById(int announcementId) {
         return announcementRepository.findById(announcementId).orElseThrow(AnnouncementNotFoundException::new);
     }
 }

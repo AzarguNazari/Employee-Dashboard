@@ -38,7 +38,7 @@ public class AttendanceController implements AttendanceControllerInterface {
     @Override
     public ResponseEntity<?> getAllAttendances(Pageable pageable) {
         try{
-            return new ResponseEntity<>(attendanceService.getAllAttendances(), HttpStatus.OK);
+            return new ResponseEntity<>(attendanceService.getAll(), HttpStatus.OK);
         }
         catch(Exception ex){
             return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
@@ -48,7 +48,7 @@ public class AttendanceController implements AttendanceControllerInterface {
     @Override
     public ResponseEntity<?> getAttendanceById(Integer attendanceID) {
         try{
-            return new ResponseEntity<>(attendanceService.getAttendanceById(attendanceID), HttpStatus.OK);
+            return new ResponseEntity<>(attendanceService.getById(attendanceID), HttpStatus.OK);
         }
         catch(Exception ex){
             return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);

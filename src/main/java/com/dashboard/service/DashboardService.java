@@ -28,4 +28,5 @@ public class DashboardService implements DashboardServiceInterface {
         employeeRepository.save(employee);
         log.debug("New employee is saved {}", employee);
     }
+
 }

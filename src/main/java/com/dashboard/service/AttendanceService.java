@@ -1,9 +1,9 @@
 package com.dashboard.service;
 
 import com.dashboard.exception.AttendanceNotFoundException;
+import com.dashboard.interfaces.serviceInterfaces.CrudOperations;
 import com.dashboard.model.Attendance;
 import com.dashboard.repository.AttendanceRepository;
-import com.dashboard.interfaces.serviceInterfaces.AttendanceServiceInterface;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +13,7 @@ import java.util.Optional;
 
 @Service
 @Slf4j
-public class AttendanceService implements AttendanceServiceInterface {
+public class AttendanceService implements CrudOperations<Attendance> {
 
     @Autowired
     private AttendanceRepository attendanceRepository;
@@ -25,14 +25,14 @@ public class AttendanceService implements AttendanceServiceInterface {
     }
 
     @Override
-    public void delete(Integer attendanceId) {
+    public void delete(int attendanceId) {
         final Optional<Attendance> byId = attendanceRepository.findById(attendanceId);
         if(byId.isEmpty()) throw new AttendanceNotFoundException();
         attendanceRepository.deleteById(attendanceId);
     }
 
     @Override
-    public void update(Integer attendanceId, Attendance attendance) {
+    public void update(int attendanceId, Attendance attendance) {
         final Optional<Attendance> byId = attendanceRepository.findById(attendanceId);
         if(byId.isEmpty()) throw new AttendanceNotFoundException();
         attendanceRepository.deleteById(attendanceId);
@@ -41,17 +41,17 @@ public class AttendanceService implements AttendanceServiceInterface {
     }
 
     @Override
-    public boolean exist(Integer attendanceId) {
+    public boolean exist(int attendanceId) {
         return attendanceRepository.findById(attendanceId).isPresent();
     }
 
     @Override
-    public List<Attendance> getAllAttendances() {
+    public List<Attendance> getAll() {
         return attendanceRepository.findAll();
     }
 
     @Override
-    public Attendance getAttendanceById(Integer attendanceId) {
+    public Attendance getById(int attendanceId) {
         final Optional<Attendance> byId = attendanceRepository.findById(attendanceId);
         if(byId.isEmpty()) throw new AttendanceNotFoundException();
         return byId.get();

@@ -23,7 +23,7 @@ public class EmployeeController implements EmployeeControllerInterface {
     @Override
     public ResponseEntity<?> createEmployee(Employee employee) {
         try{
-            employeeService.addNewEmployee(employee);
+            employeeService.save(employee);
             log.debug("New employee {} is created", employee);
             return new ResponseEntity<>("New employee created", HttpStatus.CREATED);
         }
@@ -38,7 +38,7 @@ public class EmployeeController implements EmployeeControllerInterface {
     @Override
     public ResponseEntity<?> getAllEmployees(Pageable pageable) {
         try{
-            return new ResponseEntity<>(employeeService.getAllEmployees(), HttpStatus.OK);
+            return new ResponseEntity<>(employeeService.getAll(), HttpStatus.OK);
         }
         catch(Exception ex){
             return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
@@ -49,7 +49,7 @@ public class EmployeeController implements EmployeeControllerInterface {
     @Override
     public ResponseEntity<?> getEmployeeById(Integer id) {
         try{
-            return new ResponseEntity<>(employeeService.getEmployeeById(id), HttpStatus.OK);
+            return new ResponseEntity<>(employeeService.getById(id), HttpStatus.OK);
         }
         catch(Exception ex){
             return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
@@ -59,7 +59,7 @@ public class EmployeeController implements EmployeeControllerInterface {
     @Override
     public ResponseEntity<?> deleteEmployeeById(Integer employeeID) {
         try{
-            employeeService.deleteById(employeeID);
+            employeeService.delete(employeeID);
             log.debug("Employee with id {} is deleted", employeeID);
             return new ResponseEntity<>("Employee with id " + employeeID + " is deleted", HttpStatus.OK);
         }

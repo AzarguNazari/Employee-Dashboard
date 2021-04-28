@@ -11,23 +11,11 @@ public interface TaskServiceInterface {
 
     void addAllTasks(List<Task> tasks);
 
-    void add(Task task);
-
-    Task getTaskById(Integer id);
-
-    List<Task> getAll();
-
     Long totalEmployees();
 
     List<Task> getTaskByPriority(Priority priority);
 
-    void deleteTaskById(Integer id);
-
-    void updateTask(Integer employeeId, Task task);
-
     List<Task> findTaskByStatus(String status);
-
-    boolean exist(Integer taskId);
 
     long count();
 }

@@ -8,6 +8,7 @@
 - Adopt vavr 
 - use (`docker pull postman/newman:5-alpine`) for postman testing
 - change to gradle
+- help :
 
 ## API 
 

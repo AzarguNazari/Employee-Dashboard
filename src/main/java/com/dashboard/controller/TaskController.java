@@ -23,7 +23,7 @@ public class TaskController implements TaskControllerInterface {
     @Override
     public ResponseEntity<?> createTask(Task task) {
         try{
-            taskService.add(task);
+            taskService.save(task);
             log.debug("New task {} is added", task);
             return new ResponseEntity<>("New task is created", HttpStatus.CREATED);
         }
@@ -45,7 +45,7 @@ public class TaskController implements TaskControllerInterface {
     @Override
     public ResponseEntity<?> getTaskById(Integer id) {
         try{
-            return new ResponseEntity<>(taskService.getTaskById(id), HttpStatus.OK);
+            return new ResponseEntity<>(taskService.getById(id), HttpStatus.OK);
         }
         catch(EmployeeNotFoundException ex){
             log.debug("account {} is already existed", id);
@@ -69,7 +69,7 @@ public class TaskController implements TaskControllerInterface {
     @Override
     public ResponseEntity<?> deleteTaskById(Integer id) {
         try{
-            taskService.deleteTaskById(id);
+            taskService.delete(id);
             return new ResponseEntity<>("Task with id " + id + " is deleted", HttpStatus.NO_CONTENT);
         }
         catch(Exception ex){
@@ -80,7 +80,7 @@ public class TaskController implements TaskControllerInterface {
     @Override
     public ResponseEntity<?> updateTask(Integer taskID, Task task) {
         try{
-            taskService.updateTask(taskID, task);
+            taskService.update(taskID, task);
             return new ResponseEntity<>(HttpStatus.OK);
         }
         catch(Exception ex){

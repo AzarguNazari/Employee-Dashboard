@@ -10,23 +10,11 @@ public interface EmployeeServiceInterface {
 
     void addAllEmployees(List<Employee> users);
 
-    void addNewEmployee(Employee employee);
-
-    Optional<Employee> getEmployeeById(Integer id);
-
-    List<Employee> getAllEmployees();
-
     Optional<Employee> getByUsername(String username);
-
-    void deleteById(Integer id);
-
-    void update(Integer employeeId, Employee employee);
 
     void assignTask(Integer employeeId, Integer taskID);
 
     void unassignTask(Integer employeeId, Integer taskID);
-
-    boolean exist(Integer employeeId);
 
     long count();
 }

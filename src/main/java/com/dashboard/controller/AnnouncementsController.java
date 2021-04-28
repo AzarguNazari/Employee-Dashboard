@@ -37,7 +37,7 @@ public class AnnouncementsController implements AnnouncementControllerInterface 
     @Override
     public ResponseEntity<?> getAllEmployees() {
         try{
-            return new ResponseEntity<>(announcementService.getAllAnnouncements(), HttpStatus.OK);
+            return new ResponseEntity<>(announcementService.getAll(), HttpStatus.OK);
         }
         catch(Exception ex){
             return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
@@ -47,7 +47,7 @@ public class AnnouncementsController implements AnnouncementControllerInterface 
     @Override
     public ResponseEntity<?> getEmployeeById(Integer announcementID) {
         try{
-            return new ResponseEntity<>(announcementService.getAnnouncementById(announcementID), HttpStatus.OK);
+            return new ResponseEntity<>(announcementService.getById(announcementID), HttpStatus.OK);
         }
         catch(Exception ex){
             return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
