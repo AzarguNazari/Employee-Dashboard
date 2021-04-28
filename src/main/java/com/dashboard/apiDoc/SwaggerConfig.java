@@ -1,4 +1,4 @@
-package com.dashboard.documentation;
+package com.dashboard.apiDoc;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.models.OpenAPI;
