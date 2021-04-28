@@ -62,7 +62,7 @@ public class AnnouncementsController implements AnnouncementControllerInterface 
             return new ResponseEntity<>("Announcement with id " + announcementID + " is deleted", HttpStatus.OK);
         }
         catch(AnnouncementNotFoundException ex){
-            return ExceptionFactory.EMPLOYEE_NOT_FOUND(announcementID);
+            return ExceptionFactory.ANNOUNCEMENT_NOT_FOUND(announcementID);
         }
         catch(Exception ex){
             return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
@@ -71,6 +71,16 @@ public class AnnouncementsController implements AnnouncementControllerInterface 
 
     @Override
     public ResponseEntity<?> updateEmployee(Integer announcementID, Announcement announcement) {
-        return null;
+        try{
+            announcementService.update(announcementID, announcement);
+            log.debug("Announcement {} is updated", announcement);
+            return new ResponseEntity<>("Announcement with id " + announcement + " is updated", HttpStatus.OK);
+        }
+        catch(AttendanceNotFoundException ex){
+            return ExceptionFactory.ANNOUNCEMENT_NOT_FOUND(announcementID);
+        }
+        catch(Exception ex){
+            return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 }

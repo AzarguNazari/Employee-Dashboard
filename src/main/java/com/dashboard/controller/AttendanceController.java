@@ -1,11 +1,13 @@
 package com.dashboard.controller;
 
+import com.dashboard.exception.*;
 import com.dashboard.interfaces.controllerInterfaces.AttendanceControllerInterface;
 import com.dashboard.model.Attendance;
 import com.dashboard.service.AttendanceService;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,26 +22,66 @@ public class AttendanceController implements AttendanceControllerInterface {
 
     @Override
     public ResponseEntity<?> createAttendance(Attendance attendance) {
-        return null;
+        try{
+            attendanceService.save(attendance);
+            log.debug("New attendance {} is created", attendance);
+            return new ResponseEntity<>("New attendance created", HttpStatus.CREATED);
+        }
+        catch(BadRequestException ex){
+            return new ResponseEntity<>(new ApiError("Attendance with id " + attendance.getId() + " is already existed", HttpStatus.BAD_REQUEST), HttpStatus.BAD_REQUEST);
+        }
+        catch(Exception ex){
+            return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @Override
     public ResponseEntity<?> getAllAttendances(Pageable pageable) {
-        return null;
+        try{
+            return new ResponseEntity<>(attendanceService.getAllAttendances(), HttpStatus.OK);
+        }
+        catch(Exception ex){
+            return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @Override
     public ResponseEntity<?> getAttendanceById(Integer attendanceID) {
-        return null;
+        try{
+            return new ResponseEntity<>(attendanceService.getAttendanceById(attendanceID), HttpStatus.OK);
+        }
+        catch(Exception ex){
+            return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @Override
     public ResponseEntity<?> deleteAttendanceById(Integer attendanceID) {
-        return null;
+        try{
+            attendanceService.delete(attendanceID);
+            log.debug("attendanceID with id {} is deleted", attendanceID);
+            return new ResponseEntity<>("Attendance with id " + attendanceID + " is deleted", HttpStatus.OK);
+        }
+        catch(AttendanceNotFoundException ex){
+            return ExceptionFactory.ATTENDANCE_NOT_FOUND(attendanceID);
+        }
+        catch(Exception ex){
+            return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @Override
     public ResponseEntity<?> updateAttendance(Integer attendanceID, Attendance attendance) {
-        return null;
+        try{
+            attendanceService.update(attendanceID, attendance);
+            log.debug("Attendance {} is updated", attendance);
+            return new ResponseEntity<>("Attendance with id " + attendanceID + " is updated", HttpStatus.OK);
+        }
+        catch(AttendanceNotFoundException ex){
+            return ExceptionFactory.ATTENDANCE_NOT_FOUND(attendanceID);
+        }
+        catch(Exception ex){
+            return new ResponseEntity<>(new ApiError("Internal error happened on backend", HttpStatus.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 }
