@@ -16,13 +16,11 @@ public interface EmployeeServiceInterface {
 
     List<Employee> getAllEmployees();
 
-    Long totalEmployees();
-
     Optional<Employee> getByUsername(String username);
 
-    void deleteEmployeeById(Integer id);
+    void deleteById(Integer id);
 
-    void updateEmployee(Integer employeeId, Employee employee);
+    void update(Integer employeeId, Employee employee);
 
     void assignTask(Integer employeeId, Integer taskID);
 
