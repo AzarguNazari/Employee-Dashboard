@@ -1,6 +1,6 @@
 package com.dashboard.interfaces.controllerInterfaces;
 
-import com.dashboard.model.Attendance;
+import com.dashboard.models.Attendance;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;

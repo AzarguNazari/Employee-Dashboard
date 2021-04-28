@@ -1,7 +1,7 @@
 package com.dashboard;
 
-import com.dashboard.model.Employee;
-import com.dashboard.model.Title;
+import com.dashboard.models.Employee;
+import com.dashboard.models.Title;
 
 import java.util.Arrays;
 import java.util.List;

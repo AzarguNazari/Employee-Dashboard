@@ -1,10 +1,10 @@
 package com.dashboard;
 
-import com.dashboard.controller.TaskController;
-import com.dashboard.model.Priority;
-import com.dashboard.model.Status;
-import com.dashboard.model.Task;
-import com.dashboard.service.TaskService;
+import com.dashboard.controllers.TaskController;
+import com.dashboard.models.Priority;
+import com.dashboard.models.Status;
+import com.dashboard.models.Task;
+import com.dashboard.services.TaskService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

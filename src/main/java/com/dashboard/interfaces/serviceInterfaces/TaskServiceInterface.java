@@ -1,7 +1,7 @@
 package com.dashboard.interfaces.serviceInterfaces;
 
-import com.dashboard.model.Priority;
-import com.dashboard.model.Task;
+import com.dashboard.models.Priority;
+import com.dashboard.models.Task;
 
 import java.util.List;
 

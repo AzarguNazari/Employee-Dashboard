@@ -1,13 +1,12 @@
 package com.dashboard.config;
 
-import com.dashboard.model.Employee;
-import com.dashboard.model.Title;
-import com.dashboard.model.Priority;
-import com.dashboard.model.Task;
-import com.dashboard.repository.RoleRepository;
-import com.dashboard.repository.TaskRepository;
-import com.dashboard.interfaces.serviceInterfaces.EmployeeServiceInterface;
-import com.dashboard.service.EmployeeService;
+import com.dashboard.models.Employee;
+import com.dashboard.models.Title;
+import com.dashboard.models.Priority;
+import com.dashboard.models.Task;
+import com.dashboard.repositories.RoleRepository;
+import com.dashboard.repositories.TaskRepository;
+import com.dashboard.services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;

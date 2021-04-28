@@ -1,10 +1,10 @@
 package com.dashboard;
 
 
-import com.dashboard.controller.EmployeeController;
-import com.dashboard.model.Employee;
-import com.dashboard.model.Title;
-import com.dashboard.repository.EmployeeRepository;
+import com.dashboard.controllers.EmployeeController;
+import com.dashboard.models.Employee;
+import com.dashboard.models.Title;
+import com.dashboard.repositories.EmployeeRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;

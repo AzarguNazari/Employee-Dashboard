@@ -1,6 +1,6 @@
 package com.dashboard.interfaces.serviceInterfaces;
 
-import com.dashboard.model.Attendance;
+import com.dashboard.models.Attendance;
 
 import java.util.List;
 

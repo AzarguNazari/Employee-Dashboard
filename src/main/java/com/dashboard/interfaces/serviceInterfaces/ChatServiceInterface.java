@@ -1,10 +1,5 @@
 package com.dashboard.interfaces.serviceInterfaces;
 
-import com.dashboard.model.Attendance;
-import com.dashboard.model.Message;
-
-import java.util.List;
-
 public interface ChatServiceInterface {
 //    void save(Message message);
 //    void delete(Integer messageID);

@@ -1,6 +1,6 @@
 package com.dashboard.interfaces.controllerInterfaces;
 
-import com.dashboard.model.User;
+import com.dashboard.models.User;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;

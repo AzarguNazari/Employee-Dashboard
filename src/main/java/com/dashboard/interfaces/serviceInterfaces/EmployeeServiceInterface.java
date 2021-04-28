@@ -1,6 +1,6 @@
 package com.dashboard.interfaces.serviceInterfaces;
 
-import com.dashboard.model.Employee;
+import com.dashboard.models.Employee;
 
 import java.util.List;
 import java.util.Optional;
