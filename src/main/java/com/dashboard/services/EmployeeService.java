@@ -4,7 +4,7 @@ import com.dashboard.exceptions.BadRequestException;
 import com.dashboard.exceptions.EmployeeNotFoundException;
 import com.dashboard.exceptions.TaskNotFoundException;
 import com.dashboard.interfaces.serviceInterfaces.CrudOperations;
-import com.dashboard.models.Employee;
+import com.dashboard.models.JPA.Employee;
 import com.dashboard.repositories.EmployeeRepository;
 import com.dashboard.repositories.TaskRepository;
 import com.dashboard.interfaces.serviceInterfaces.EmployeeServiceInterface;

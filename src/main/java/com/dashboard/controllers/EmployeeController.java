@@ -2,7 +2,7 @@ package com.dashboard.controllers;
 
 import com.dashboard.interfaces.controllerInterfaces.EmployeeControllerInterface;
 import com.dashboard.exceptions.*;
-import com.dashboard.models.Employee;
+import com.dashboard.models.JPA.Employee;
 import com.dashboard.services.EmployeeService;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;

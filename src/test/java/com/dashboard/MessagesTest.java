@@ -1,8 +1,8 @@
 package com.dashboard;
 
-import com.dashboard.models.Priority;
-import com.dashboard.models.Status;
-import com.dashboard.models.Task;
+import com.dashboard.models.JPA.Priority;
+import com.dashboard.models.JPA.Status;
+import com.dashboard.models.JPA.Task;
 import com.dashboard.repositories.TaskRepository;
 import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;

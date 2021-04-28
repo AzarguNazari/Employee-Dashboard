@@ -2,7 +2,7 @@ package com.dashboard.controllers;
 
 import com.dashboard.interfaces.controllerInterfaces.UserControllerInterface;
 import com.dashboard.exceptions.UserNotFoundException;
-import com.dashboard.models.User;
+import com.dashboard.models.JPA.User;
 import com.dashboard.services.UserService;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;

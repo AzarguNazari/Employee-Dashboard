@@ -2,8 +2,8 @@ package com.dashboard.services;
 
 import com.dashboard.exceptions.EmployeeNotFoundException;
 import com.dashboard.interfaces.serviceInterfaces.CrudOperations;
-import com.dashboard.models.Priority;
-import com.dashboard.models.Task;
+import com.dashboard.models.JPA.Priority;
+import com.dashboard.models.JPA.Task;
 import com.dashboard.repositories.TaskRepository;
 import com.dashboard.interfaces.serviceInterfaces.TaskServiceInterface;
 import lombok.extern.slf4j.Slf4j;

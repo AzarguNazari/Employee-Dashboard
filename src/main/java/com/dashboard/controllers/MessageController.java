@@ -1,7 +1,7 @@
 package com.dashboard.controllers;
 
 import com.dashboard.interfaces.controllerInterfaces.MessageControllerInterface;
-import com.dashboard.models.Message;
+import com.dashboard.models.JPA.Message;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,7 +1,7 @@
 package com.dashboard.security;
 
 import com.dashboard.exceptions.EmployeeNotFoundException;
-import com.dashboard.models.Employee;
+import com.dashboard.models.JPA.Employee;
 import com.dashboard.models.security.CustomEmployeeDetails;
 import com.dashboard.repositories.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;

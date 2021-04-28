@@ -2,7 +2,7 @@ package com.dashboard.services;
 
 import com.dashboard.exceptions.AttendanceNotFoundException;
 import com.dashboard.interfaces.serviceInterfaces.CrudOperations;
-import com.dashboard.models.Attendance;
+import com.dashboard.models.JPA.Attendance;
 import com.dashboard.repositories.AttendanceRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.dashboard.models.dto;
+package com.dashboard.models.DTO;
 
 import lombok.Data;
 

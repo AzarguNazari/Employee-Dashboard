@@ -2,7 +2,7 @@ package com.dashboard.controllers;
 
 import com.dashboard.exceptions.*;
 import com.dashboard.interfaces.controllerInterfaces.AttendanceControllerInterface;
-import com.dashboard.models.Attendance;
+import com.dashboard.models.JPA.Attendance;
 import com.dashboard.services.AttendanceService;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;

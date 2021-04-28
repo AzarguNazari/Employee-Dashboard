@@ -1,4 +1,4 @@
-package com.dashboard.models;
+package com.dashboard.models.JPA;
 
 import com.sun.istack.NotNull;
 import lombok.Data;

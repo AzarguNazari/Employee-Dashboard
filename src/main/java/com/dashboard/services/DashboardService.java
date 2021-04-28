@@ -1,8 +1,8 @@
 package com.dashboard.services;
 
-import com.dashboard.models.Employee;
-import com.dashboard.models.EmployeeDto;
-import com.dashboard.models.Title;
+import com.dashboard.models.JPA.Employee;
+import com.dashboard.models.JPA.EmployeeDto;
+import com.dashboard.models.JPA.Title;
 import com.dashboard.exceptions.InvalidInput;
 import com.dashboard.repositories.EmployeeRepository;
 import com.dashboard.interfaces.serviceInterfaces.DashboardServiceInterface;

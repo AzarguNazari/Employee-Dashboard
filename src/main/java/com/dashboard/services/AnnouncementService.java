@@ -1,7 +1,7 @@
 package com.dashboard.services;
 
 import com.dashboard.exceptions.AnnouncementNotFoundException;
-import com.dashboard.models.Announcement;
+import com.dashboard.models.JPA.Announcement;
 import com.dashboard.repositories.AnnouncementRepository;
 import com.dashboard.interfaces.serviceInterfaces.CrudOperations;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -2,7 +2,7 @@ package com.dashboard.controllers;
 
 import com.dashboard.interfaces.controllerInterfaces.AnnouncementControllerInterface;
 import com.dashboard.exceptions.*;
-import com.dashboard.models.Announcement;
+import com.dashboard.models.JPA.Announcement;
 import com.dashboard.services.AnnouncementService;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;

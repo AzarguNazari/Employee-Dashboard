@@ -1,6 +1,6 @@
-package com.dashboard.models.dto;
+package com.dashboard.models.DTO;
 
-import com.dashboard.models.Priority;
+import com.dashboard.models.JPA.Priority;
 import lombok.Data;
 
 @Data

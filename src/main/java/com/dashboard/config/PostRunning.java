@@ -1,9 +1,9 @@
 package com.dashboard.config;
 
-import com.dashboard.models.Employee;
-import com.dashboard.models.Title;
-import com.dashboard.models.Priority;
-import com.dashboard.models.Task;
+import com.dashboard.models.JPA.Employee;
+import com.dashboard.models.JPA.Title;
+import com.dashboard.models.JPA.Priority;
+import com.dashboard.models.JPA.Task;
 import com.dashboard.repositories.RoleRepository;
 import com.dashboard.repositories.TaskRepository;
 import com.dashboard.services.EmployeeService;

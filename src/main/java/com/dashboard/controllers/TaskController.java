@@ -3,7 +3,7 @@ package com.dashboard.controllers;
 import com.dashboard.interfaces.controllerInterfaces.TaskControllerInterface;
 import com.dashboard.exceptions.ApiError;
 import com.dashboard.exceptions.EmployeeNotFoundException;
-import com.dashboard.models.Task;
+import com.dashboard.models.JPA.Task;
 import com.dashboard.services.TaskService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

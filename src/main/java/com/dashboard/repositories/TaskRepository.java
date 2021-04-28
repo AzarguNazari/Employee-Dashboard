@@ -1,6 +1,6 @@
 package com.dashboard.repositories;
 
-import com.dashboard.models.Task;
+import com.dashboard.models.JPA.Task;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

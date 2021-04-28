@@ -1,6 +1,6 @@
 package com.dashboard.repositories;
 
-import com.dashboard.models.Employee;
+import com.dashboard.models.JPA.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

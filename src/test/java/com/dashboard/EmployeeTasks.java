@@ -1,9 +1,9 @@
 package com.dashboard;
 
 import com.dashboard.controllers.TaskController;
-import com.dashboard.models.Priority;
-import com.dashboard.models.Status;
-import com.dashboard.models.Task;
+import com.dashboard.models.JPA.Priority;
+import com.dashboard.models.JPA.Status;
+import com.dashboard.models.JPA.Task;
 import com.dashboard.services.TaskService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

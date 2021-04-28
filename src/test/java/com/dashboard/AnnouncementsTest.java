@@ -2,8 +2,8 @@ package com.dashboard;
 
 
 import com.dashboard.controllers.EmployeeController;
-import com.dashboard.models.Employee;
-import com.dashboard.models.Title;
+import com.dashboard.models.JPA.Employee;
+import com.dashboard.models.JPA.Title;
 import com.dashboard.repositories.EmployeeRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

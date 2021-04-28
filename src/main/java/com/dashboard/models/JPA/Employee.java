@@ -1,4 +1,4 @@
-package com.dashboard.models;
+package com.dashboard.models.JPA;
 
 import lombok.AccessLevel;
 import lombok.Data;

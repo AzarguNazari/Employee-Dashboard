@@ -1,7 +1,7 @@
 package com.dashboard.services;
 
 import com.dashboard.exceptions.UserNotFoundException;
-import com.dashboard.models.User;
+import com.dashboard.models.JPA.User;
 import com.dashboard.repositories.UserRepository;
 import com.dashboard.interfaces.serviceInterfaces.UserServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
