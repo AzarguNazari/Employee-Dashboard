@@ -49,7 +49,7 @@ public class EmployeeTasks {
 
     @Test
     public void getAllTasks_returnTwoTasks() throws Exception{
-        when(taskService.getTaskById(anyInt())).thenReturn(tasks.get(0));
+        when(taskService.getById(anyInt())).thenReturn(tasks.get(0));
 
         final ResponseEntity<?> task = taskController.getTaskById(1);
 
@@ -62,8 +62,8 @@ public class EmployeeTasks {
     @Test
     public void createNewAccount_returnTrue() throws Exception {
 
-        Mockito.doNothing().when(taskService).add(tasks.get(0));
-        when(taskService.getTaskById(anyInt())).thenReturn(tasks.get(0));
+        Mockito.doNothing().when(taskService).save(tasks.get(0));
+        when(taskService.getById(anyInt())).thenReturn(tasks.get(0));
 
         final ResponseEntity<?> createdTask = taskController.createTask(tasks.get(0));
 
@@ -81,7 +81,7 @@ public class EmployeeTasks {
 
         Task task2 = tasks.get(1);
 
-        Mockito.doNothing().when(taskService).updateTask(1, task2);
+        Mockito.doNothing().when(taskService).update(1, task2);
 
         final ResponseEntity<?> updateTask = taskController.updateTask(1, task2);
 
@@ -92,7 +92,7 @@ public class EmployeeTasks {
     @Test
     void deleteTask1_returnNO_CONTENT_status(){
 
-        Mockito.doNothing().when(taskService).deleteTaskById(anyInt());
+        Mockito.doNothing().when(taskService).delete(anyInt());
 
         final ResponseEntity<?> updateTask = taskController.deleteTaskById(anyInt());
 
