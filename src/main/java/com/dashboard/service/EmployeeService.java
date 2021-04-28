@@ -55,10 +55,6 @@ public class EmployeeService implements EmployeeServiceInterface {
         return employeeRepository.findById(id);
     }
 
-    @Override
-    public Long totalEmployees(){
-        return employeeRepository.count();
-    }
 
     @Override
     public Optional<Employee> getByUsername(String username){
@@ -66,14 +62,14 @@ public class EmployeeService implements EmployeeServiceInterface {
     }
 
     @Override
-    public void deleteEmployeeById(Integer employeeID){
+    public void deleteById(Integer employeeID){
         final Optional<Employee> employee = employeeRepository.findById(employeeID);
         if(employee.isEmpty()) throw new EmployeeNotFoundException();
         employeeRepository.deleteById(employeeID);
     }
 
     @Override
-    public void updateEmployee(Integer employeeId, Employee employee) {
+    public void update(Integer employeeId, Employee employee) {
         final Optional<Employee> emp = employeeRepository.findById(employeeId);
         if(emp.isEmpty()) throw new EmployeeNotFoundException();
         employee.setId(employeeId);
