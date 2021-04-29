@@ -1,10 +1,9 @@
 package com.dashboard.services;
 
 import com.dashboard.exceptions.AnnouncementNotFoundException;
+import com.dashboard.interfaces.serviceInterfaces.CrudOperations;
 import com.dashboard.models.JPA.Announcement;
 import com.dashboard.repositories.AnnouncementRepository;
-import com.dashboard.interfaces.serviceInterfaces.CrudOperations;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,8 +12,12 @@ import java.util.Optional;
 @Service
 public class AnnouncementService implements CrudOperations<Announcement> {
 
-    @Autowired
     private AnnouncementRepository announcementRepository;
+
+    public AnnouncementService(AnnouncementRepository announcementRepository) {
+        this.announcementRepository = announcementRepository;
+    }
+
 
     @Override
     public void save(Announcement announcement) {
