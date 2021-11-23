@@ -1,4 +1,4 @@
-//package com.dashboard.controllers;
+package com.dashboard.controllers;//package com.dashboard.controllers;
 //
 //import com.dashboard.interfaces.controllerInterfaces.MessageControllerInterface;
 //import com.dashboard.models.JPA.Message;
