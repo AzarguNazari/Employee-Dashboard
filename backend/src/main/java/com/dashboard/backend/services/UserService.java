@@ -2,7 +2,7 @@ package com.dashboard.backend.services;
 
 import com.dashboard.backend.exceptions.UserNotFoundException;
 import com.dashboard.backend.interfaces.serviceInterfaces.UserServiceInterface;
-import com.dashboard.backend.models.JPA.User;
+import com.dashboard.backend.models.jpa.User;
 import com.dashboard.backend.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

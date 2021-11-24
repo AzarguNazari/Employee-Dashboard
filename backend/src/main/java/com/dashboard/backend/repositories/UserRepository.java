@@ -1,6 +1,6 @@
 package com.dashboard.backend.repositories;
 
-import com.dashboard.backend.models.JPA.User;
+import com.dashboard.backend.models.jpa.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

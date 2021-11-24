@@ -1,6 +1,6 @@
 package com.dashboard.backend.interfaces.controllerInterfaces;
 
-import com.dashboard.backend.models.JPA.Task;
+import com.dashboard.backend.models.jpa.Task;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;

@@ -2,9 +2,9 @@ package com.dashboard.backend.services;
 
 import com.dashboard.backend.exceptions.InvalidInput;
 import com.dashboard.backend.interfaces.serviceInterfaces.DashboardServiceInterface;
-import com.dashboard.backend.models.JPA.Title;
-import com.dashboard.backend.models.JPA.Employee;
-import com.dashboard.backend.models.JPA.EmployeeDto;
+import com.dashboard.backend.models.jpa.Title;
+import com.dashboard.backend.models.jpa.Employee;
+import com.dashboard.backend.models.jpa.EmployeeDto;
 import com.dashboard.backend.repositories.EmployeeRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

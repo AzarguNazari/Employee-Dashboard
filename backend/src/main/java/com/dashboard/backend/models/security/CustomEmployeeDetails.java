@@ -1,6 +1,6 @@
 package com.dashboard.backend.models.security;
 
-import com.dashboard.backend.models.JPA.Employee;
+import com.dashboard.backend.models.jpa.Employee;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

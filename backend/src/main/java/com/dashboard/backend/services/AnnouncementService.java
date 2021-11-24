@@ -2,7 +2,7 @@ package com.dashboard.backend.services;
 
 import com.dashboard.backend.exceptions.AnnouncementNotFoundException;
 import com.dashboard.backend.interfaces.serviceInterfaces.CrudOperations;
-import com.dashboard.backend.models.JPA.Announcement;
+import com.dashboard.backend.models.jpa.Announcement;
 import com.dashboard.backend.repositories.AnnouncementRepository;
 import org.springframework.stereotype.Service;
 

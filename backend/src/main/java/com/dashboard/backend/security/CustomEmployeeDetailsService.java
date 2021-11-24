@@ -1,7 +1,7 @@
 package com.dashboard.backend.security;
 
 import com.dashboard.backend.exceptions.EmployeeNotFoundException;
-import com.dashboard.backend.models.JPA.Employee;
+import com.dashboard.backend.models.jpa.Employee;
 import com.dashboard.backend.models.security.CustomEmployeeDetails;
 import com.dashboard.backend.repositories.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;

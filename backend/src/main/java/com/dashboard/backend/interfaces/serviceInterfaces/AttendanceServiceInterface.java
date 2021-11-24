@@ -1,6 +1,6 @@
 package com.dashboard.backend.interfaces.serviceInterfaces;
 
-import com.dashboard.backend.models.JPA.Attendance;
+import com.dashboard.backend.models.jpa.Attendance;
 
 import java.util.List;
 

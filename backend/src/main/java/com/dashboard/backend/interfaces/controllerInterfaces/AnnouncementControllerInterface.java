@@ -1,6 +1,6 @@
 package com.dashboard.backend.interfaces.controllerInterfaces;
 
-import com.dashboard.backend.models.JPA.Announcement;
+import com.dashboard.backend.models.jpa.Announcement;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;

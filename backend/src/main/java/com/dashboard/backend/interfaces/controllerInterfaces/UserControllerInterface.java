@@ -1,6 +1,6 @@
 package com.dashboard.backend.interfaces.controllerInterfaces;
 
-import com.dashboard.backend.models.JPA.User;
+import com.dashboard.backend.models.jpa.User;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;

@@ -1,9 +1,9 @@
 package com.dashboard.backend.config;
 
-import com.dashboard.backend.models.JPA.Employee;
-import com.dashboard.backend.models.JPA.Priority;
-import com.dashboard.backend.models.JPA.Task;
-import com.dashboard.backend.models.JPA.Title;
+import com.dashboard.backend.models.jpa.Employee;
+import com.dashboard.backend.models.jpa.Priority;
+import com.dashboard.backend.models.jpa.Task;
+import com.dashboard.backend.models.jpa.Title;
 import com.dashboard.backend.repositories.TaskRepository;
 import com.dashboard.backend.services.EmployeeService;
 import com.dashboard.backend.repositories.RoleRepository;

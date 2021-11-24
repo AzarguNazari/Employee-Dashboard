@@ -1,3 +1,9 @@
+# What it can?
+- Employee can login/logout
+- Employee can check his profile/salary/time
+- Employee can see his tasks/meetings
+- Employee can chat with other employee
+
 ## Functional Todo
 - add security feature
 - make all endpoints work properly

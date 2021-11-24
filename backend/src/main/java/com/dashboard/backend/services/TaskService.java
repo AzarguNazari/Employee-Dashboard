@@ -4,8 +4,8 @@ import com.dashboard.backend.interfaces.serviceInterfaces.CrudOperations;
 import com.dashboard.backend.interfaces.serviceInterfaces.TaskServiceInterface;
 import com.dashboard.backend.repositories.TaskRepository;
 import com.dashboard.backend.exceptions.EmployeeNotFoundException;
-import com.dashboard.backend.models.JPA.Priority;
-import com.dashboard.backend.models.JPA.Task;
+import com.dashboard.backend.models.jpa.Priority;
+import com.dashboard.backend.models.jpa.Task;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

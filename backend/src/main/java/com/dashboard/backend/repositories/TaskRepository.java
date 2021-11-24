@@ -1,6 +1,6 @@
 package com.dashboard.backend.repositories;
 
-import com.dashboard.backend.models.JPA.Task;
+import com.dashboard.backend.models.jpa.Task;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

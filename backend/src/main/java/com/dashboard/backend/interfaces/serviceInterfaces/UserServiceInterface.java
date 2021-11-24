@@ -1,6 +1,6 @@
 package com.dashboard.backend.interfaces.serviceInterfaces;
 
-import com.dashboard.backend.models.JPA.User;
+import com.dashboard.backend.models.jpa.User;
 
 import java.util.List;
 

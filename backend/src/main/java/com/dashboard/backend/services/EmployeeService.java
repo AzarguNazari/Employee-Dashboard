@@ -6,7 +6,7 @@ import com.dashboard.backend.exceptions.TaskNotFoundException;
 import com.dashboard.backend.interfaces.serviceInterfaces.CrudOperations;
 import com.dashboard.backend.interfaces.serviceInterfaces.EmployeeServiceInterface;
 import com.dashboard.backend.repositories.TaskRepository;
-import com.dashboard.backend.models.JPA.Employee;
+import com.dashboard.backend.models.jpa.Employee;
 import com.dashboard.backend.repositories.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
