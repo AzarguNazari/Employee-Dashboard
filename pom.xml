@@ -11,7 +11,9 @@
 
 	<modules>
 		<module>backend</module>
-		<module>sba</module>
+		<module>spring-boot-admin</module>
+		<module>services/attendence-service</module>
+		<module>services/document-management-service</module>
 	</modules>
 
 
