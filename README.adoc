@@ -18,3 +18,9 @@ A spring boot backend application with a good practice of REST.
 
 == TODO List
 - For future improvement, you can use the `TODO.md` file
+
+== Architecture
+[plantuml, format="svg", id="myDiagram", width="2000px"]
+----
+include::documentation/architecture.plantuml[]
+----
