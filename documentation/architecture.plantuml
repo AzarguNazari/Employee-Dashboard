@@ -1,20 +1,5 @@
 @startuml
-title Actility Connector Architecture
-
-actor "Use" as use
-participant "Actility Connector" as connector
-participant "DX ThinkPark API" as thinkPark
-participant "Actility Adapter" as actilityAdapter
 
 use -> connector: login
-connector -> thinkPark: post: get token
-thinkPark -> connector: return token
-connector -> thinkPark: get: get list of devices
-thinkPark -> connector: return list of devices
-connector -> thinkPark: post: connector config
-thinkPark -> connector: return list of configured devices
-connector -> thinkPark: post: send tracker command
-thinkPark -> connector: return success message
-connector -> actilityAdapter: retrieve the latest state of trackers
-actilityAdapter -> connector: return trackers' states
+
 @enduml
