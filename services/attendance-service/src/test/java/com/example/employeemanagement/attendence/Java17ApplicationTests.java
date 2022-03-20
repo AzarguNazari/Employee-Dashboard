@@ -1,4 +1,4 @@
-package com.example.java17;
+package com.example.employeemanagement.attendence;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

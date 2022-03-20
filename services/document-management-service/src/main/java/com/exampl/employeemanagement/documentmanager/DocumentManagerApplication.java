@@ -1,13 +1,13 @@
-package com.example.java17;
+package com.exampl.employeemanagement.documentmanager;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Java17Application {
+public class DocumentManagerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Java17Application.class, args);
+		SpringApplication.run(DocumentManagerApplication.class, args);
 	}
 
 }

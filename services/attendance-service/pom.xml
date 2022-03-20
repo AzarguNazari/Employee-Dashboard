@@ -11,7 +11,7 @@
 	</parent>
 
 	<groupId>com.example</groupId>
-	<artifactId>java17</artifactId>
+	<artifactId>attendance-service</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<name>attendance-service</name>
 	<description>Demo project for Spring Boot</description>
