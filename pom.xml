@@ -5,16 +5,15 @@
 
 	<groupId>com.dashboard</groupId>
 	<artifactId>employee-dashboard</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0-SNAPSHOT</version>
 	<name>employee-dashboard</name>
 	<packaging>pom</packaging>
 
 	<modules>
 		<module>backend</module>
 		<module>spring-boot-admin</module>
-		<module>services/attendence-service</module>
+		<module>services/attendance-service</module>
 		<module>services/document-management-service</module>
 	</modules>
-
 
 </project>
