@@ -6,7 +6,7 @@
 	<groupId>com.dashboard</groupId>
 	<artifactId>employee-dashboard</artifactId>
 	<version>1.0-SNAPSHOT</version>
-	<name>employee-dashboard</name>
+	<name>employee-management</name>
 	<packaging>pom</packaging>
 
 	<modules>
