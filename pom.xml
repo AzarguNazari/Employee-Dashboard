@@ -14,6 +14,7 @@
 		<module>spring-boot-admin</module>
 		<module>services/attendance-service</module>
 		<module>services/document-management-service</module>
+		<module>services/app</module>
 	</modules>
 
 </project>
